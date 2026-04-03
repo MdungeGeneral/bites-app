@@ -157,6 +157,7 @@ export default function ShortsPlayer({
     // Outer div catches the "first tap" to unlock audio on mobile
     <div
       className="h-screen w-full overflow-hidden bg-black relative"
+      style={{ overscrollBehavior: "none", touchAction: "none" }}
       onClick={unlockSound}
     >
       <Swiper

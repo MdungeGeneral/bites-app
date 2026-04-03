@@ -14,10 +14,12 @@ html,
 body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
   background: #000;
-  /* Prevent iOS rubber-band scroll from showing white edges */
-  overscroll-behavior: none;
+}
+
+/* Allow normal page scrolling everywhere except inside the Shorts player */
+body {
+  overflow-y: auto;
 }
 
 /* Swiper full-height override */
