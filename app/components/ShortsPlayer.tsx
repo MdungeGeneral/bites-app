@@ -16,11 +16,13 @@ function VideoSlide({
   isActive,
   muted,
   registerRef,
+  onBlock,
 }: {
   video: Video;
   isActive: boolean;
   muted: boolean;
   registerRef: (el: HTMLVideoElement | null) => void;
+  onBlock: () => void;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
   const bgRef = useRef<HTMLVideoElement>(null);
@@ -39,7 +41,12 @@ function VideoSlide({
     if (isActive) {
       main.currentTime = 0;
       if (bg) bg.currentTime = 0;
-      main.play().catch(() => {});
+      main.play().catch(() => {
+        // Browser blocked unmuted autoplay — mute and retry
+        main.muted = true;
+        onBlock();
+        main.play().catch(() => {});
+      });
       bg?.play().catch(() => {});
     } else {
       main.pause();
@@ -113,8 +120,8 @@ export default function ShortsPlayer({
   notebookLabel?: string;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [muted, setMuted] = useState(true);
-  const [soundUnlocked, setSoundUnlocked] = useState(false);
+  const [muted, setMuted] = useState(false); // start unmuted; falls back if browser blocks
+  const [blockedByBrowser, setBlockedByBrowser] = useState(false);
 
   // Keep stable callbacks per video so VideoSlide doesn't re-mount
   const videoRefs = useRef<Map<string, HTMLVideoElement | null>>(new Map());
@@ -125,13 +132,13 @@ export default function ShortsPlayer({
     []
   );
 
-  // First tap anywhere unlocks audio
+  // Tap anywhere to unmute after browser blocked autoplay
   const unlockSound = useCallback(() => {
-    if (!soundUnlocked) {
-      setSoundUnlocked(true);
+    if (blockedByBrowser) {
       setMuted(false);
+      setBlockedByBrowser(false);
     }
-  }, [soundUnlocked]);
+  }, [blockedByBrowser]);
 
   if (videos.length === 0) {
     return (
@@ -180,6 +187,7 @@ export default function ShortsPlayer({
               isActive={index === activeIndex}
               muted={muted}
               registerRef={registerRef(video.id)}
+              onBlock={() => { setMuted(true); setBlockedByBrowser(true); }}
             />
           </SwiperSlide>
         ))}
@@ -189,7 +197,7 @@ export default function ShortsPlayer({
       <button
         onClick={(e) => {
           e.stopPropagation();
-          setSoundUnlocked(true);
+          setBlockedByBrowser(false);
           setMuted((m) => !m);
         }}
         aria-label={muted ? "Unmute" : "Mute"}
@@ -219,8 +227,8 @@ export default function ShortsPlayer({
         </span>
       </div>
 
-      {/* ── First-time "tap to hear" nudge ── */}
-      {!soundUnlocked && (
+      {/* ── First-time "tap to hear" nudge — only shown if browser blocked autoplay ── */}
+      {blockedByBrowser && (
         <div className="absolute bottom-28 inset-x-0 flex justify-center z-50 pointer-events-none">
           <span className="bg-black/60 backdrop-blur-sm text-white text-xs font-medium px-4 py-2 rounded-full animate-pulse">
             Tap anywhere to enable sound
@@ -228,8 +236,8 @@ export default function ShortsPlayer({
         </div>
       )}
 
-      {/* ── Swipe hint (fades after first interaction) ── */}
-      {videos.length > 1 && !soundUnlocked && (
+      {/* ── Swipe hint ── */}
+      {videos.length > 1 && (
         <div className="absolute bottom-10 inset-x-0 flex justify-center z-50 pointer-events-none">
           <span className="text-white/40 text-xs">Swipe up for next</span>
         </div>
