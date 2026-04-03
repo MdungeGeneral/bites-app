@@ -2,6 +2,9 @@ import ShortsPlayer from "@/app/components/ShortsPlayer";
 import { getVideos } from "@/lib/getVideos";
 import { notFound } from "next/navigation";
 
+// Always fetch fresh data from R2 — never serve a cached page
+export const dynamic = "force-dynamic";
+
 interface Props {
   params: Promise<{ notebook: string }>;
 }
