@@ -5,14 +5,19 @@ Uploads one video file or an entire folder of videos to your Cloudflare R2
 bucket so the Bites webapp picks them up automatically.
 
 Usage (single file):
-    python scripts/upload_to_r2.py <topic-name> <path/to/video.mp4>
+    python scripts/upload_to_r2.py <topic-name> <path/to/video.mp4> [--w]
 
 Usage (whole folder — topic name is taken from the folder name):
-    python scripts/upload_to_r2.py <path/to/folder>
+    python scripts/upload_to_r2.py <path/to/folder> [--w]
 
 Examples:
     python scripts/upload_to_r2.py Reinsurance "downloads/my-video.mp4"
+    python scripts/upload_to_r2.py Reinsurance "downloads/my-video.mp4" --w
     python scripts/upload_to_r2.py "public/videos/Reinsurance"
+    python scripts/upload_to_r2.py "public/videos/Reinsurance" --w
+
+Flags:
+    --w   Overwrite files that already exist in R2 (re-upload even if key is present)
 
 Supported formats: .mp4, .webm, .mov
 
@@ -84,14 +89,14 @@ def get_existing_keys(s3, bucket: str, topic: str) -> set:
     return keys
 
 
-def upload_file(s3, bucket: str, topic: str, video_path: Path, existing_keys: set) -> str:
+def upload_file(s3, bucket: str, topic: str, video_path: Path, existing_keys: set, overwrite: bool = False) -> str:
     """Upload a file. Returns 'uploaded', 'skipped', or 'error'."""
     if video_path.suffix.lower() not in SUPPORTED_EXT:
         return "skipped"
 
     r2_key = f"{topic}/{video_path.name}"
 
-    if r2_key in existing_keys:
+    if r2_key in existing_keys and not overwrite:
         print(f"  SKIP (already in R2): {video_path.name}")
         return "skipped"
 
@@ -107,9 +112,12 @@ def upload_file(s3, bucket: str, topic: str, video_path: Path, existing_keys: se
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
+    args = [a for a in sys.argv[1:] if a != "--w"]
+    overwrite = "--w" in sys.argv[1:]
+
+    if len(args) == 1:
         # Folder sync mode: python upload_to_r2.py <folder>
-        folder = Path(sys.argv[1]).expanduser().resolve()
+        folder = Path(args[0]).expanduser().resolve()
         if not folder.is_dir():
             print(f"ERROR: '{folder}' is not a folder.")
             print("Usage: python scripts/upload_to_r2.py \"path/to/folder\"")
@@ -125,17 +133,17 @@ if __name__ == "__main__":
             print("ERROR: R2_BUCKET_NAME missing from .env.local")
             sys.exit(1)
         s3 = make_s3_client()
-        print(f"Syncing {len(files)} file(s) → topic '{topic}' …")
+        print(f"Syncing {len(files)} file(s) → topic '{topic}' {'(overwrite on)' if overwrite else ''}…")
         existing = get_existing_keys(s3, bucket, topic)
-        results = [upload_file(s3, bucket, topic, f, existing) for f in files]
+        results = [upload_file(s3, bucket, topic, f, existing, overwrite) for f in files]
         uploaded = results.count("uploaded")
         skipped = results.count("skipped")
         print(f"\n✓ {uploaded} uploaded, {skipped} already up-to-date.")
 
-    elif len(sys.argv) == 3:
+    elif len(args) == 2:
         # Single file mode: python upload_to_r2.py <topic> <file>
-        topic = sys.argv[1]
-        video_path = Path(sys.argv[2]).expanduser().resolve()
+        topic = args[0]
+        video_path = Path(args[1]).expanduser().resolve()
         if not video_path.exists():
             print(f"ERROR: File not found: {video_path}")
             sys.exit(1)
@@ -145,7 +153,7 @@ if __name__ == "__main__":
             sys.exit(1)
         s3 = make_s3_client()
         existing = get_existing_keys(s3, bucket, topic)
-        result = upload_file(s3, bucket, topic, video_path, existing)
+        result = upload_file(s3, bucket, topic, video_path, existing, overwrite)
         if result == "uploaded":
             print("✓ Done — the video will appear in Bites on next page load.")
         else:
@@ -153,7 +161,7 @@ if __name__ == "__main__":
 
     else:
         print("Usage:")
-        print('  Sync folder:  python scripts/upload_to_r2.py "public/videos/My topic"')
-        print("  Single file:  python scripts/upload_to_r2.py <topic-name> <video-file>")
+        print('  Sync folder:  python scripts/upload_to_r2.py "public/videos/My topic" [--w]')
+        print("  Single file:  python scripts/upload_to_r2.py <topic-name> <video-file> [--w]")
         sys.exit(1)
 

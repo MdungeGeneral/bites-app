@@ -120,8 +120,10 @@ export default function ShortsPlayer({
   notebookLabel?: string;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [muted, setMuted] = useState(false); // start unmuted; falls back if browser blocks
+  const [muted, setMuted] = useState(false);
   const [blockedByBrowser, setBlockedByBrowser] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const activeVideoRef = useRef<HTMLVideoElement | null>(null);
 
   // Keep stable callbacks per video so VideoSlide doesn't re-mount
   const videoRefs = useRef<Map<string, HTMLVideoElement | null>>(new Map());
@@ -132,11 +134,28 @@ export default function ShortsPlayer({
     []
   );
 
-  // Tap anywhere to unmute after browser blocked autoplay
-  const unlockSound = useCallback(() => {
+  // Reset paused state when the slide changes
+  useEffect(() => {
+    setPaused(false);
+    const active = videos[activeIndex];
+    if (active) activeVideoRef.current = videoRefs.current.get(active.id) ?? null;
+  }, [activeIndex, videos]);
+
+  // Tap anywhere: if browser blocked sound → unmute; otherwise toggle play/pause
+  const handleTap = useCallback(() => {
     if (blockedByBrowser) {
       setMuted(false);
       setBlockedByBrowser(false);
+      return;
+    }
+    const el = activeVideoRef.current;
+    if (!el) return;
+    if (el.paused) {
+      el.play().catch(() => {});
+      setPaused(false);
+    } else {
+      el.pause();
+      setPaused(true);
     }
   }, [blockedByBrowser]);
 
@@ -161,11 +180,11 @@ export default function ShortsPlayer({
   const canLoop = videos.length > 1;
 
   return (
-    // Outer div catches the "first tap" to unlock audio on mobile
+    // Outer div: tap to pause/resume or unlock sound
     <div
       className="h-screen w-full overflow-hidden bg-black relative"
       style={{ overscrollBehavior: "none", touchAction: "none" }}
-      onClick={unlockSound}
+      onClick={handleTap}
     >
       <Swiper
         direction="vertical"
@@ -226,6 +245,17 @@ export default function ShortsPlayer({
           {activeIndex + 1} / {videos.length}
         </span>
       </div>
+
+      {/* ── Pause overlay ── */}
+      {paused && (
+        <div className="absolute inset-0 z-40 flex items-center justify-center pointer-events-none">
+          <div className="w-20 h-20 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center">
+            <svg className="w-10 h-10 text-white translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+      )}
 
       {/* ── First-time "tap to hear" nudge — only shown if browser blocked autoplay ── */}
       {blockedByBrowser && (
