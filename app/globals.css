@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  /* Prevent iOS rubber-band scroll from showing white edges */
+  overscroll-behavior: none;
+}
+
+/* Swiper full-height override */
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  height: 100% !important;
+  width: 100% !important;
+}
