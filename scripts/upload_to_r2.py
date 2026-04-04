@@ -168,10 +168,13 @@ if __name__ == "__main__":
         s3 = make_s3_client()
         existing = get_existing_keys(s3, bucket, topic)
         result = upload_file(s3, bucket, topic, video_path, existing, overwrite)
+        print()  # blank line for readability
         if result == "uploaded":
             print("✓ Done — the video will appear in Bites on next page load.")
+        elif overwrite:
+            print("✓ Video overwritten in R2 — changes will sync on next page load.")
         else:
-            print("Already up-to-date.")
+            print("ℹ Video already up-to-date in R2 — no action taken.")
 
     else:
         print("Usage:")
