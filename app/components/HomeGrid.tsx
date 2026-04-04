@@ -84,10 +84,10 @@ export default function HomeGrid({ notebooks }: { notebooks: Notebook[] }) {
         </h1>
         {notebooks.length > 0 && (
           <Link
-            href="/watch/all"
+            href="/watch/random"
             className="text-xs font-semibold bg-violet-600 hover:bg-violet-500 active:bg-violet-700 px-4 py-2 rounded-full transition-colors"
           >
-            Play All ▶
+            Random 🔀
           </Link>
         )}
       </header>
