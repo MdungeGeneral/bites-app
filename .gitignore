@@ -22,3 +22,6 @@ public/videos/**/*.mov
 # OS
 .DS_Store
 Thumbs.db
+
+# Reaction stats (user-generated, not source code)
+data/

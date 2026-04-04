@@ -17,12 +17,18 @@ function VideoSlide({
   muted,
   registerRef,
   onBlock,
+  counts,
+  userReaction,
+  onReact,
 }: {
   video: Video;
   isActive: boolean;
   muted: boolean;
   registerRef: (el: HTMLVideoElement | null) => void;
   onBlock: () => void;
+  counts: { likes: number; dislikes: number };
+  userReaction: "like" | "dislike" | null;
+  onReact: (action: "like" | "dislike") => void;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
   const bgRef = useRef<HTMLVideoElement>(null);
@@ -106,6 +112,33 @@ function VideoSlide({
           {video.title}
         </h2>
       </div>
+
+      {/* Reaction buttons */}
+      <div
+        className="absolute right-3 bottom-24 z-30 flex flex-col items-center gap-5"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={() => onReact("like")}
+          aria-label="Like"
+          className={`flex flex-col items-center gap-1 active:scale-90 transition-transform ${
+            userReaction === "like" ? "text-violet-400" : "text-white/80"
+          }`}
+        >
+          <span className="text-3xl drop-shadow-md">&#128077;</span>
+          <span className="text-xs font-bold drop-shadow">{counts.likes}</span>
+        </button>
+        <button
+          onClick={() => onReact("dislike")}
+          aria-label="Dislike"
+          className={`flex flex-col items-center gap-1 active:scale-90 transition-transform ${
+            userReaction === "dislike" ? "text-red-400" : "text-white/80"
+          }`}
+        >
+          <span className="text-3xl drop-shadow-md">&#128078;</span>
+          <span className="text-xs font-bold drop-shadow">{counts.dislikes}</span>
+        </button>
+      </div>
     </div>
   );
 }
@@ -124,6 +157,68 @@ export default function ShortsPlayer({
   const [blockedByBrowser, setBlockedByBrowser] = useState(false);
   const [paused, setPaused] = useState(false);
   const activeVideoRef = useRef<HTMLVideoElement | null>(null);
+
+  // ── Reactions ────────────────────────────────────────────────────────────
+  type Counts = { likes: number; dislikes: number };
+  const [reactionCounts, setReactionCounts] = useState<Record<string, Counts>>({});
+  const [userReactions, setUserReactions] = useState<Record<string, "like" | "dislike" | null>>({});
+
+  useEffect(() => {
+    // Load the user's own votes from localStorage
+    try {
+      const saved = localStorage.getItem("bites-reactions");
+      if (saved) setUserReactions(JSON.parse(saved));
+    } catch {}
+    // Fetch global counts
+    fetch("/api/reactions")
+      .then((r) => r.json())
+      .then(setReactionCounts)
+      .catch(() => {});
+  }, []);
+
+  const handleReact = useCallback(
+    (videoId: string, action: "like" | "dislike") => {
+      const current = userReactions[videoId] ?? null;
+      const toggling = current === action; // same button = undo
+      const next: "like" | "dislike" | null = toggling ? null : action;
+
+      // Persist user choice
+      setUserReactions((prev) => {
+        const updated = { ...prev, [videoId]: next };
+        localStorage.setItem("bites-reactions", JSON.stringify(updated));
+        return updated;
+      });
+
+      // Optimistic count update
+      setReactionCounts((prev) => {
+        const base = { ...(prev[videoId] ?? { likes: 0, dislikes: 0 }) };
+        const likeKey   = "likes"   as const;
+        const dislikeKey = "dislikes" as const;
+        const key    = action  === "like" ? likeKey : dislikeKey;
+        const oldKey = current === "like" ? likeKey : dislikeKey;
+        if (toggling) {
+          base[key] = Math.max(0, base[key] - 1);
+        } else {
+          base[key]++;
+          if (current !== null) base[oldKey] = Math.max(0, base[oldKey] - 1);
+        }
+        return { ...prev, [videoId]: base };
+      });
+
+      // Server sync
+      const apiCalls: string[] = [];
+      if (!toggling && current !== null) apiCalls.push(`remove-${current}`);
+      apiCalls.push(toggling ? `remove-${action}` : action);
+      apiCalls.forEach((a) =>
+        fetch("/api/reactions", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ videoId, action: a }),
+        }).catch(() => {})
+      );
+    },
+    [userReactions]
+  );
 
   // Keep stable callbacks per video so VideoSlide doesn't re-mount
   const videoRefs = useRef<Map<string, HTMLVideoElement | null>>(new Map());
@@ -207,6 +302,9 @@ export default function ShortsPlayer({
               muted={muted}
               registerRef={registerRef(video.id)}
               onBlock={() => { setMuted(true); setBlockedByBrowser(true); }}
+              counts={reactionCounts[video.id] ?? { likes: 0, dislikes: 0 }}
+              userReaction={userReactions[video.id] ?? null}
+              onReact={(action) => handleReact(video.id, action)}
             />
           </SwiperSlide>
         ))}
