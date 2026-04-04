@@ -141,7 +141,8 @@ export async function getNotebooks(): Promise<Notebook[]> {
     slug,
     label: slug.replace(/[-_]/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
     videoCount: vids.length,
-    firstVideoUrl: vids[0]?.url ?? null,
+    // Pick a random video as the thumbnail so each page load shows a different one
+    firstVideoUrl: vids[Math.floor(Math.random() * vids.length)]?.url ?? null,
   }));
 }
 
