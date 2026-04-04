@@ -31,3 +31,4 @@ export default async function WatchPage({ params }: Props) {
 
   const label = slug === "random" ? "Random 🔀" : slug === "all" ? "All Chapters" : slug;
   return <ShortsPlayer videos={videos} notebookLabel={label} />;
+}
