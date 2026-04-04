@@ -60,6 +60,37 @@ function VideoSlide({
     }
   }, [isActive]);
 
+  // Sync background video with main video playback (pause/play/currentTime)
+  useEffect(() => {
+    const main = ref.current;
+    const bg = bgRef.current;
+    if (!main || !bg) return;
+
+    const syncBgWithMain = () => {
+      // Keep background currentTime in sync with main video
+      if (Math.abs(bg.currentTime - main.currentTime) > 0.1) {
+        bg.currentTime = main.currentTime;
+      }
+      // Mirror pause state: if main is paused, pause bg too
+      if (main.paused && !bg.paused) {
+        bg.pause();
+      } else if (!main.paused && bg.paused) {
+        bg.play().catch(() => {});
+      }
+    };
+
+    // Sync on every timeupdate of the main video
+    main.addEventListener("timeupdate", syncBgWithMain);
+    main.addEventListener("play", () => bg.play().catch(() => {}));
+    main.addEventListener("pause", () => bg.pause());
+
+    return () => {
+      main.removeEventListener("timeupdate", syncBgWithMain);
+      main.removeEventListener("play", () => bg.play().catch(() => {}));
+      main.removeEventListener("pause", () => bg.pause());
+    };
+  }, []);
+
   // Mirror the global mute state
   useEffect(() => {
     if (ref.current) ref.current.muted = muted;
