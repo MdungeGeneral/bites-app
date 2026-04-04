@@ -89,18 +89,19 @@ def get_existing_keys(s3, bucket: str, topic: str) -> set:
     return keys
 
 
-def upload_file(s3, bucket: str, topic: str, video_path: Path, existing_keys: set, overwrite: bool = False) -> str:
+def upload_file(s3, bucket: str, topic: str, video_path: Path, existing_keys: set, overwrite: bool = False, r2_key: str | None = None) -> str:
     """Upload a file. Returns 'uploaded', 'skipped', or 'error'."""
     if video_path.suffix.lower() not in SUPPORTED_EXT:
         return "skipped"
 
-    r2_key = f"{topic}/{video_path.name}"
+    if r2_key is None:
+        r2_key = f"{topic}/{video_path.name}"
 
     if r2_key in existing_keys and not overwrite:
-        print(f"  SKIP (already in R2): {video_path.name}")
+        print(f"  SKIP (already in R2): {r2_key}")
         return "skipped"
 
-    print(f"  Uploading {video_path.name} …", end=" ", flush=True)
+    print(f"  Uploading {r2_key} …", end=" ", flush=True)
     s3.upload_file(
         str(video_path),
         bucket,
@@ -124,9 +125,9 @@ if __name__ == "__main__":
             print("       python scripts/upload_to_r2.py <topic-name> <video-file>")
             sys.exit(1)
         topic = folder.name
-        files = sorted(f for f in folder.iterdir() if f.suffix.lower() in SUPPORTED_EXT)
+        files = sorted(f for f in folder.rglob("*") if f.suffix.lower() in SUPPORTED_EXT)
         if not files:
-            print(f"No supported video files found in {folder}")
+            print(f"No supported video files found in {folder} (searched recursively)")
             sys.exit(0)
         bucket = os.environ.get("R2_BUCKET_NAME")
         if not bucket:
@@ -135,7 +136,13 @@ if __name__ == "__main__":
         s3 = make_s3_client()
         print(f"Syncing {len(files)} file(s) → topic '{topic}' {'(overwrite on)' if overwrite else ''}…")
         existing = get_existing_keys(s3, bucket, topic)
-        results = [upload_file(s3, bucket, topic, f, existing, overwrite) for f in files]
+        results = [
+            upload_file(
+                s3, bucket, topic, f, existing, overwrite,
+                r2_key=f"{topic}/{f.relative_to(folder).as_posix()}",
+            )
+            for f in files
+        ]
         uploaded = results.count("uploaded")
         skipped = results.count("skipped")
         print(f"\n✓ {uploaded} uploaded, {skipped} already up-to-date.")
