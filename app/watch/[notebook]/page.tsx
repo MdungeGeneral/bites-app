@@ -15,20 +15,31 @@ export default async function WatchPage({ params }: Props) {
 
   const allVideos = await getVideos();
 
-  let videos = slug === "all" || slug === "random"
-    ? [...allVideos]
-    : allVideos.filter((v) => v.notebook === slug);
+  // Fisher-Yates shuffle helper
+  function shuffle<T>(arr: T[]): T[] {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  let videos;
+  let label: string;
+
+  if (slug === "random") {
+    // Pick 10 random videos from across all topics
+    videos = shuffle(allVideos).slice(0, 10);
+    label = "Random 🔀";
+  } else {
+    // Topic view — shuffle so videos play in random order
+    const topicVideos = allVideos.filter((v) => v.notebook === slug);
+    videos = shuffle(topicVideos);
+    label = slug;
+  }
 
   if (videos.length === 0) notFound();
 
-  // Shuffle for random mode using Fisher-Yates
-  if (slug === "random") {
-    for (let i = videos.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [videos[i], videos[j]] = [videos[j], videos[i]];
-    }
-  }
-
-  const label = slug === "random" ? "Random 🔀" : slug === "all" ? "All Chapters" : slug;
   return <ShortsPlayer videos={videos} notebookLabel={label} />;
 }
