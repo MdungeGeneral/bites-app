@@ -1,25 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import type { Notebook } from "@/lib/getVideos";
 
-/** Renders the first frame of a video as a thumbnail by seeking to t=1s. */
+/** Renders the first frame of a video as a thumbnail by seeking to t=1s.
+ *  Uses IntersectionObserver so the video only starts loading when the card
+ *  scrolls into view — prevents dozens of parallel metadata requests on load.
+ */
 function VideoThumbnail({ src }: { src: string }) {
   const ref = useRef<HTMLVideoElement>(null);
+  const [visible, setVisible] = useState(false);
 
+  // Only start loading once the card enters the viewport
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { rootMargin: "100px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || !visible) return;
     const seek = () => { el.currentTime = 1; };
     el.addEventListener("loadedmetadata", seek, { once: true });
     return () => el.removeEventListener("loadedmetadata", seek);
-  }, [src]);
+  }, [visible]);
 
   return (
     <video
       ref={ref}
-      src={src}
+      src={visible ? src : undefined}
       className="absolute inset-0 h-full w-full object-cover"
       preload="metadata"
       muted
@@ -30,8 +47,14 @@ function VideoThumbnail({ src }: { src: string }) {
 
 /** Single notebook card */
 function NotebookCard({ notebook }: { notebook: Notebook }) {
+  const router = useRouter();
+  const slug = encodeURIComponent(notebook.slug);
+
   return (
-    <Link href={`/watch/${encodeURIComponent(notebook.slug)}`} className="group block">
+    <div
+      className="group block cursor-pointer"
+      onClick={() => router.push(`/watch/${slug}`)}
+    >
       <div className="relative aspect-[9/16] w-full overflow-hidden rounded-2xl bg-zinc-800 shadow-lg ring-1 ring-white/10 group-active:scale-95 transition-transform duration-150">
         {notebook.firstVideoUrl ? (
           <VideoThumbnail src={notebook.firstVideoUrl} />
@@ -50,14 +73,26 @@ function NotebookCard({ notebook }: { notebook: Notebook }) {
           }}
         />
 
-        {/* Play button overlay */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity">
+        {/* Play button overlay (hover / active) */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity pointer-events-none">
           <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
             <svg className="w-7 h-7 text-white translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />
             </svg>
           </div>
         </div>
+
+        {/* Shuffle button — always visible, top-right corner */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            router.push(`/watch/${slug}?shuffle=1`);
+          }}
+          aria-label="Shuffle play"
+          className="absolute top-2 right-2 z-10 w-9 h-9 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-base active:scale-90 transition-transform"
+        >
+          🔀
+        </button>
 
         {/* Notebook info */}
         <div className="absolute bottom-0 left-0 right-0 p-3 pointer-events-none">
@@ -69,7 +104,7 @@ function NotebookCard({ notebook }: { notebook: Notebook }) {
           </p>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
 

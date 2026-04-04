@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import crypto from "crypto";
 import { S3Client, ListObjectsV2Command } from "@aws-sdk/client-s3";
+import { unstable_cache } from "next/cache";
 
 export interface Video {
   id: string;
@@ -121,9 +122,18 @@ async function getVideosFromR2(): Promise<Video[]> {
 
 // ── Public API — auto-selects source based on env ────────────────────────────
 
+// Cache the R2 listing for 1 hour so every page navigation doesn't trigger a
+// full S3 ListObjectsV2 scan. The page itself stays force-dynamic so shuffling
+// is still fresh on each render.
+const getCachedVideosFromR2 = unstable_cache(
+  getVideosFromR2,
+  ["r2-video-list"],
+  { revalidate: 3600 }
+);
+
 export async function getVideos(): Promise<Video[]> {
   if (process.env.R2_BUCKET_NAME) {
-    return getVideosFromR2();
+    return getCachedVideosFromR2();
   }
   return getVideosFromDisk();
 }

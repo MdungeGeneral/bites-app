@@ -109,7 +109,7 @@ function VideoSlide({
         aria-hidden
         muted
         playsInline
-        preload="auto"
+        preload={isActive ? "auto" : "none"}
         loop
       />
 
@@ -122,7 +122,7 @@ function VideoSlide({
         loop
         playsInline
         muted={muted}
-        preload="auto"
+        preload={isActive ? "auto" : "none"}
       />
 
       {/* Bottom gradient so text is always readable */}
