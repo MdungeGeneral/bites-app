@@ -1,43 +1,33 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
+import { Redis } from "@upstash/redis";
 
 export const dynamic = "force-dynamic";
 
-const DATA_FILE = path.join(process.cwd(), "data", "reactions.json");
+const redis = Redis.fromEnv();
 
-type Counts    = { likes: number; dislikes: number };
-type Reactions = Record<string, Counts>;
+const HASH_KEY = "bites:reactions";
 
-function read(): Reactions {
-  try {
-    if (!fs.existsSync(DATA_FILE)) return {};
-    return JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
-  } catch {
-    return {};
-  }
-}
+type Counts = { likes: number; dislikes: number };
 
-function write(data: Reactions): void {
-  const dir = path.dirname(DATA_FILE);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), "utf-8");
+async function getCounts(videoId: string): Promise<Counts> {
+  const raw = await redis.hget<Counts>(HASH_KEY, videoId);
+  return raw ?? { likes: 0, dislikes: 0 };
 }
 
 /** GET /api/reactions           — returns all counts
  *  GET /api/reactions?id=<md5>  — returns counts for one video */
 export async function GET(req: NextRequest) {
   const id = req.nextUrl.searchParams.get("id");
-  const reactions = read();
 
   if (id) {
     if (!/^[0-9a-f]{32}$/i.test(id)) {
       return NextResponse.json({ error: "Invalid id" }, { status: 400 });
     }
-    return NextResponse.json(reactions[id] ?? { likes: 0, dislikes: 0 });
+    return NextResponse.json(await getCounts(id));
   }
 
-  return NextResponse.json(reactions);
+  const all = await redis.hgetall<Record<string, Counts>>(HASH_KEY);
+  return NextResponse.json(all ?? {});
 }
 
 /** POST /api/reactions
@@ -61,17 +51,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid action" }, { status: 400 });
   }
 
-  const reactions = read();
-  if (!reactions[videoId]) reactions[videoId] = { likes: 0, dislikes: 0 };
-  const r = reactions[videoId];
+  const counts = await getCounts(videoId);
 
   switch (action) {
-    case "like":           r.likes    = r.likes    + 1;              break;
-    case "dislike":        r.dislikes = r.dislikes + 1;              break;
-    case "remove-like":    r.likes    = Math.max(0, r.likes    - 1); break;
-    case "remove-dislike": r.dislikes = Math.max(0, r.dislikes - 1); break;
+    case "like":           counts.likes    = counts.likes    + 1;              break;
+    case "dislike":        counts.dislikes = counts.dislikes + 1;              break;
+    case "remove-like":    counts.likes    = Math.max(0, counts.likes    - 1); break;
+    case "remove-dislike": counts.dislikes = Math.max(0, counts.dislikes - 1); break;
   }
 
-  write(reactions);
-  return NextResponse.json(r);
+  await redis.hset(HASH_KEY, { [videoId]: counts });
+  return NextResponse.json(counts);
 }
