@@ -97,11 +97,18 @@ def upload_file(s3, bucket: str, topic: str, video_path: Path, existing_keys: se
     if r2_key is None:
         r2_key = f"{topic}/{video_path.name}"
 
-    if r2_key in existing_keys and not overwrite:
-        print(f"  SKIP (already in R2): {r2_key}")
-        return "skipped"
+    # Check if file already exists in R2
+    if r2_key in existing_keys:
+        if not overwrite:
+            size_mb = video_path.stat().st_size / (1024 * 1024)
+            print(f"  SKIP (exists in R2, {size_mb:.1f} MB): {video_path.name}")
+            return "skipped"
+        else:
+            # Overwrite mode: still upload but indicate it's being replaced
+            print(f"  Overwriting in R2: {r2_key} …", end=" ", flush=True)
+    else:
+        print(f"  Uploading to R2: {r2_key} …", end=" ", flush=True)
 
-    print(f"  Uploading {r2_key} …", end=" ", flush=True)
     s3.upload_file(
         str(video_path),
         bucket,
@@ -171,4 +178,3 @@ if __name__ == "__main__":
         print('  Sync folder:  python scripts/upload_to_r2.py "public/videos/My topic" [--w]')
         print("  Single file:  python scripts/upload_to_r2.py <topic-name> <video-file> [--w]")
         sys.exit(1)
-
