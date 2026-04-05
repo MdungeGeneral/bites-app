@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid videoId" }, { status: 400 });
   }
 
-  const validActions = new Set(["like", "dislike", "remove-like", "remove-dislike"]);
+  const validActions = new Set(["like", "dislike", "remove-like", "remove-dislike", "reset-dislikes"]);
   if (!action || !validActions.has(action)) {
     return NextResponse.json({ error: "Invalid action" }, { status: 400 });
   }
@@ -58,6 +58,7 @@ export async function POST(req: NextRequest) {
     case "dislike":        counts.dislikes = counts.dislikes + 1;              break;
     case "remove-like":    counts.likes    = Math.max(0, counts.likes    - 1); break;
     case "remove-dislike": counts.dislikes = Math.max(0, counts.dislikes - 1); break;
+    case "reset-dislikes": counts.dislikes = 0;                                break;
   }
 
   await redis.hset(HASH_KEY, { [videoId]: counts });
