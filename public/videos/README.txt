@@ -15,5 +15,6 @@ refresh the page.
 
 For production, upload files to your Cloudflare R2 bucket at:
   r2://<bucket>/<topic-name>/<video-name>.mp4
-and run: python scripts/upload_to_r2.py <topic-name> <video-file.mp4>
-or run:  python scripts/upload_to_r2.py "public\videos\<topic folder name>"
+Use the upload script in the ShortVideoCreation repo:
+  python upload_to_r2.py <topic-name> <video-file.mp4>
+  python upload_to_r2.py "path\to\topic folder"
