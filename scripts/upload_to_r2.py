@@ -30,6 +30,7 @@ Credentials — set in .env.local:
 
 import os
 import sys
+import hashlib
 from pathlib import Path
 
 SUPPORTED_EXT = {".mp4", ".webm", ".mov"}
@@ -75,36 +76,53 @@ def make_s3_client():
     )
 
 
-def get_existing_keys(s3, bucket: str, topic: str) -> set:
-    """Return the set of R2 keys already in this topic folder."""
+def get_existing_objects(s3, bucket: str, topic: str) -> dict[str, str]:
+    """Return a mapping of {r2_key: etag} for all objects under *topic*/."""
     from botocore.exceptions import ClientError  # type: ignore
-    keys = set()
+    objects: dict[str, str] = {}
     try:
         paginator = s3.get_paginator("list_objects_v2")
         for page in paginator.paginate(Bucket=bucket, Prefix=f"{topic}/"):
             for obj in page.get("Contents", []):
-                keys.add(obj["Key"])
+                # ETags are quoted strings in S3/R2 — strip the quotes
+                objects[obj["Key"]] = obj["ETag"].strip('"')
     except ClientError:
         pass
-    return keys
+    return objects
 
 
-def upload_file(s3, bucket: str, topic: str, video_path: Path, existing_keys: set, overwrite: bool = False, r2_key: str | None = None) -> str:
-    """Upload a file. Returns 'uploaded', 'skipped', or 'error'."""
+def _md5(path: Path) -> str:
+    """Return the hex MD5 of a local file."""
+    h = hashlib.md5()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(8 * 1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def upload_file(s3, bucket: str, topic: str, video_path: Path, existing_objects: dict[str, str], overwrite: bool = False, r2_key: str | None = None) -> str:
+    """Upload a file. Returns 'uploaded', 'skipped', or 'error'.
+
+    Re-uploads if the local MD5 differs from the R2 ETag even without --w,
+    so regenerated videos are always kept in sync.
+    """
     if video_path.suffix.lower() not in SUPPORTED_EXT:
         return "skipped"
 
     if r2_key is None:
         r2_key = f"{topic}/{video_path.name}"
 
-    # Check if file already exists in R2
-    if r2_key in existing_keys:
+    if r2_key in existing_objects:
         if not overwrite:
-            size_mb = video_path.stat().st_size / (1024 * 1024)
-            print(f"  SKIP (exists in R2, {size_mb:.1f} MB): {video_path.name}")
-            return "skipped"
+            local_md5 = _md5(video_path)
+            remote_etag = existing_objects[r2_key]
+            if local_md5 == remote_etag:
+                size_mb = video_path.stat().st_size / (1024 * 1024)
+                print(f"  SKIP (up-to-date, {size_mb:.1f} MB): {r2_key}")
+                return "skipped"
+            else:
+                print(f"  Re-uploading (content changed): {r2_key} …", end=" ", flush=True)
         else:
-            # Overwrite mode: still upload but indicate it's being replaced
             print(f"  Overwriting in R2: {r2_key} …", end=" ", flush=True)
     else:
         print(f"  Uploading to R2: {r2_key} …", end=" ", flush=True)
@@ -141,8 +159,8 @@ if __name__ == "__main__":
             print("ERROR: R2_BUCKET_NAME missing from .env.local")
             sys.exit(1)
         s3 = make_s3_client()
-        print(f"Syncing {len(files)} file(s) → topic '{topic}' {'(overwrite on)' if overwrite else ''}…")
-        existing = get_existing_keys(s3, bucket, topic)
+        print(f"Syncing {len(files)} file(s) → topic '{topic}' {'(overwrite on)' if overwrite else '(MD5 check)'}…")
+        existing = get_existing_objects(s3, bucket, topic)
         results = [
             upload_file(
                 s3, bucket, topic, f, existing, overwrite,
@@ -166,7 +184,7 @@ if __name__ == "__main__":
             print("ERROR: R2_BUCKET_NAME missing from .env.local")
             sys.exit(1)
         s3 = make_s3_client()
-        existing = get_existing_keys(s3, bucket, topic)
+        existing = get_existing_objects(s3, bucket, topic)
         result = upload_file(s3, bucket, topic, video_path, existing, overwrite)
         print()  # blank line for readability
         if result == "uploaded":
