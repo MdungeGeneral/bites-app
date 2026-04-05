@@ -150,7 +150,12 @@ if __name__ == "__main__":
             print("       python scripts/upload_to_r2.py <topic-name> <video-file>")
             sys.exit(1)
         topic = folder.name
-        files = sorted(f for f in folder.rglob("*") if f.suffix.lower() in SUPPORTED_EXT)
+        files = sorted(
+            f for f in folder.rglob("*")
+            if f.suffix.lower() in SUPPORTED_EXT
+            # Skip individual render segments left behind by video_assembler.py
+            and not any(part.endswith("_segments") for part in f.parts)
+        )
         if not files:
             print(f"No supported video files found in {folder} (searched recursively)")
             sys.exit(0)
