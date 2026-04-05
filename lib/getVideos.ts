@@ -6,6 +6,7 @@ import { unstable_cache } from "next/cache";
 
 export interface Video {
   id: string;
+  key: string;   // raw object key, e.g. "Life Insurance Concepts/some-file.mp4"
   url: string;
   notebook: string;
   title: string;
@@ -51,8 +52,10 @@ function getVideosFromDisk(): Video[] {
         .replace(/[-_]/g, " ")
         .replace(/\b\w/g, (c) => c.toUpperCase());
 
+      const key = `${chapter}/${file}`;
       videos.push({
-        id: crypto.createHash("md5").update(`${chapter}/${file}`).digest("hex"),
+        id: crypto.createHash("md5").update(key).digest("hex"),
+        key,
         url: `/videos/${chapter}/${encodeURIComponent(file)}`,
         notebook: chapter,
         title,
@@ -104,6 +107,7 @@ async function getVideosFromR2(): Promise<Video[]> {
 
       videos.push({
         id: crypto.createHash("md5").update(key).digest("hex"),
+        key,
         url: `${publicUrl}/${encodeURIComponent(chapter)}/${encodeURIComponent(file)}`,
         notebook: chapter,
         title,
