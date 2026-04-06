@@ -1,15 +1,17 @@
 import Flashcard from "../components/Flashcard";
-import fs from "fs";
 import path from "path";
+import { promises as fs } from "fs";
 
-async function getFlashcards(): Promise<{ question: string; answer: string }[]> {
+export async function getServerSideProps() {
+  // Load the flashcards file dynamically
   const filePath = path.join(process.cwd(), "public", "flashcards", "Chapter 1-Life insurance products.json");
-  const data = fs.readFileSync(filePath, "utf-8");
-  return JSON.parse(data);
+  const data = await fs.readFile(filePath, "utf-8");
+  const flashcards = JSON.parse(data);
+
+  return { props: { flashcards } };
 }
 
-export default async function FlashcardExample() {
-  const flashcards = await getFlashcards();
+export default function FlashcardExample({ flashcards }: { flashcards: { question: string; answer: string }[] }) {
   const firstFlashcard = flashcards[0];
 
   return (
