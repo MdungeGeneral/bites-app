@@ -1,22 +1,28 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Flashcard from "../components/Flashcard";
-import path from "path";
-import { promises as fs } from "fs";
 
-export async function getServerSideProps() {
-  // Load the flashcards file dynamically
-  const filePath = path.join(process.cwd(), "public", "flashcards", "Chapter 1-Life insurance products.json");
-  const data = await fs.readFile(filePath, "utf-8");
-  const flashcards = JSON.parse(data);
+export default function FlashcardExample() {
+  const [flashcard, setFlashcard] = useState<{ question: string; answer: string } | null>(null);
 
-  return { props: { flashcards } };
-}
+  useEffect(() => {
+    async function fetchFlashcards() {
+      const response = await fetch("/flashcards/Chapter 1-Life insurance products.json");
+      const data = await response.json();
+      setFlashcard(data[0]);
+    }
 
-export default function FlashcardExample({ flashcards }: { flashcards: { question: string; answer: string }[] }) {
-  const firstFlashcard = flashcards[0];
+    fetchFlashcards();
+  }, []);
+
+  if (!flashcard) {
+    return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 text-black">
-      <Flashcard front={firstFlashcard.question} back={firstFlashcard.answer} />
+      <Flashcard front={flashcard.question} back={flashcard.answer} />
     </div>
   );
 }
