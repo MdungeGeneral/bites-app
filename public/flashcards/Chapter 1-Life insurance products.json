@@ -1,30 +1,30 @@
 [
     {
-        "question": "Q",
+        "question": "Define anti-selection",
+        "answer": "As a formula"
+    },
+    {
+        "question": "Describe an endowment contract (6, 5 additional sub points)",
         "answer": "Anti-selection refers to people being more likely to take out insurance when they believe their risk is higher than insurance company has allowed for in its premiums."
     },
     {
-        "question": "Q",
+        "question": "Describe the forms under which endowment assurances can be written",
         "answer": "A"
     },
     {
-        "question": "Q",
+        "question": "State 3 examples of how the death benefit on a unit-linked endowment assurance may be expressed.",
         "answer": "A"
     },
     {
-        "question": "Q",
+        "question": "Discuss the risks to an insurance company that arise from endowment assurances",
         "answer": "All 3 versions commonly found in practice, as used to meet different needs."
     },
     {
-        "question": "Q",
+        "question": "State reasons why anti-selection risk for group endowment assurance may be lower than for individual contracts",
         "answer": "Anti-selection"
     },
     {
-        "question": "Q",
-        "answer": "A"
-    },
-    {
-        "question": "Q",
+        "question": "Discuss the capital requirements related to insurers who write endowment assurance",
         "answer": "A"
     }
 ]
