@@ -86,11 +86,21 @@ export default async function WatchPage({ params, searchParams }: Props) {
   }
 
   // Helper: pick a random flashcard (fetch file and choose a random card)
-  async function pickRandomFlashcard() {
+  async function pickRandomFlashcard(prefer?: string) {
     if (!flashcardFiles.length) return null;
-    const choice = flashcardFiles[Math.floor(Math.random() * flashcardFiles.length)];
+    // If a preferred substring is given, try to find a file that matches it first
+    let choices = flashcardFiles;
+    if (prefer) {
+      const pref = prefer.toLowerCase();
+      const filtered = flashcardFiles.filter((f) => f.name.toLowerCase().includes(pref) || f.url.toLowerCase().includes(pref));
+      if (filtered.length) choices = filtered;
+    }
+
+    const choice = choices[Math.floor(Math.random() * choices.length)];
     try {
-      const url = choice.url.startsWith('http') ? choice.url : `${R2_PUBLIC_URL.replace(/\/$/, '')}${choice.url.startsWith('/') ? '' : '/'}${choice.url}`;
+      const base = R2_PUBLIC_URL ? R2_PUBLIC_URL.replace(/\/$/, '') : '';
+      const pathPart = choice.url.startsWith('http') ? choice.url : `${choice.url.replace(/^\/+/, '')}`;
+      const url = choice.url.startsWith('http') ? choice.url : `${base}/${pathPart}`;
       const res = await fetch(url);
       if (!res.ok) throw new Error('fetch failed');
       const arr = await res.json();
@@ -109,8 +119,19 @@ export default async function WatchPage({ params, searchParams }: Props) {
     playlist.push({ type: 'video', video: v });
     // 50% chance to insert a flashcard after this video
     if (Math.random() < 0.5 && flashcardFiles.length) {
-      const card = await pickRandomFlashcard();
+      const card = await pickRandomFlashcard(v.notebook || undefined);
       if (card) playlist.push(card);
+    }
+  }
+
+  // Ensure at least one flashcard present if flashcard files exist
+  if (flashcardFiles.length > 0 && !playlist.some((it) => it.type === 'flashcard')) {
+    const guaranteed = await pickRandomFlashcard();
+    if (guaranteed) {
+      // insert after a random video position
+      const videoPositions = playlist.map((it, idx) => ({ it, idx })).filter((x) => x.it.type === 'video').map((x) => x.idx);
+      const insertAfter = videoPositions.length ? videoPositions[Math.floor(Math.random() * videoPositions.length)] : playlist.length - 1;
+      playlist.splice(insertAfter + 1, 0, guaranteed);
     }
   }
 
