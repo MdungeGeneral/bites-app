@@ -1,0 +1,34 @@
+#!/bin/sh
+# Pre-push hook: ensure project builds before allowing a push.
+# To skip this hook set SKIP_BUILD_HOOK=1 in the environment for the push.
+set -e
+
+if [ "$SKIP_BUILD_HOOK" = "1" ]; then
+  echo "SKIP_BUILD_HOOK=1 set — skipping pre-push build check."
+  exit 0
+fi
+
+if ! command -v npm >/dev/null 2>&1; then
+  echo "npm not found in PATH — cannot run build. Install Node.js/npm or set SKIP_BUILD_HOOK=1 to bypass (not recommended)."
+  exit 1
+fi
+
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || echo .)"
+cd "$REPO_ROOT" || exit 1
+
+# Only run npm ci if node_modules is missing
+if [ ! -d node_modules ]; then
+  echo "node_modules not found — running npm ci (this may take a while)..."
+  npm ci --no-audit --prefer-offline || { echo "npm ci failed"; exit 1; }
+else
+  echo "node_modules present — skipping npm ci."
+fi
+
+echo "Running npm run build..."
+if npm run build --silent; then
+  echo "Build succeeded — proceeding with push."
+  exit 0
+else
+  echo "Build failed — aborting push. Fix build errors and try again."
+  exit 1
+fi
