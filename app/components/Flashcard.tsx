@@ -15,7 +15,7 @@ export default function Flashcard({ front, back }: FlashcardProps) {
         <h2 className="text-4xl sm:text-5xl font-bold leading-snug">{front}</h2>
       </header>
 
-      <section className="text-4xl sm:text-5xl leading-snug whitespace-pre-wrap break-words overflow-auto flex-1">
+      <section className="text-4xl sm:text-5xl leading-snug whitespace-pre-wrap break-words">
         {back}
       </section>
     </article>
