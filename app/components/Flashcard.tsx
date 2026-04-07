@@ -31,9 +31,13 @@ export default function Flashcard({ front, back }: FlashcardProps) {
     const flushList = () => {
       if (listItems.length) {
         elements.push(
-          <ul key={`list-${idx}-${elements.length}`} className="list-disc ml-6 mb-6 space-y-2">
+          <ul
+            key={`list-${idx}-${elements.length}`}
+            className="ml-6 mb-6 space-y-2"
+            style={{ listStyleType: 'disc', marginLeft: '1.5rem' }}
+          >
             {listItems.map((li, i) => (
-              <li key={i} className="leading-relaxed text-2xl sm:text-3xl">
+              <li key={i} className="leading-relaxed text-2xl sm:text-3xl" style={{ display: 'list-item' }}>
                 {li}
               </li>
             ))}
