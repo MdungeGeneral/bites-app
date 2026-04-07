@@ -1,30 +1,34 @@
 [
     {
+        "question": "Define new business strain, both in words and as a formula.",
+        "answer": "In words: New business strain arises when premium paid at start of contract, less initial expenses including any commission payments, is not sufficient to cover supervisory reserves and required solvency capital that company needs to set up at that point. As a formula: NUB=V_0 + E_0- P_0"
+    },
+    {
         "question": "Define anti-selection",
-        "answer": "As a formula NUB=V_0 + E_0- P_0"
+        "answer": "Anti-selection refers to people being more likely to take out insurance when they believe their risk is higher than insurance company has allowed for in its premiums. Can also arise where existing policyholders have opportunity to exercise guarantee or option. Those who have most to gain from guarantee or option will be most likely to exercise it."
     },
     {
         "question": "Describe an endowment contract (6, 5 additional sub points)",
-        "answer": "Anti-selection refers to people being more likely to take out insurance when they believe their risk is higher than insurance company has allowed for in its premiums."
+        "answer": "Pays benefit on survival to known date (savings need) retirement lump sum, repay capital on interest only loan May also pay death benefit during term (protection need) Can be used to transfer wealth e.g nominate child beneficiary Normally has surrender value. Usually increases over time Depends on contract design Not necessarily related to sum assured Can have a paid up value too Group version exists e. g. by employers as part of remuneration package e. g. retirement benefits, or death-in-service benefit"
     },
     {
         "question": "Describe the forms under which endowment assurances can be written",
-        "answer": "A Pays benefit on survival to known date"
+        "answer": "In all cases, product can be paid for either with single premium or regular premiums. Without-profits Benefit is a guaranteed sum assured typically paid on survival, can be death benefit added With-profits benefit increases over time with bonuses declared by insurer Unit-linked premiums pooled into collective investment fund benefit depends on investment performance and fees Benefit is versatile, can be fixed sum assured value of units some % of value of units Surrender value based on unit value may be reduce by some surrender penalty by insurer"
     },
     {
-        "question": "State 3 examples of how the death benefit on a unit-linked endowment assurance may be expressed.",
-        "answer": "A In all cases, product can be paid for either with single premium or regular premiums."
+        "question": "State 3 examples of how the death benefit on a unit-linked endowment assurance may be expressed. Also, explain the needs each option satisfies.",
+        "answer": "Fixed monetary amount Bid value of units Percentage (e.g. 120%) of Bid value of units. If (1) is chosen, with very high sum assured (relative to premium), then policy can be almost entirely protection. With (2) or (3), emphasis would be on savings. All 3 versions commonly found in practice, as used to meet different needs."
     },
     {
         "question": "Discuss the risks to an insurance company that arise from endowment assurances",
-        "answer": "All 3 versions commonly found in practice, as used to meet different needs."
+        "answer": "Investment risk depends on contract design/form greatest for without-profits contracts, lower for with-profits contracts, lowest for unit-linked contracts Mortality risk depends on level/nature of death benefit big death benefit: high at start, reduces with duration IF Withdrawal risk (persistency) depending on withdrawal value compared with asset share Expense risk Marginal costs (e.g. administration), fixed costs (e.g salaries) Risks arise because of inflation inability of management to control expenses lower than expected sales Anti-selection policyholder choice to take out contract based on own knowledge of health Concentration of risk particularly for group contracts e.g. multiple deaths of people in same residential area due to catastrophe"
     },
     {
         "question": "State reasons why anti-selection risk for group endowment assurance may be lower than for individual contracts",
-        "answer": "Anti-selection policyholder choice to take out contract based on own knowledge of health"
+        "answer": "compulsory membership requirement restrictions on level of cover per member (salary related)"
     },
     {
         "question": "Discuss the capital requirements related to insurers who write endowment assurance",
-        "answer": "A compulsory membership requirement"
+        "answer": "Frequency of premium payments (more upfront = less capital intensive) Initial expenses higher initial expenses increase capital requirement if premium doesn’t increase Solvency capital requirements need assets to cover supervisory and required solvency capital Contract design whether contract design allows reserves/solvency margin to remain low Reserving basis (level of prudence) reserving basis stronger, requires more capital than would be required under pricing basis"
     }
 ]
