@@ -18,7 +18,13 @@ export default function Flashcard({ front, back }: FlashcardProps) {
     : [];
 
   const renderParagraph = (p: string, idx: number) => {
-    const lines = p.split(/\n/).map((l) => l.trim());
+    // Normalize the paragraph so that '+' or '-' markers are on their own lines
+    // Handle cases where '+' appears mid-line (e.g. "... +item ...") or with a backslash ("\+item")
+    let normalized = p.replace(/\\\+/g, '+'); // convert literal "\+" to "+"
+    normalized = normalized.replace(/\s\+/g, '\n+'); // convert " space+" to newline+ so it becomes a list item
+    normalized = normalized.replace(/\s\-/g, '\n-'); // same for dash bullets
+
+    const lines = normalized.split(/\n/).map((l) => l.trim()).filter(Boolean);
     const elements: any[] = [];
     let listItems: string[] = [];
 
@@ -38,10 +44,10 @@ export default function Flashcard({ front, back }: FlashcardProps) {
     };
 
     for (const line of lines) {
-      if (line.startsWith("+")) {
-        listItems.push(line.replace(/^\+/, "").trim());
-      } else if (line.startsWith("-")) {
-        listItems.push(line.replace(/^-/, "").trim());
+      if (line.startsWith('+')) {
+        listItems.push(line.replace(/^\+/, '').trim());
+      } else if (line.startsWith('-')) {
+        listItems.push(line.replace(/^-/, '').trim());
       } else {
         flushList();
         elements.push(
