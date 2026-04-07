@@ -2,6 +2,14 @@
 
 import Link from "next/link";
 import { useRef, useEffect, useState } from "react";
+
+type NotebookItem = {
+  slug: string;
+  label: string;
+  videoCount: number;
+  firstVideoUrl: string | null;
+  cardCount?: number;
+};;
 import { useRouter } from "next/navigation";
 import type { Notebook } from "@/lib/getVideos";
 
@@ -115,6 +123,48 @@ function NotebookCard({ notebook }: { notebook: Notebook }) {
 }
 
 export default function HomeGrid({ notebooks }: { notebooks: Notebook[] }) {
+  const [cardCounts, setCardCounts] = useState<Record<string, number>>({});
+
+  useEffect(() => {
+    let mounted = true;
+    async function loadIndex() {
+      try {
+        const res = await fetch('/api/flashcards/index');
+        if (!res.ok) return;
+        const data = await res.json();
+        const items: { name: string; url: string; count: number }[] = data.items || [];
+
+        // normalize helper
+        const normalize = (s: string) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+
+        const counts: Record<string, number> = {};
+        for (const nb of notebooks) {
+          const slugNorm = normalize(nb.slug);
+          let total = 0;
+          for (const it of items) {
+            const nameNorm = normalize(it.name);
+            // match by normalized substring or shared word
+            if (!nameNorm || !slugNorm) continue;
+            let matched = false;
+            if (nameNorm.includes(slugNorm) || slugNorm.includes(nameNorm)) matched = true;
+            else {
+              const nameWords = new Set((it.name || '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+              const slugWords = new Set((nb.slug || '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+              for (const w of nameWords) if (slugWords.has(w)) { matched = true; break; }
+            }
+            if (matched) total += Number(it.count || 0);
+          }
+          counts[nb.slug] = total;
+        }
+
+        if (mounted) setCardCounts(counts);
+      } catch (e) {
+        // ignore
+      }
+    }
+    loadIndex();
+    return () => { mounted = false; };
+  }, [notebooks]);
 
   return (
     <div className="min-h-screen bg-black text-white">
