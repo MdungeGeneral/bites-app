@@ -1,7 +1,7 @@
 [
     {
         "question": "Define anti-selection",
-        "answer": "As a formula"
+        "answer": "As a formula NUB=V_0 + E_0- P_0"
     },
     {
         "question": "Describe an endowment contract (6, 5 additional sub points)",
@@ -9,11 +9,11 @@
     },
     {
         "question": "Describe the forms under which endowment assurances can be written",
-        "answer": "A"
+        "answer": "A Pays benefit on survival to known date"
     },
     {
         "question": "State 3 examples of how the death benefit on a unit-linked endowment assurance may be expressed.",
-        "answer": "A"
+        "answer": "A In all cases, product can be paid for either with single premium or regular premiums."
     },
     {
         "question": "Discuss the risks to an insurance company that arise from endowment assurances",
@@ -21,10 +21,10 @@
     },
     {
         "question": "State reasons why anti-selection risk for group endowment assurance may be lower than for individual contracts",
-        "answer": "Anti-selection"
+        "answer": "Anti-selection policyholder choice to take out contract based on own knowledge of health"
     },
     {
         "question": "Discuss the capital requirements related to insurers who write endowment assurance",
-        "answer": "A"
+        "answer": "A compulsory membership requirement"
     }
 ]

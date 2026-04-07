@@ -1,11 +1,11 @@
 [
     {
         "question": "What forms (structural basis) may be used to write immediate annuity business (4)",
-        "answer": "A"
+        "answer": "A Pays regular benefit, provided insured alive at time of payment"
     },
     {
         "question": "State key risks to an insurance company that arise from immediate annuities",
-        "answer": "A"
+        "answer": "A Without-profits"
     },
     {
         "question": "Comment on the capital requirements surrounding immediate annuities",
@@ -13,10 +13,10 @@
     },
     {
         "question": "Describe in detail the core structure of a deferred annuity contract",
-        "answer": "A"
+        "answer": "A Depends on relationship between reserving/pricing basis"
     },
     {
         "question": "State the risks to an insurance company that arise from deferred annuities",
-        "answer": "Annuity choices as for immediate annuity i.e"
+        "answer": "Annuity choices as for immediate annuity i.e advance/arrears single/joint level/variable guarantee period less flexible than endowment assurance (savings vehicle) with immediate annuity starting at maturity date"
     }
 ]

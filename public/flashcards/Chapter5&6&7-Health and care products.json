@@ -1,23 +1,23 @@
 [
     {
         "question": "List the key features of an IP contract",
-        "answer": "A"
+        "answer": "A Main needs"
     },
     {
         "question": "What kind of product variations are possible on IP contracts in terms of guarantees/reviewability of premiums?",
-        "answer": "A"
+        "answer": "A Replaces income +would\u2019ve earned if becomes unable to work due to accident/illness +temporary annuity continuing until insured recovers/dies/annuity term ends, whichever comes first"
     },
     {
         "question": "What options may we find with respect to benefits/premiums on IP contracts in terms of escalation?",
-        "answer": "A"
+        "answer": "A Guaranteed/renewable premium rates"
     },
     {
         "question": "What are some important points to bear in mind when setting claims definitions for IP contracts?",
-        "answer": "A"
+        "answer": "A +May be subject to a cap"
     },
     {
         "question": "What kind of claims definitions do we have for IP contracts?",
-        "answer": "A"
+        "answer": "A Claim definitions"
     },
     {
         "question": "What kind of benefit definitions might exist for IP contracts?",
@@ -25,11 +25,11 @@
     },
     {
         "question": "What is over-insurance in the context of IP contracts , and how might it arise?",
-        "answer": "A"
+        "answer": "A Replacement ratio (level of post-claim income to pre-claim income, net of taxes in both cases)"
     },
     {
         "question": "How do we address over insurance in the context of IP contracts?",
-        "answer": "A"
+        "answer": "A When benefit is more than is needed e.g. a higher than appropriate replacement ratio"
     },
     {
         "question": "Other policy definitions on IP contracts:",
@@ -37,22 +37,22 @@
     },
     {
         "question": "Deferred period definition and characteristics",
-        "answer": "A"
+        "answer": "A +specified period after policy start during which benefits won\u2019t be paid +reduce potential for anti-selection +Uncommon now as anti-selection can be reduced through underwriting"
     },
     {
         "question": "Linked claims period",
-        "answer": "A"
+        "answer": "A Deferred period"
     },
     {
         "question": "Expiry age/term",
-        "answer": "A"
+        "answer": "A Waive deferred period if same sickness recurs within certain amount of time e.g. 26, or 52 weeks since last claim to encourage return to work"
     },
     {
         "question": "Briefly discuss group IP contracts (General)",
-        "answer": "A"
+        "answer": "A +age at which benefits cease; often same as normal retirement age +The term could also be fixed duration +shorter premium paying period than policy term"
     },
     {
         "question": "Briefly discuss group IP contracts (Benefits)",
-        "answer": "A"
+        "answer": "A +legal obligation eg some countries sick pay during first 2 weeks if sick"
     }
 ]
