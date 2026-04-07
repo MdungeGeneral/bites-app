@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Flashcard from "./Flashcard";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper/modules";
@@ -178,11 +179,16 @@ function VideoSlide({
 
 export default function ShortsPlayer({
   videos,
+  playlist,
   notebookLabel,
 }: {
   videos: Video[];
+  playlist?: any[];
   notebookLabel?: string;
 }) {
+  // Build unified items list: if server provided a playlist, use it; otherwise wrap the videos
+  const items = Array.isArray(playlist) && playlist.length ? playlist : (Array.isArray(videos) ? videos.map((v: any) => ({ type: 'video', video: v })) : []);
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [muted, setMuted] = useState(false);
   const [blockedByBrowser, setBlockedByBrowser] = useState(false);
@@ -263,9 +269,13 @@ export default function ShortsPlayer({
   // Reset paused state when the slide changes
   useEffect(() => {
     setPaused(false);
-    const active = videos[activeIndex];
-    if (active) activeVideoRef.current = videoRefs.current.get(active.id) ?? null;
-  }, [activeIndex, videos]);
+    const activeItem = items[activeIndex];
+    if (activeItem && activeItem.type === 'video') {
+      activeVideoRef.current = videoRefs.current.get(activeItem.video.id) ?? null;
+    } else {
+      activeVideoRef.current = null;
+    }
+  }, [activeIndex, items]);
 
   // Tap anywhere: if browser blocked sound → unmute; otherwise toggle play/pause
   const handleTap = useCallback(() => {
@@ -325,18 +335,24 @@ export default function ShortsPlayer({
           setActiveIndex(swiper.realIndex);
         }}
       >
-        {videos.map((video, index) => (
-          <SwiperSlide key={video.id}>
-            <VideoSlide
-              video={video}
-              isActive={index === activeIndex}
-              muted={muted}
-              registerRef={registerRef(video.id)}
-              onBlock={() => { setMuted(true); setBlockedByBrowser(true); }}
-              counts={reactionCounts[video.id] ?? { likes: 0, dislikes: 0 }}
-              userReaction={userReactions[video.id] ?? null}
-              onReact={(action) => handleReact(video.id, action)}
-            />
+        {items.map((item: any, index: number) => (
+          <SwiperSlide key={index}>
+            {item.type === 'video' ? (
+              <VideoSlide
+                video={item.video}
+                isActive={index === activeIndex}
+                muted={muted}
+                registerRef={registerRef(item.video.id)}
+                onBlock={() => { setMuted(true); setBlockedByBrowser(true); }}
+                counts={reactionCounts[item.video.id] ?? { likes: 0, dislikes: 0 }}
+                userReaction={userReactions[item.video.id] ?? null}
+                onReact={(action: string) => handleReact(item.video.id, action)}
+              />
+            ) : (
+              <div onClick={(e) => e.stopPropagation()} className="h-full w-full flex items-center justify-center">
+                <Flashcard key={index} front={item.question} back={item.answer} />
+              </div>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>
@@ -371,7 +387,7 @@ export default function ShortsPlayer({
           <span className="text-white font-bold text-sm truncate flex-1">{notebookLabel}</span>
         )}
         <span className="bg-black/40 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full shrink-0">
-          {activeIndex + 1} / {videos.length}
+          {activeIndex + 1} / {items.length}
         </span>
       </div>
 
@@ -396,7 +412,7 @@ export default function ShortsPlayer({
       )}
 
       {/* ── Swipe hint ── */}
-      {videos.length > 1 && (
+      {items.length > 1 && (
         <div className="absolute bottom-10 inset-x-0 flex justify-center z-50 pointer-events-none">
           <span className="text-white/40 text-xs">Swipe up for next</span>
         </div>
