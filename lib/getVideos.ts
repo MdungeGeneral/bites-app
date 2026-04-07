@@ -17,6 +17,7 @@ export interface Notebook {
   label: string;
   videoCount: number;
   firstVideoUrl: string | null;
+  cardCount?: number; // number of flashcards available for this notebook
 }
 
 const SUPPORTED_EXT = new Set([".mp4", ".webm", ".mov"]);
@@ -151,12 +152,105 @@ export async function getNotebooks(): Promise<Notebook[]> {
     map.get(v.notebook)!.push(v);
   }
 
-  return [...map.entries()].map(([slug, vids]) => ({
+  const notebooks = [...map.entries()].map(([slug, vids]) => ({
     slug,
     label: slug.replace(/[-_]/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
     videoCount: vids.length,
     // Pick a random video as the thumbnail so each page load shows a different one
     firstVideoUrl: vids[Math.floor(Math.random() * vids.length)]?.url ?? null,
+    cardCount: 0,
   }));
+
+  // Attempt to count flashcards for each notebook. Prefer R2 index when available, fall back to local public/flashcards
+  try {
+    const publicDir = path.join(process.cwd(), 'public', 'flashcards');
+    if (process.env.R2_PUBLIC_URL) {
+      // R2: fetch index.json which can be either { filename: url } or { topic: [{name,url}, ...] }
+      const indexUrl = `${process.env.R2_PUBLIC_URL.replace(/\/$/, '')}/flashcards/index.json`;
+      const res = await fetch(indexUrl);
+      if (res.ok) {
+        const idx = await res.json();
+        const entries: { name: string; url: string }[] = [];
+        if (idx && typeof idx === 'object') {
+          for (const k of Object.keys(idx)) {
+            const v = idx[k];
+            if (Array.isArray(v)) {
+              for (const it of v) {
+                if (it && it.name && it.url) entries.push({ name: it.name, url: it.url });
+              }
+            } else if (typeof v === 'string') {
+              // idx might be { filename: url }
+              entries.push({ name: k, url: v });
+            }
+          }
+        }
+
+        // For each notebook, find matching files and fetch counts
+        for (const nb of notebooks) {
+          const slugLower = nb.slug.toLowerCase();
+          let count = 0;
+          const candidates = entries.filter((e) => {
+            const nameLower = e.name.toLowerCase();
+            return (
+              nameLower.startsWith(slugLower) ||
+              slugLower.startsWith(nameLower) ||
+              nameLower.includes(slugLower) ||
+              slugLower.includes(nameLower)
+            );
+          });
+
+          for (const c of candidates) {
+            try {
+              const r = await fetch(c.url);
+              if (!r.ok) continue;
+              const arr = await r.json();
+              if (Array.isArray(arr)) count += arr.length;
+            } catch (e) {
+              // ignore
+            }
+          }
+
+          nb.cardCount = count;
+        }
+
+        return notebooks;
+      }
+    }
+
+    // Fallback: read local public/flashcards folder
+    if (fs.existsSync(publicDir)) {
+      const files = fs.readdirSync(publicDir).filter((f) => f.toLowerCase().endsWith('.json'));
+      const fileMap: { name: string; path: string }[] = files.map((f) => ({ name: f, path: path.join(publicDir, f) }));
+      for (const nb of notebooks) {
+        const slugLower = nb.slug.toLowerCase();
+        let count = 0;
+        const candidates = fileMap.filter((e) => {
+          const nameLower = e.name.toLowerCase();
+          return (
+            nameLower.startsWith(slugLower) ||
+            slugLower.startsWith(nameLower) ||
+            nameLower.includes(slugLower) ||
+            slugLower.includes(nameLower)
+          );
+        });
+        for (const c of candidates) {
+          try {
+            const content = fs.readFileSync(c.path, 'utf8');
+            const arr = JSON.parse(content);
+            if (Array.isArray(arr)) count += arr.length;
+          } catch (e) {
+            // ignore
+          }
+        }
+        nb.cardCount = count;
+      }
+    }
+  } catch (e) {
+    // don't fail listing videos if flashcards counting fails
+    console.warn('Failed to count flashcards per notebook', e);
+  }
+
+  return notebooks;
 }
+
 

@@ -101,6 +101,12 @@ function NotebookCard({ notebook }: { notebook: Notebook }) {
           </p>
           <p className="text-white/50 text-xs mt-0.5">
             {notebook.videoCount} {notebook.videoCount === 1 ? "bite" : "bites"}
+            {typeof notebook.cardCount === 'number' && notebook.cardCount > 0 && (
+              <>
+                {" \u00B7 "}
+                {notebook.cardCount} {notebook.cardCount === 1 ? 'card' : 'cards'}
+              </>
+            )}
           </p>
         </div>
       </div>
