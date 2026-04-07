@@ -12,26 +12,47 @@ export default function Flashcard({ front, back }: FlashcardProps) {
 
   return (
     <div
+      role="button"
+      aria-pressed={flipped}
       onClick={() => setFlipped(!flipped)}
-      className="relative w-72 h-48 bg-white text-black border rounded-xl shadow-md cursor-pointer transition-transform duration-500 hover:scale-105"
+      className="cursor-pointer"
+      style={{ perspective: 1000 }}
     >
-      {/* Card Content */}
       <div
-        className={`absolute inset-0 flex items-center justify-center p-4 text-lg font-semibold transform transition-transform duration-500 ${
-          flipped ? "rotate-y-180" : "rotate-y-0"
-        }`}
-        style={{ backfaceVisibility: "hidden" }}
+        className="relative w-80 sm:w-96 h-64"
+        style={{
+          transformStyle: "preserve-3d",
+          transition: "transform 0.6s",
+          transform: `rotateY(${flipped ? 180 : 0}deg)`,
+        }}
       >
-        {flipped ? back : front}
-      </div>
+        {/* Front Face */}
+        <div
+          className="absolute inset-0 bg-white text-black rounded-xl shadow-md p-4 flex flex-col overflow-auto text-sm leading-relaxed"
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            whiteSpace: "pre-wrap",
+            wordBreak: "break-word",
+          }}
+        >
+          <div className="w-full">{front}</div>
+        </div>
 
-      {/* Hidden backface */}
-      <div
-        className={`absolute inset-0 flex items-center justify-center p-4 text-lg font-semibold transform transition-transform duration-500 ${
-          flipped ? "rotate-y-0" : "rotate-y-180"
-        }`}
-        style={{ backfaceVisibility: "hidden" }}
-      />
+        {/* Back Face */}
+        <div
+          className="absolute inset-0 bg-gray-50 text-black rounded-xl shadow-md p-4 flex flex-col overflow-auto text-sm leading-relaxed"
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+            whiteSpace: "pre-wrap",
+            wordBreak: "break-word",
+          }}
+        >
+          <div className="w-full">{back}</div>
+        </div>
+      </div>
     </div>
   );
 }
