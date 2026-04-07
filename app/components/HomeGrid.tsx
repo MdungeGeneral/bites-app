@@ -131,20 +131,52 @@ export default function HomeGrid({ notebooks }: { notebooks: Notebook[] }) {
     let mounted = true;
     async function loadIndex() {
       try {
-        let items: { name: string; url: string; count: number }[] = [];
+        let items: { name: string; url: string; count?: number }[] = [];
 
-        // Try server-side index first
-        try {
-          const res = await fetch('/api/flashcards/index');
-          if (res.ok) {
-            const data = await res.json();
-            items = data.items || [];
+        const R2_PUBLIC_URL = (process.env.NEXT_PUBLIC_R2_PUBLIC_URL || '').replace(/\/$/, '');
+
+        // 1) If R2 public URL configured, try reading its index.json first
+        if (R2_PUBLIC_URL) {
+          try {
+            const r2res = await fetch(`${R2_PUBLIC_URL}/flashcards/index.json`);
+            if (r2res.ok) {
+              const r2data = await r2res.json();
+              // r2data may be { items: [...] } or { topic: [...] } or { filename: url }
+              if (Array.isArray(r2data.items)) {
+                items = r2data.items.map((it: any) => ({ name: it.name, url: it.url, count: Number(it.count || 0) }));
+              } else if (r2data && typeof r2data === 'object') {
+                for (const k of Object.keys(r2data)) {
+                  const v = r2data[k];
+                  if (Array.isArray(v)) {
+                    for (const it of v) {
+                      if (it && typeof it === 'object') items.push({ name: it.name || k, url: it.url || '', count: Number(it.count || 0) });
+                      else if (typeof it === 'string') items.push({ name: it, url: it, count: 0 });
+                    }
+                  } else if (typeof v === 'string') {
+                    items.push({ name: k, url: v, count: 0 });
+                  }
+                }
+              }
+            }
+          } catch (e) {
+            // ignore and fallback
           }
-        } catch (e) {
-          // ignore and fallback
         }
 
-        // Fallback to public index.json
+        // 2) Try server-side index if still empty
+        if (!items.length) {
+          try {
+            const res = await fetch('/api/flashcards/index');
+            if (res.ok) {
+              const data = await res.json();
+              items = data.items || [];
+            }
+          } catch (e) {
+            // ignore
+          }
+        }
+
+        // 3) Fallback to public index.json in repo
         if (!items.length) {
           try {
             const res2 = await fetch('/flashcards/index.json');
@@ -162,13 +194,35 @@ export default function HomeGrid({ notebooks }: { notebooks: Notebook[] }) {
         // normalize helper
         const normalize = (s: string) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
 
+        // We'll fetch counts lazily for only the matched files to reduce requests
+        const countCache = new Map<string, number>();
+
+        // helper to fetch and cache count for a given url
+        const fetchCount = async (url: string) => {
+          if (!url) return 0;
+          if (countCache.has(url)) return countCache.get(url)!;
+          try {
+            const abs = url.startsWith('http') ? url : new URL(url, window.location.origin).toString();
+            const r = await fetch(abs);
+            if (!r.ok) { countCache.set(url, 0); return 0; }
+            const arr = await r.json();
+            const c = Array.isArray(arr) ? arr.length : 0;
+            countCache.set(url, c);
+            return c;
+          } catch (e) {
+            countCache.set(url, 0);
+            return 0;
+          }
+        };
+
         const counts: Record<string, number> = {};
         for (const nb of notebooks) {
           const slugNorm = normalize(nb.slug);
           let total = 0;
+          // Collect promises for matched items that need counting
+          const toFetch: string[] = [];
           for (const it of items) {
             const nameNorm = normalize(it.name);
-            // match by normalized substring or shared word
             if (!nameNorm || !slugNorm) continue;
             let matched = false;
             if (nameNorm.includes(slugNorm) || slugNorm.includes(nameNorm)) matched = true;
@@ -177,8 +231,23 @@ export default function HomeGrid({ notebooks }: { notebooks: Notebook[] }) {
               const slugWords = new Set((nb.slug || '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
               for (const w of nameWords) if (slugWords.has(w)) { matched = true; break; }
             }
-            if (matched) total += Number(it.count || 0);
+            if (matched) {
+              if (typeof it.count === 'number' && it.count > 0) {
+                total += it.count;
+              } else if (it.url) {
+                toFetch.push(it.url);
+              }
+            }
           }
+
+          // fetch counts for matched urls (concurrently)
+          if (toFetch.length) {
+            const unique = Array.from(new Set(toFetch));
+            const promises = unique.map((u) => fetchCount(u));
+            const results = await Promise.all(promises);
+            for (const c of results) total += c;
+          }
+
           counts[nb.slug] = total;
         }
 
