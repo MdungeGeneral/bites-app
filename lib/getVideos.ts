@@ -186,17 +186,23 @@ export async function getNotebooks(): Promise<Notebook[]> {
         }
 
         // For each notebook, find matching files and fetch counts
+        const normalize = (s: string) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+
         for (const nb of notebooks) {
-          const slugLower = nb.slug.toLowerCase();
+          const slugNorm = normalize(nb.slug);
           let count = 0;
+
+          // candidate selection: normalize names and check substring or token overlap
           const candidates = entries.filter((e) => {
-            const nameLower = e.name.toLowerCase();
-            return (
-              nameLower.startsWith(slugLower) ||
-              slugLower.startsWith(nameLower) ||
-              nameLower.includes(slugLower) ||
-              slugLower.includes(nameLower)
-            );
+            const nameNorm = normalize(e.name);
+            if (!nameNorm || !slugNorm) return false;
+            if (nameNorm.includes(slugNorm) || slugNorm.includes(nameNorm)) return true;
+            // fallback: check shared words
+            const nameWords = new Set((e.name || '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+            const slugWords = new Set((nb.slug || '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+            let common = 0;
+            for (const w of nameWords) if (slugWords.has(w)) common++;
+            return common >= 1;
           });
 
           for (const c of candidates) {
@@ -217,22 +223,41 @@ export async function getNotebooks(): Promise<Notebook[]> {
       }
     }
 
-    // Fallback: read local public/flashcards folder
+    // Fallback: read local public/flashcards folder (recursive)
     if (fs.existsSync(publicDir)) {
-      const files = fs.readdirSync(publicDir).filter((f) => f.toLowerCase().endsWith('.json'));
-      const fileMap: { name: string; path: string }[] = files.map((f) => ({ name: f, path: path.join(publicDir, f) }));
+      const collectFiles = (dir: string) => {
+        const entries = fs.readdirSync(dir, { withFileTypes: true });
+        const out: { name: string; path: string; rel: string }[] = [];
+        for (const ent of entries) {
+          const p = path.join(dir, ent.name);
+          if (ent.isDirectory()) {
+            out.push(...collectFiles(p));
+          } else if (ent.isFile() && ent.name.toLowerCase().endsWith('.json')) {
+            out.push({ name: ent.name, path: p, rel: path.relative(publicDir, p) });
+          }
+        }
+        return out;
+      };
+
+      const fileMap = collectFiles(publicDir);
+
+      const normalize = (s: string) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+
       for (const nb of notebooks) {
-        const slugLower = nb.slug.toLowerCase();
+        const slugNorm = normalize(nb.slug);
         let count = 0;
+
         const candidates = fileMap.filter((e) => {
-          const nameLower = e.name.toLowerCase();
-          return (
-            nameLower.startsWith(slugLower) ||
-            slugLower.startsWith(nameLower) ||
-            nameLower.includes(slugLower) ||
-            slugLower.includes(nameLower)
-          );
+          const nameNorm = normalize(e.name);
+          if (!nameNorm || !slugNorm) return false;
+          if (nameNorm.includes(slugNorm) || slugNorm.includes(nameNorm)) return true;
+          const nameWords = new Set((e.name || '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+          const slugWords = new Set((nb.slug || '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+          let common = 0;
+          for (const w of nameWords) if (slugWords.has(w)) common++;
+          return common >= 1;
         });
+
         for (const c of candidates) {
           try {
             const content = fs.readFileSync(c.path, 'utf8');
@@ -242,6 +267,7 @@ export async function getNotebooks(): Promise<Notebook[]> {
             // ignore
           }
         }
+
         nb.cardCount = count;
       }
     }
