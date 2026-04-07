@@ -43,7 +43,7 @@ export default function FlashcardExample() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-black p-6">
       <div className="w-full max-w-3xl">
-        <Flashcard front={card.question} back={card.answer} />
+        <Flashcard key={index} front={card.question} back={card.answer} />
 
         <div className="mt-6 flex items-center justify-between">
           <div>
