@@ -8,14 +8,14 @@ type FlashcardProps = {
 export default function Flashcard({ front, back }: FlashcardProps) {
   return (
     <article
-      className="bg-white text-black border rounded-xl shadow-md p-6 w-full max-w-4xl mx-auto"
+      className="bg-white text-black border rounded-xl shadow-md p-8 w-full max-w-md sm:max-w-lg md:max-w-xl mx-auto min-h-[70vh] flex flex-col"
       aria-label="Flashcard"
     >
-      <header className="mb-4">
-        <h2 className="text-3xl sm:text-4xl font-bold leading-tight">{front}</h2>
+      <header className="mb-6">
+        <h2 className="text-4xl sm:text-5xl font-bold leading-snug">{front}</h2>
       </header>
 
-      <section className="text-lg sm:text-2xl leading-relaxed whitespace-pre-wrap break-words overflow-auto max-h-[60vh]">
+      <section className="text-4xl sm:text-5xl leading-snug whitespace-pre-wrap break-words overflow-auto flex-1">
         {back}
       </section>
     </article>
