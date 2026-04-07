@@ -1,1 +1,90 @@
-[]
+[
+    {
+        "question": "List 16 possible sources of risk to a life insurer",
+        "answer": "Business \\+Mortality rates \\+Expenses (including inflation) \\+Persistency \\+Policy and other data \\+New business mix \\+New business volumes \\+Guarantee and options \\+Competition \\+Aggregation and concentration of risk \\+Legal, regulatory and tax developments (not strictly business risk, but just putting it here as it doesn’t make sense in other category) Market +Investment performance Market fluctuations How assets change vs liabilities Credit +Counter-parties +Others: credit downgrading Operational +Fraud +Actions of board members +Actions of distributors +Failure of management systems and control --"
+    },
+    {
+        "question": "Risk due to data: types of data What type of data might an insurer work with? (2) What kind of ‘other data’ might insurer use (5)",
+        "answer": "Policy data eg age at entry, policy term, duration in force, sum assured maintained by insurer Other data \\+​Internal data from other products \\+External data \\+Insurance industry data \\+National stats \\+Overseas markets --"
+    },
+    {
+        "question": "Risk due to data: types of data We’ve covered the various data an insurer might use and what its potential sources of data might be; what would an insurer use this data for?",
+        "answer": "Uses of data: MAFIA PEPRS acronym from CA1/ARM :) \\+Marketing \\+Administration \\+Financial planning and management \\+Investments \\+Accounting \\+Provisioning/reserving \\+Experience statistics and analysis/investigations done to give appropriate advice inaccurate data => inaccurate advice +Premium rating or product costing +Risk management +Statutory returns --"
+    },
+    {
+        "question": "Risk due to data: Explain how policy and other data can be a source of risk to a life insurer",
+        "answer": "Poor maintenance Company may not maintain adequate, accurate and complete records required by actuary and so +results of supervisory valuation may be inaccurate +other investigations may be inaccurate and so advice inappropriate Model Points Risk: not always practical/cost effective to do investigation on whole book. can use model points, then scale up results the fewer the model points, less accurate Internal data inadequate indicator of future experience: due to inaccuracy/low volumes population differences: adequate data available, but inappropriately for particular population External data ​may also be inadequate and/or inappropriate --"
+    },
+    {
+        "question": "Risk due to data Discuss main issues for health and care products compared to life insurance products (3)",
+        "answer": "For health and care contracts specifically, the following issues are experienced (more so than for life insurance): Limited credibility +smaller policy volumes e.g CI and LTCI +lower incidence rates e.g. IP and CI Limited applicability of past data \\+Changes to products/market over time \\+Limited relevance of past data due to sensitivity to socio-economic conditions (IP) medical advances (CI) longevity/health at older ages (LTCI) Limited applicability of industry data +​Due to heterogeneity of products and markets --"
+    },
+    {
+        "question": "Risks in investigations: Define 3 risks which normally arise in investigations e.g. when setting mortality assumptions for pricing",
+        "answer": "Model risk: Inappropriate/erroneous probability distribution chosen for underlying model e.g. future mortality. Parameter risk: Underlying model correct, but parameters inadequate (don’t reflect future experience of lives insured/to be insured) Random fluctuation risk: Actual future experience may not correspond with model/parameters adopted (even though these adequately reflect lives insured/ to be insured) First 2 risks always exist (impossible to predict future with complete certainty). Extent of 3rd depends on numbers exposed to risk: smaller number = greater risk. --"
+    },
+    {
+        "question": "The risk that actual expenses are higher than expected or allowed for e.g. due to inflation is called expense risk. The risk that charges received are lower than expected or allowed for is more typically classified as other types of risk. Give 3 examples of what these other risks might be.",
+        "answer": "Investment performance risk (e.g. if charges are fund-based) Persistency risk (e.g if charges required to recoup initial expenses are not received due to high withdrawal) New business mix or volume risk (e.g. if charges are linked to average size or volume of new business) --"
+    },
+    {
+        "question": "Explain how persistence may be a source of risk to a life insurer (4)",
+        "answer": "Asset share: risk if less than surrender value greater at time of withdrawal… …made worse by mismatching initial expenses vs charges to recoup expenses Selective withdrawals negatively influencing mortality experience Reduce business volumes means risk of increasing per-policy expenses Study Deck Preview (9) Browse (9)"
+    },
+    {
+        "question": "Risk due to new business mix: Explain how the mix of new business (M.O.B) may be a source of risk to a life insurer in terms of Mix by nature/size of contract (3) Mix by source (3)",
+        "answer": "Mix by nature/size of contract Nature +class of business (eg proportion of pensions sold) +type of contract (eg term ass vs endowment) +contract design (eg with profits vs unit linked) +premium frequency (single vs regular) size of contract could cause significant change in risk profile/capital needs of company in particular, if contracts are on average smaller than assumed, expense loadings may fail to cover company’s overheads Mix by source (distribution channels) Pricing assumptions (e.g. mortality, withdrawals) based on expected M.O.B by source, If same premium charged across channels, effectively causes some average weighting in assumptions. Change in M.O.B by source may invalidate assumptions. --"
+    },
+    {
+        "question": "Risk due to new business volumes: Explain risks may arise for the insurer if new business is too much and ( 2 ) too little ( 3 )",
+        "answer": "Too much: risk of insufficient +capital to cover financing requirements +admin resources to process new policies Too little expense risk: +​overheads spread over too few policies (expense loading in premiums/charges insufficient) +mismatching of charges and expenses new products’ (fixed) development costs: +risk of not recovering fixed development costs already incurred fall in new business damages profitability, competitiveness, long term viability --"
+    },
+    {
+        "question": "Risk due to competition: Why is competition risk a factor (2) Give 5 examples of decisions, which may be taken as a result of competition, that may increase a company’s risk profile (5)",
+        "answer": "Why is competition a risk factor? The need to compete, especially in a free market, may lead management to take decisions which increase risk profile beyond that supported by available resources 5 decisions due to competition which may increasing risk profile +Reduce premium rates or charges under new business contracts +Offer additional guarantees and options under new business contracts +Increase bonuses under existing contracts +Increase salaries or commission in respective distribution channels +Don’t increase charges/reduce charges’ growth rate relative to what may have been originally intended for existing business with review-able charges --"
+    },
+    {
+        "question": "Risk due to guarantees and options: Why might an insurer write products with options/guarantees arise? (2) Outline briefly how insurer would determine costs of options/guarantees (3)",
+        "answer": "Insurer may offer options/guarantees for competitive/regulatory reasons. Cost of these would need to be determined using parameters (risk for future experience) and model of how to calculate cost Determining cost of risk deterministic modelling +would need to test range of possible scenarios, ranging from optimistic to pessimistic +assign probabilities to each outcome and take expectation based on this +subjective (scenarios chosen; probabilities assigned) stochastic modelling best suited for options/guarantees +develop model with assumptions, producing thousands of simulated outcomes, hence cost of guarantee +expected cost could be average across simulations +considering risk reduction techniques eg. derivatives --"
+    },
+    {
+        "question": "Risk due to actions of directors: What is the role of directors? (2) What role do actuaries perform (2) State 3 reasons why board of directors may not follow actuary’s recommendations to take actions that are within the company’s and available resources (3)",
+        "answer": "Director’s role is to +make decisions which steer the running of the company +impose proper systems of management/control on financial operation of company Actuary’s role +Help judge financial risks with particular course of action +Ensure inappropriate risks are not taken, esp where security/fair treatment of policyholders concerned Reasons why directors may not follow actuaries’ advice +Competitive reasons +Strategic company goals, such as maximising new business volumes or amount of funds under management +Maximise shareholder earnings --"
+    },
+    {
+        "question": "Risk due to actions of distributors: State 3 actions that a distributor could take that may create financial risk for a life insurer.",
+        "answer": "Especially prevalent where distributor independent of insurer +Lapse and re-entry encouragement where no/low penalties exist, and no commission claw-back +Take advantage of loopholes in product design intermediary naturally try find best premiums for client some definitions may allow variation in interpretation e.g. smoker/non-smoker status +Take advantage of timing effects in unit pricing ​e.g. if UP fixed daily at start, and MVs fall heavily during day, if units sold at end of day, and purchased at start of following day, significant profit can be made at insurer’s expense --"
+    },
+    {
+        "question": "Risk due to failure of appropriate management systems and controls: State 3 problems that may result from the failure of management systems and controls",
+        "answer": "Even if we assume enough control systems have been implemented (with proper documentation/training support for systems), there’s still a risk that one/more control is contravened (e.g. due to insufficient monitoring) May lead to +Financial loss +Regulatory intervention +Damage to reputation --"
+    },
+    {
+        "question": "Risk due to fraud: Generally speaking, what causes fraud? Name 3 parties who might perpetuate fraud against an insurer.",
+        "answer": "Fraud is generally the result of a type of control failure, caused by deliberate intent of one/more parties Can be perpetuated by: +Directors or staff (have special access to financial systems or insurer and to computer programs and data which support business) +Policyholders (main risk is fraudulent claims) +Other outside parties (who may obtain some access to computer systems of insurer e.g. website access) --"
+    },
+    {
+        "question": "Counterparty risk: How does counterparty risk arise (2) Name 4 counterparties who might default on their obligations to an insurance company (4)",
+        "answer": "Counterparty risk arises when insurer enters into agreements with another party/entity…. …and insurer relies on obligations under the agreement Examples of counterparties +Reinsurer e.g .failure to pay their share of claims +Outsourcers e.g. poor quality service for outsourced administration services (IT, investment management, policy admin) complaints from policyholders + cost insurer to put things right +Corporate bond issuers e.g failure to pay coupons or capital +Distribution arrangements e.g distributors fail to pass premiums Study Deck Preview (5) Browse (5)"
+    },
+    {
+        "question": "State the overall aims of a life insurance company (2)",
+        "answer": "Maximise (or optimise with an acceptable level of risk): +Profits, either for shareholders or with-profits policyholders +Return on available capital, for capital providers Usually these are complementary objectives ie. they work together. --"
+    },
+    {
+        "question": "Comment on aggregation and concentration of risks that an insurer is exposed to (2)",
+        "answer": "it’s important to understand risks individually But the financial impact on the insurer will also depend on +how these risks emerge in future, and +how they relate to each other --"
+    },
+    {
+        "question": "How might a company go about assessing its overall risk, allowing for aggregation/accumulation of risks? (5)",
+        "answer": "Carry out financial projection with the greatest insight being provided if stochastic methods… …incorporating probability distributions of the key risks, are adopted. This will allow for correlation between the parameters. Running the projection model many times to test sensitivities and different scenarios .. …will produce results that enable the insurer to assess the inherent risk in the business. --"
+    },
+    {
+        "question": "State 3 considerations in assessing the overall level of insurer risk.",
+        "answer": "+Capital and other resources available to insurer More capital => greater emphasis on return on capital Company may be willing to take on risks with higher severity of loss if these risks could result in greater return +Cost of failing to meet public interest need for company to avoid insolvency +Cost of failing to meet requirements of any other applicable legislation --"
+    },
+    {
+        "question": "Credit rating What do we mean by an insurer’s credit rating? (1) Why is downgrading of credit rating a risk to the insurer? (4)",
+        "answer": "An insurer’s credit rating is an external, objective measure/assessment of the insurer’s risk profile…hence its aggregation of risks Downgrading of company’s credit rating is a risk because it would lead to: +adverse publicity +greater difficulty + cost of raising additional capital in market …and as a consequence +profitable activities available to do may be constrained +policyholders may be less likely to maintain/purchase policies=> less business"
+    }
+]

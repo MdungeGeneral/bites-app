@@ -1,22 +1,26 @@
 [
     {
+        "question": "Describe in detail the core structure of an immediate annuity contract",
+        "answer": "Pays regular benefit, provided insured alive at time of payment Payments start immediately, no deferred period Purchased by single premium, may actually be proceeds of another policy (e.g. endowment policy) Customer needs convert capital into lifetime income e.g. pension protect level of future income Normally no surrender value (but can be sold to secondary market in some jurisdictions) Group version can be used by employer to provide pensions Other features: May be in advance or arrears May be single, joint-life first death, last survivor May be level or variable e.g. fixed increase or inflation link May have guaranteed period Can be payable for temporary periods only e.g. pay school fees"
+    },
+    {
         "question": "What forms (structural basis) may be used to write immediate annuity business (4)",
-        "answer": "A Pays regular benefit, provided insured alive at time of payment"
+        "answer": "Without-profits With-profits Index-linked Unitised insurer guarantees paying value of units, income is guaranteed in number of units, but not in monetary value (as price will value)"
     },
     {
         "question": "State key risks to an insurance company that arise from immediate annuities",
-        "answer": "A Without-profits"
+        "answer": "Longevity risk including rate of improvement of life expectancy Anti-selection risk: extent depends on extent of free choice available regarding purchase Investment risk extent depends on extent of matching of annuity payments with suitable assets in market shortage of appropriate securities to match/meet liabilities Expense risk higher than expected inflation inability of management to manage expenses higher than expected initial expenses when selling"
     },
     {
         "question": "Comment on the capital requirements surrounding immediate annuities",
-        "answer": "Anti-selection risk: extent depends on extent of free choice available regarding purchase"
+        "answer": "Depends on relationship between reserving/pricing basis Capital strain if insurer needs to set up reserves and solvency margins higher than single premium received"
     },
     {
         "question": "Describe in detail the core structure of a deferred annuity contract",
-        "answer": "A Depends on relationship between reserving/pricing basis"
+        "answer": "Pays regular benefit, provided life insured is alive at time of payment Benefit payments start at end of deferred period, Funded by regular or single premiums Customer needs Can be used to build up to pension in retirement Lump sum instead of part/all of the annuity, meeting need for cash sum at that point (e.g. to pay home loan) Typically surrender value payable during deferred period, but not normally once benefit starts/is in payment Group version exists (employers for their employees) Annuity choices as for immediate annuity i.e advance/arrears single/joint level/variable guarantee period less flexible than endowment assurance (savings vehicle) with immediate annuity starting at maturity date"
     },
     {
         "question": "State the risks to an insurance company that arise from deferred annuities",
-        "answer": "Annuity choices as for immediate annuity i.e advance/arrears single/joint level/variable guarantee period less flexible than endowment assurance (savings vehicle) with immediate annuity starting at maturity date"
+        "answer": "Split into risks before and after vesting/annuity payments commence: Pre-vesting: as for endowment investment \\+mortality (depending on death benefit) \\+withdrawal/persistency \\+expenses Post-vesting: as for immediate +annuity \\+longevity \\+investment \\+expenses Additional risks if annuity conversion terms are guaranteed"
     }
 ]

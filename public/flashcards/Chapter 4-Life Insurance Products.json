@@ -1,34 +1,38 @@
 [
     {
-        "question": "For each of the following products, suggest most likely product basis:",
-        "answer": "A Conventional without profits guaranteed benefits, usually level regular premiums"
+        "question": "Describe 4 bases on which life insurance products can be written",
+        "answer": "Conventional without profits guaranteed benefits, usually level regular premiums With-profits conventional/accumulating policyholder shares in part/all of future surplus (from within contracts, or other contracts) Unit-linked benefits linked directly to performance of specified fund, characterised by fewer guarantees on benefits/premiums greater flexibility can be used for savings and protection Index-linked benefits guaranteed to move in line with performance of specified investment index/economic index"
     },
     {
-        "question": "Compare conventional without-profits, with-profits and unit-linked products form the consumer\u2019s point of view in terms of cost, flexibility and guarantees",
-        "answer": "A Term assurance conventional without profits"
+        "question": "For each of the following products, suggest most likely product basis: +term assurance +whole life assurance +endowment assurance +immediate annuity",
+        "answer": "Term assurance conventional without profits Whole life assurance unit-linked, or with-profits new conventional without-profits is rare Endowment assurance unit-linked or with-profits new conventional without-profits is rare Immediate annuity conventional without-profits or index-linked"
+    },
+    {
+        "question": "Compare conventional without-profits, with-profits and unit-linked products form the consumer’s point of view in terms of cost, flexibility and guarantees",
+        "answer": "Conventional without-profits +high guarantees imply higher cost +usually least flexible (to alter premiums/benefits) With-profits +typically lies somewhere between other two in terms of cost, guarantees and flexibility Unit-linked +higher/lower expected benefit/premium for given premium/benefit +flexibility in types of levels of cover included, ability to vary premiums according to need"
     },
     {
         "question": "Outline the key features of unit-linked contracts",
-        "answer": "A Conventional without-profits +high guarantees imply higher cost +usually least flexible (to alter premiums/benefits)"
+        "answer": "Policyholders’s premiums paid into investment fund, buys units Value of unit fund depends on value of assets underlying investment fund, equal to units x Unit Price Used for savings and protection Insurer deducts charges from policyholder’s unit fund +from premium before invested allocation rate, bid-offer spread, fixed amt per premium +from unit funds fund management charge, fixed regular fund charge, regular charges taken to cover death benefits in excess of Fund Value Maturity value usually equal value of units Death benefit may exceed Fund Value. Surrender value is value of unit fund, possibly with surrender penalty."
     },
     {
         "question": "State 3 main charging structures used to meet initial expenses for unit-linked policies",
-        "answer": "A Policyholders\u2019s premiums paid into investment fund, buys units"
+        "answer": "Initial expenses +Can be catered for by Low Allocation Rate at Start +Moderately Reduced Allocation Rate +Higher Regular Fund Management Charge"
     },
     {
         "question": "Describe risks faced by an insurer which sells unit-linked contracts",
-        "answer": "A Initial expenses +Can be catered for by Low Allocation Rate at Start +Moderately Reduced Allocation Rate +Higher Regular Fund Management Charge"
+        "answer": "Less guarantees => likely lower risk than non-linked contracts Nature/extent of risks influenced by nature/level of any guarantees, any marketing/legislative constraints on charges Anti-selection risk as for comparable non-linked products Selective withdrawal risk may be higher due to transparency of fees Withdrawal/persistency risk depends on asset share compared to withdrawal benefit which may not be guaranteed in amount, but its method of calculation, May also be higher due to transparency of charges. Mortality and Investment risk influence by non-unit related guarantees Expense risk Influenced by the reviewability of charges as well as legislative restrictions. Significant marketing risk (due to low level of guarantees)"
     },
     {
-        "question": "Describe risks of conventional without-profits contracts from the policyholders\u2019 point of view",
-        "answer": "Anti-selection risk as for comparable non-linked products"
+        "question": "Describe risks of conventional without-profits contracts from the policyholders’ point of view",
+        "answer": "+Insufficient benefit… +..made worse by inflation over time +Insurer insolvency, unable to fully meet guaranteed benefits. +Inflexibility of product to keep pace with changing disposable income of policyholder +changing amounts of benefit needed throughout financial life \\+Affordability of premiums accident sickness redundancy other loss of income"
     },
     {
         "question": "Describe briefly a range of products that the insurer should sell",
-        "answer": "A +Insufficient benefit\u2026"
+        "answer": "+Attractive range of products that maximises profits +In the long-rum profits would be maximised when utility to customers are maximised +the Insurer should control and diversify their risk through their business volumes and business mix."
     },
     {
         "question": "Describe index linked contracts",
-        "answer": "A +Attractive range of products that maximises profits"
+        "answer": "Benefits are guaranteed to move in line with economic performance of investment/economic index in specified contract Single or regular premiums Surrender value, if applicable, would normally be value of benefits calculated according to index value at time of surrender Main risk to insurer, peculiar to these contracts, relates to investment, i.e. being unable to invest in a way to precisely match the benefit guarantee (i.e. assets held don’t move in line with economic/investment index)"
     }
 ]

@@ -1,1 +1,198 @@
-[]
+[
+    {
+        "question": "Background on assumptions What is the key reason assumptions are used for? (1) What key risk does setting assumptions introduce? (1) What kind of risks can be somewhat mitigated by appropriate matching of assets? (3)",
+        "answer": "Assumptions used by insurers for variety of reasons, mostly assessing eventual cost of liabilities Setting assumptions may => parameter risk: want to reduce this Not easy finding matched assets protecting from actual experience different to expected, can sometimes reduce following risks from investment matching: (1) Investment risk: relates return required meet current liabs for future payouts (2) Inflation risk: relates increase in inflation-linked liabs + liabs behaving approximately in line with inflation (eg expenses) (3) Marketing risk: ability to satisfy PHs in relation to any investment-linked/discretionary benefits. --"
+    },
+    {
+        "question": "Best estimate mortality: List 2 separate parts of mortality to be considered when setting best estimate mortality assumptions (2)",
+        "answer": "Base mortality: initial rate of mortality, the main demographic assumption for pricing/evaluating life insurance contracts Mortality trend: how mortality rate changes over time --"
+    },
+    {
+        "question": "Best estimate mortality: Outline a general process for setting assumptions (5)",
+        "answer": "(1) Investigate past experience; make past best estimate parameters; appropriate in context of historical conditions/then-circumstances (2) Consider future conditions (including commercial and economic environment ) during period for which assumptions will be used (3) Determine future best estimates assumptions, given expected future conditions (4) Extent of (a) relying past data vs (b) allowing for other factors, depends on data credibility/relevance + parameter’s predictability (5) Adjust best estimates with margin. Size of margin depends on: +purpose for which model is required +degree of risk associated with parameter --"
+    },
+    {
+        "question": "Two factors that a company needs to balance in deciding on the appropriate number of years of past experience to include in a mortality investigation.",
+        "answer": "Need to balance the following: +Adequate volume of data to ensure credibility +The heterogeneity of the data due to trends over time which may not be relevant --"
+    },
+    {
+        "question": "Best estimate mortality: base mortality derivation Describe how to derive best estimate base mortality rates, in terms of What factors will influence future mortality experience (3)",
+        "answer": "Rates should reflect expected future experience of lives to be insured by contract being priced, in terms of (1) target market: affected by distribution channel (2) underwriting controls: (3) change: since last historical investigation, to point assumptions will apply on average (usually 10 - 15 yrs) --"
+    },
+    {
+        "question": "Best estimate mortality: base mortality derivation Describe how mortality rates are set including adjustments (7)",
+        "answer": "Base rates usually uses adjusted rates from standard table (1) saves resources (2) protects against errors eg inappropriate graduation (3) sufficient data: analysis own experience=> derive adjustments (4) data must be over enough years (adequate volume), but also few enough years (prevent excessive heterogeneity from trends over time) (5) analysis divide data into relevant homogenous groups (6) further adjustments if different experience expected from that which analysed data relate (targ market, underwrit, distr) --"
+    },
+    {
+        "question": "Best estimate mortality: base mortality derivation What data sources can be used to adjust base mortality rates (6)",
+        "answer": "own past experience with that product, own past experience with similar product(s), reinsurance data industry data i.e. standard tables international data national statistics --"
+    },
+    {
+        "question": "Best estimate mortality: base mortality derivation data sources In using data for adjustments when deriving best estimate base mortality rates, list some pros/cons related to the following data sources which may be used: Industry wide investigations (3) Population mortality statistics (2) Reinsurer data (5)",
+        "answer": "(1) Industry wide investigations useful for contracts where +insufficent volumes of own experience exist +good for showing trends, since trends in own data might be due to statistical variation +not 100% suitable since not based on insurer’s particular PHs (2) Population mortality statistics +useful for showing trends if re-examined at regular intervals in past +not 100% suitable since not based on insurer’s particular PHs (3) Reinsurer data Ads +access to mortality experience of many direct writers +may be most relevant data available Disads +relates to large number of different companies +may have little/no suitable data +comes with a cost: cost of reinsurance --"
+    },
+    {
+        "question": "Best estimate mortality: mortality trends What do we mean by ‘mortality trend’? (1) State 2 circumstances where the estimation of future mortality improvements is particularly important (2)",
+        "answer": "The mortality trend relates to how the rate of mortality changes over time. Estimating future mortality improvements is particular important: (1) for policies with longevity risk e.g. annuities (2) when rates are guaranteed rather than review-able --"
+    },
+    {
+        "question": "Describe how we might consider expected changes in mortality over time Different approaches used to project mortality trends (3) Considerations to the product (2)",
+        "answer": "(1) expectations: uses expert opinion + subjective judgement to specify range of future scenarios +can implicitly include all relevant knowledge, including quantitative factors +subjective and subject to bias (2) extrapolation of historical trends +project historical mortality trends into the future +some subjectvity: choice of period to determine trends (3) explanatory projection techniques, +modelling bio-medical processes that cause death +only effective to extent process understood and mathematically model-able Considerations should also be given to the product e.g. important for contracts +paying significant death benefit +important for annuities where increased longevity is a risk +not important for single premium savings contracts --"
+    },
+    {
+        "question": "Best estimate mortality: mortality trends State how each of the following might be taken into account when making projections of future mortality: (1) cohort effect (2) the combined effects of multiple factors (3) random effects",
+        "answer": "(1) Cohort effect each year of birth cohort is modelled separately, allowing for specific mortality improvement rates by cohort (as well as by age and sex) (2)Multi-factor effects Use multi-factor predictive modelling techniques (eg. generalised linear models), accounting for personal attributes along with external factors affecting mortality, allowing for any correlations and interactions between them. (3) Random effects Use stochastic modelling (e.g. Lee-Carter or P-spline method) --"
+    },
+    {
+        "question": "Morbidity assumptions What factors/kind of rates should we consider when setting morbidity assumptions (4)",
+        "answer": "Key factors/assumptions (1) Disability incidence rate and duration for IP (2) Incidence rate for CI (3) Incidence and amount for LTCI (4) Impact of benefit size on assumptions --"
+    },
+    {
+        "question": "Morbidity assumptions Expand briefly on how size of benefit may impact morbidity assumptions (4)",
+        "answer": "For IP, CI, and most LTCI, benefit amount fixed, so no assumption needed for this But may be correlation between incidence rates and benefit size Only for very large policies, may insurer want to alter assumptions, to relfect better claims experience from +PH belonging to higher socio-economic class +stricter level of underwriting --"
+    },
+    {
+        "question": "Morbidity rates: Disability incidence and duration for IP Describe how these rates may be determined (4) What factors might affect the transition intensities (5) Describe how rates are used (2) Describe issues surrounding estimating these rates (3) How might we control parameter uncertainty for these rates? (3)",
+        "answer": "(1) Benefits for IP can be modelled using a multi-state approach ​​needs transition intensities (claim inception, recoveries, death) calculated for homogeneous groups +duration: recovery may differ vastly by duration in force +disability type: recovery may dif vastly by disability type may seperate +second/subsequent incidences: as more likely to claim in future (2) Intensities influenced by +PH characteristics: identified at underwriting +prod design features: replace ratio/rehab benefits +economic morale: low => more likely claim +government welfare provision +tax: on premiums (discourage sales), relief on prems (enoucourage sales), way insurer is taxed, tax rates involved changing over time (3) Intensities used to calculate transitions probabilities +then construct projected numbers/proportions in each state at future ages. +can be used to calc claim inception rates/disability annuity values (4) Issues surrounding estimating rates +Data limitations is the main issue +Published insurance incidence data has limited credibility +Worldwide stats may not be relevant (4) Controlling parameter uncertainty +Assuming larger risk margins +Issuing products with review-able premiums/charges +Reinsurance --"
+    },
+    {
+        "question": "Morbidity rates: Incidence rate for CI What factors influence claim distribution rates for CI (4) What kind of factors complicate modelling/setting of assumptions (2)",
+        "answer": "May be necessary to estimate significant number of distributions (40+) if each condition modelled separately, plus allowance for future trends Other influences claim distribution (other than trends), include +advancement in medical science (cures=> more windfalls) +diagnosing conditions earlier (more claims) +simple/more readily available operations (more claims) +influence new and existing business separately new business, can adjust premiums accordingly +existing business, can only adjust in force prems if revieawable Factors which complicate modelling/setting assumptions +may need to separately model claims definitions which are disease-based and/or treatment-based (eg coronary artery bypass, major organ transplant, heart valve replace) +guaranteed and review-able alternatives +lack of data, only cancers/heart attacks will provide enough data…otherwise hasn’t really been around long enough --"
+    },
+    {
+        "question": "Morbidity rates: Incidence and amount for LTCI What key assumptions do we need to estimate for LTCI? (2) What are important factors for LTCI contract assumptions? (5) What issues arise when estimating necessary assumptions? (3)",
+        "answer": "Estimate distribution of +claim frequency +claim amount (if funding for care) Important influences for LTCI assumptions (1) Medical advancements +Transition rates: improved health may reduce inception rates and rates for people moving to higher ben-levels +Mortality rate: improved health=> people needing benefits for longer +Costs: changing med care may => higher costs e.g. more expensive procedeurs (2) Economic factors +inflation: big problem if benefits are indemnity based +demand (for LTC) vs supply, usually demand is greater, leading to inflation heavier than economic inflation Issues arising when estimating necessary assumptions +Data limitations +Little data on claim frequency to base estimates of future transition rates +Absence of insurance statistics (industry data) --"
+    },
+    {
+        "question": "Investment return: List 4 factors that affect the value assigned to the investment return assumption when pricing a life insurance contract.",
+        "answer": "(1) Significance of assumption. This depends on: +level of reserves (larger reserves => more important) +extent of investment guarantees (2) Extent of investment guarantees given under the contract. This will affect asset mix more onerous the gaurantee => more cautious assets selected => reflected cautious investment return assumption (3) Extent of any reinvestment risk, and extent to which reinvestment risk can be reduced by suitable asset choice: the less important reinvestment risk the less account needs to be taken of future investment yields (4) Intended asset mix for the contract and current and likely future return --"
+    },
+    {
+        "question": "Investment return: Market consistency For a contract that is priced using a market-consistent approach, how do we set investment return assumption? (3) Comment on this process specifically for stochastic modelling (2) Comment on this process specifically for deterministic modelling (3)",
+        "answer": "For market consistent approach expected investment return should be set as the risk-free rate irrespective of the actual underlying assets held this is true for both stochastic and deterministic models If stochastic modelling is used need additional assumptions for investment return volatility and correlation assumptions which are dependent on actual underlying assets --"
+    },
+    {
+        "question": "Non-marginal expenses + commission: What is the general principle when setting expense/commission assumptions? (1) How might the expense assumptions be determined? (3) Comment on the use of an expense model (1) Comment on how fixed expenses should be catered for (1) Give examples of marginal expenses which may arise (8)",
+        "answer": "(1) Expense and commission assumptions should reflect expected expenses to be incurred in processing/subsequently administering business (2) Assumptions would be determined by +analysing recent experience for type of business concerned.. +…dividing expenses by function, as appropriate, and possible whether expected to be proportional to premium/benefit, or an amt per contract +if insufficient own data? use similar other product. else industry data, else reinsurance data (3) In practice, an expense model may constructed/used to project staff structure/associated overheads. Output taken in conjunction with expected new business volumes to give suitable per policy/per premium costs. Fixed expenses Expense loadings should contain contribution for expenses not covered in marginal expense categories, but distinction between fixed/marginal sometimes blurry. Marginal expense examples Initial acquisition (incl commission), initial medical underwriting, initial administration, renewal administration, sales channels' renewal rewards, investment, withdrawal/PUP (usually allow for via suitable discontinuance terms), claim/maturity --"
+    },
+    {
+        "question": "What is a key risk when setting per policy expenses? (1) Describe 3 methods of allowing for expenses that do not vary by policy size when setting premium rates or charges (3)",
+        "answer": "A key risk when setting per policy expenses relates to how to incorporate expenses that do not vary by size of contract 3 methods to allow for this risk: Individual calculation of premium rates or charges normally only for very large cases as small cases would be very uncompetitive Policy fee addition to premium (or deduction from regular benefit payments) for non-linked contracts or charges that match per policy expenses for unit-linked contracts Sum assured differential i.e. for non-linked contracts, charge different premium rates according to which band benefit falls into and for unit-linked contracts apply different charges )(e.g. allocation rates) according to which band premium payable falls into. --"
+    },
+    {
+        "question": "Expense inflation: What will primarily affect the inflation assumption, and why? (2) What 2 ‘periods’ for should be considered when setting the expense inflation assumption? (2) List 5 factors that will considered when setting the expense inflation assumption for pricing (5)",
+        "answer": "Key impact on inflation will likely be earnings inflation, as insurer’s expenses are mostly staff related Consider +inflation between setting assumption, and point from which new policies will be sold +inflation during term of policy 5 Factors affecting expense inflation +Current rates of inflation, both for prices and earnings +Expected future rates of inflation +Difference between fixed-interest government bond yields and index-linked government bond yields +Recent actual experience of life insurance company or industry +Investment assumption being used (be consistent) --"
+    },
+    {
+        "question": "Persistency Outline how to set the persist-ency assumption when pricing a product (7)",
+        "answer": "(1) persistency assumptions needed if using cashflow method, not if using formula method (2) Reflect expected future experience of contracts to be taken out (eg full withdrawal, partial, and paid-up) (3) Based on analysis of company’s recent experience, ideally of same contract, else of any similar contracts (4) If company doesn’t itself have adequate data, there may be industry-wide experience it could use (5) Assess results to see if they have been affected by special factors, e.g. adverse economic situation (5) Adjust for differences in class of lives, e.g. benefit changes, distribution channel changes (6) Sensitivity test/add appropriate margins --"
+    },
+    {
+        "question": "Persistency: What changes to benefits might lead to increased withdrawals? (6) How might distribution channels impact withdrawals? (5)",
+        "answer": "Benefits Non-linked +Increase in discontinuance terms +Decrease in bonuse rates Unit-linked +Reduced fund performance +Increased charges +Removal/variation of guarantees/options Distribution channel +Who initiates the sale: lower withdrawal if client initiates +Different sales practice: client pressurised for sale => higher rates +Sales without gathering proper info: mis-selling +Financial sophistication: varies by channel=> impacts rates +Target markets: affected by dist channel, hence PH’s affluence + level of economic wealth --"
+    },
+    {
+        "question": "How might we allow for risk in the use of parameters in pricing? (3) What key factors influence the margins to use? (3)",
+        "answer": "Parameters discussed so far would only be best estimate parameters. We can allow for risk through: (1) through the risk element of the risk discount rate only applicable to cashflow model (2) using stochastic approach only applicable to cashflow model using best estimate for non-stochastic assumptins, using a risk free rate, modelling one/more assumption scholastically (3) assessing margins to apply to expected values and using a risk free rate to discount applicable to either cashflow/formula model formula model needs judgement, as doesn’t help actuary determine extent of risk Use of margins depends on degree of risk associated with each parameter used financial significance of the risk from each parameter purpose for assumptions pricing => competitiveness (but also prevent losses) --"
+    },
+    {
+        "question": "Profit requirements: Explain what is meant by the term risk discount rate (5)",
+        "answer": "return on capital demanded by providers of that capital. It’s made up of: +return they could get obtain from risk-free asset +plus risk premium to compensate for volatility of return +can be determined by quantifying risk premium appropriate for company e.g. using CAPM +market availability of capital should also be taken into account +market’s view of risk discount rate is not necessarily most apt for any given product, as different products will have different levels of riskiness. --"
+    },
+    {
+        "question": "Profit requirements: Deciding on a risk discount rate using statistical methods Why can’t we simply use CAPM? (2) What might affect the riskiness of products/projects undertaken by insurer? (6)",
+        "answer": "+Can’t simply use CAPM as assumptions may not hold’ +not all projects company undertakes are equally risky (some products have more innovative features, eg) 6 things that might affect riskiness of products/project life company undertakes \\+Lack of historical data \\+High guarantees \\+Policyholder options \\+Overhead costs \\+Complexity of design \\+Untested market --"
+    },
+    {
+        "question": "Profit requirements: Deciding on a risk discount rate using statistical methods How might we use a statistical approach to asses the insurer’s risks and allow for them in the RDR? (4)",
+        "answer": "Can assess these risks (and allow for them) by (1) analytically, by considering variances of individual parameter values used i.e VaR[Return] (2) sensitivity analysis (3) using stochastic models (4) comparison with any available market data Study Deck Preview (22) Browse (22)"
+    },
+    {
+        "question": "In the first chapter on setting assumptions, we considered setting assumptions for pricing. What other exercises may we construct basis for? (4)",
+        "answer": "Published results Supervisory reserves Internal management accounts Embedded values --"
+    },
+    {
+        "question": "Valuing liabilities: overview Broadly speaking, how do we value the liabilities of a life insurer? (4)",
+        "answer": "Broadly speaking, determined as PV of Future benefit outgo plus claims expenses (including commission) plus taxes (if appropriate) less future premiums --"
+    },
+    {
+        "question": "Valuing liabilities: overview What implication does increasing/decreasing the discount rate have on calculation of liabilities? (3)",
+        "answer": "Impact of changes in the discount rate all things being equal, decreasing (increasing) the discount rate, will increase (decrease) degree of prudence for a positive reserve decreasing (increasing) the discount rate, will decrease (increase) degree of prudence for a negative reserve, where this is permitted --"
+    },
+    {
+        "question": "Valuing liabilities: Published accounts, key considerations State the factors to consider when deciding assumptions for determining the value of liabilities to show in an insurance company’s published accounts (6)",
+        "answer": "For country concerned, consider +legislation +accounting principles Matters to consider (1) going concern or break-up basis (2) required to show a true and fair value? (3) best estimate basis or some other basis? (4) precisely how terms used are to be interpreted --"
+    },
+    {
+        "question": "Valuing liabilities: Internal management accounts, key considerations State key driver that should determine the pricniples to be followed for determining the value of liabilities for internal management accounts (1) State the most likely aim of such a valuation. (1)",
+        "answer": "Key driver should be discussion with insurance company about the principles to follow, based on the purpose for which the internal accounts are required Most likely aim is to have best estimates of the company’s financial performance, based on realistic assumptions. --"
+    },
+    {
+        "question": "Valuing liabilities: Supervisory reserves, key considerations How might rules governing the solvency supervision process relate to rules for published accounts? (1) Key considerations for supervisory reserves (4)",
+        "answer": "If separate accounts required during process solvency supervision process , rules for preparation of separate accounts may/may not be same as rules for published accounts… Key considerations +for example may be required to use different basis (going-concern/break-up basis) +Should reference rules & guidance which was issued needing interpretation +will most likely be certain assumption restrictions which are either specific (valuation interest rates must equal premium basis rate) general (do valuation as wish, subject to not lower than X basis) +usually require prudent basis, some jurisdictions moved to market consistent approach --"
+    },
+    {
+        "question": "Valuing liabilities: going-concern vs break up basis",
+        "answer": "going concern assume insurer continues issuing new business into future break-up +assume new business cease immediately, or at some point in future e.g …closed fund by company, or.. …transfer liabilities to another insurer, who will administer/process claims until book runs down --"
+    },
+    {
+        "question": "Reserving basis vs pricing basis: uncertainty in assumptions What’s a key difference between setting assumptions for pricing vs reserving in terms of information available? (1)",
+        "answer": "Key difference is that in force policies can provide important information for setting reserving assumptions (compared to pricing assumptions) --"
+    },
+    {
+        "question": "Reserving basis vs pricing basis: uncertainty in assumptions What kind of useful info can in force policies provide for setting assumptions?",
+        "answer": "Demographic assumptions +already know who PHs are => good info about class of lives +historical experience investigation likely to indicate future experience well (if data volume credible) +hence less uncertainty in assumption than for pricing’ Expense assumptions +should be easier to assess for reserving because no future initial expenses +less uncertainty over volume/mix of future business +but share of fixed expenses covered by existing PHs affected by new policies expected… +…so expense assumption still has some uncertainty --"
+    },
+    {
+        "question": "Reserving basis vs pricing basis: using pricing assumptions for supervisory purposes What is relationship between pricing and reserving assumptions in some countries? (1)",
+        "answer": "In some countries, standard practice uses prudent assumptions for pricing/premiums, then same assumptions or supervisory reserving --"
+    },
+    {
+        "question": "Reserving basis vs pricing basis: using pricing assumptions for supervisory purposes What is impact on WP products of using pricing assumptions prudent enough to also be used for reserving? (1)",
+        "answer": "For WP products, surplus will emerge from actual experience being better than that assumed in prudent assumptions ie. even if margins are high, surpluses from experience can be given back to PHs through bonuses --"
+    },
+    {
+        "question": "Reserving basis vs pricing basis: using pricing assumptions for supervisory purposes Why would prudent pricing basis strong enough for supervisory purposes be problematic for without profits business? (1)",
+        "answer": "Less appropriate for without-profits products as overly high margins => uncompetitive, hence usually small margins are used, meaning pricing basis cannot be used for supervisory solvency --"
+    },
+    {
+        "question": "Valuing liabilities: Embedded value, key considerations Define embedded value (4)",
+        "answer": "Embededed value is defined as sum of: +shareholder-owned share of net assets +present value of future shareholder profits from existing business, including release of shareholder assets EV essentially recognises value of assets in excess of reserves and value to shareholders of future margin releases from reserves --"
+    },
+    {
+        "question": "Valuing liabilities: Embedded value, key considerations Why might we need to calculate embedded values? (2)",
+        "answer": "May need embedded values for +published accounts as supplementary info +internal management accounts --"
+    },
+    {
+        "question": "Embedded Value: Calculation Shareholder owned share of net assets (6)",
+        "answer": "Net assets are defined as the excess of assets held over those required to meet liabilities. These assets may be valued at market value or may be discounted to reflect lock-in, e.g. if they are required to be retained within the fund to cover solvency capital requirements. The value of the reserves (used in NAV) needs to be consistent with the assumption used in determining the emergence of future profit. --"
+    },
+    {
+        "question": "Embedded Value: Calculation PV of future shareholder profits Briefly outline the calculation (3)",
+        "answer": "By PV of future shareholder profits similar to conducting profit test, excluding certain elements (eg new business expenses) project future CFs on existing business to estimate future profits allowing for tax discount future profits at appropriate discount rate (shareholder required return) to determine PV --"
+    },
+    {
+        "question": "Embedded Value: Calculation PV of future shareholder profits List components that make up the present value of future shareholder profits from existing contracts, for the following types of business: conventional without-profits (3) unit-linked (2) with-profits (1)",
+        "answer": "Conventional without-profits business present value of future premiums plus investment income, less claims and expenses, plus release of supervisory reserves and required solvency capital Unit-linked business present value of future charges less expenses and benefits in excess of unit fund, plus investment income earned on, and release of, any supervisory non-unit reserves and required solvency capital With-profits business present value of future shareholder transfers, for example, as generated by bonus declarations --"
+    },
+    {
+        "question": "Define appraisal value (2)",
+        "answer": "Embedded value is starting point for value of insurer, but doesn’t allow for future new business. Appraisal value is sum of: +embedded value (shareholder share of net assets + PV future profits from existing business) +goodwill, which represents an estimate of the present value of future shareholder profits from future new business --"
+    },
+    {
+        "question": "Embedded Value: Assumptions What is the key determinant of assumptions used for EV? (3)",
+        "answer": "purpose for which EV is needed insurer offering itself for sale likely use best estimate/realistic (no margins) insurer purchasing may use cautious assumptions including margins --"
+    },
+    {
+        "question": "Embedded Value: Assumptions What 2 different kinds of basis do we need for EV calculations? (2)",
+        "answer": "We need 2 bases for EV calculations Reserving basis: This is used to determine the technical reserves used. Projection basis: This is used to project the emergence of cashflow due to differences from the reserving basis. --"
+    },
+    {
+        "question": "Embedded Value: allowing for risk What approaches may be used to allow for risk we need to include for the 2 basis needed for the EV calc?",
+        "answer": "Approaches used to allow for risk RDR for future profit streams will traditionally reflect risk. All things equal, increasing RDR => increases allowance for risk (more conservative) Stochastic approach: would highlight range of possible values profits might take Market consistent approach: using Risk-free rate as discount rate, then risk margin deducted from EV to reflect non-investment risks e.g using cost of capital approach to be covered in next chapter --"
+    },
+    {
+        "question": "Embedded Value: compared to Best Estimate What are the key differences between Embedded Values and Best Estimate Values? Best estimate basis (3) Embedded value basis (3)",
+        "answer": "Both basis may use realistic assumptions, but try to focus on different things. Best estimate basis present liability calculated per policy using realistic assumptions sum over all PHs compared with total aset value to give measure of realistic solvency (measure of PH benefit security) but change in retained profit each year can also be used to give measure of profit as extra piece of information Embedded value basis consider CFs across portfolio each time period, rather than PV for each PH. Focus of calculation is SH profit takes full account of cost of capital in value of SH transfers, because each year’s transfer has to be made from profits that arise in excess of supervisory reserves held (increase in supervisory reserves will postpone emergence of profit for SHs, at least for without profit business and thereby give reduced PV when discounted at the RDR"
+    }
+]

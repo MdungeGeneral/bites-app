@@ -1,1 +1,130 @@
-[]
+[
+    {
+        "question": "Reserves: background What are the 2 key fundamentally different purposes for calculating reserves? (2,3)",
+        "answer": "Reserves are mainly calculated to demonstrate solvency +​to regulators, by meeting a min valuation standard, showing insurer capable meeting all guaranteed liabilities +given uncertain future, valuation standards likely to require prudent assumptions; using more best estimate assumptions=> more solvency capital required quantify the realistic position of a company which helps determine +bonus declarations to determine long term sustainability of profit distribution rates +realistic profitability for information of shareholders/management +general financial management --"
+    },
+    {
+        "question": "Reserves: background What 2 primary methods can be used for reserve calculations? (2,1)",
+        "answer": "Gross premium valuation method +under unit-linked business, special case of the gross premium arises +where valuation of future non-unit cash flows may need a separate method to identify and reserve for future negative CFs Net premium valuation method --"
+    },
+    {
+        "question": "Define the gross premium valuation method ( 3 )",
+        "answer": "Calculates value of a life insurance company’s liabilities that explicitly takes into account +the future office premiums payable +expenses & claims (potentially including future discretionary benefits) Reserves = PV(expected future benefit outgo) + PV(expected future expenses) - PV(expectd future office premiums) --"
+    },
+    {
+        "question": "Gross premium valuation method: Formula method List the 5 key points surrounding the Formula method used for Gross Premium Valuations (5)",
+        "answer": "(1) Method can often be expressed as a formula, eg for a without profits end: SAA(x+t:n-t) + REa(x+t:n-t) - P’*a(x+t:n-t) where: SA = sum assured, RE = regular expenses, P’ is office premium (2) Contract usually priced so office premiums> claims & expenses so on CF approach (alternative meth to formula approach), reserves theoretically negative at policy start , just before pmt of first premium/initial expenses init expenses often higher than firs premium (for regular bus), leading to reserves being even more negative (3) After contract start, no need to reserve for first premium/init expenses however, any prudence in reserves (relative to pricing assumptions) may lead to reserves being positive even at policy commencement (4) Cost of benefits and ren expenses generally increase with pol term, but premiums remain level (for a reg prem, non-linked without-profits contract) (5) There over time future benefits + expenses > premiums except very early on in contract, giving a smooth progression of reserves, which start negative and finish with value equal to final benefit payment --"
+    },
+    {
+        "question": "Describe how a gross premium reserve would be calculated for conventional business from a projection of future cashflows",
+        "answer": "For a policy in force at the valuation date, project the expected net future outgo for each future year, according to valuation assumptions. The net expected outgo is expected claims, expenses less premiums Discount each year net outgo by the appropriate discount rate Sum the present value of all years net outgo to obtain the reserve --"
+    },
+    {
+        "question": "Gross premium vln mthd: unit-linked reserves List the 2 key components of the liability that must be considered when valuing a unit-linked policy (2)",
+        "answer": "unit-reserve +part of reserve insurer sets up for its unitised contracts +represents liability in terms of the units held under these unitised contracts +calculated as number of units x ‘bid price’ of units non-unit reserves +part of reserve insurer sets up for its unitised contracts represents liabilities other than that attributed to the unit reserve e.g. future expenses and mortality costs etc --"
+    },
+    {
+        "question": "Explain why a positive non-unit reserve may be required for a prudential valuation of a unit-linked contract (2)",
+        "answer": "Life company will receive monetary payments in form of policy charges to cover non-unit liabilities… …eg expenses of managing business.. …or benefit payments in excess of the unit fund If it expects the charges will not be sufficient to cover these liabilities at any point on a cashflow basis, it has to hold a non-unit reserve to provide for the deficiency --"
+    },
+    {
+        "question": "Gross premium valuation method: non-unit reserves What general features are associated with non-unit reserves? (1,2,4,4,1)",
+        "answer": "(1) Pattern of income not necessarily as smooth as without profits endowment. income = charges less outgo in terms of expenses and claims in excess of unit reserves (2) Cashflow approach essential due to complexity of contracts greater CF patterns’ variety (3) Liabilities for unit-linked contracts denomicated in units and monetary terms, leading to need forunit reserve as well as non-unit reserve. Non-unit liabilities include administration costs mortality costs if not paid by unit reduction future guarantee costs (eg min benfts related to prems paid) future guaranteed subsidy of allocation rate if not covered by other margins in UP eg allocating 106% allocation of premiums (4) Non unit reserve=PV(excess non unit outgo over non unit income) outgo: expenses, benefits in excess of unit fund income: charges, unallocated premium discounted CF method is used if PV non unit income > PV non unit outgo => overall negative non unit reserve; may or may not be allowed by regulation Calc depends on purpose and regulations --"
+    },
+    {
+        "question": "Gross premium valuation method: non-unit reserve calculation Describe how to calculate a non-unit reserve for a prudential valuation (8)",
+        "answer": "(1) Prudental valuation requires reserves to be prudent (2) Defines non unit reserve as amount required to ensure insurer able to pay claims & meet continuing expenses without recourse to further finance (3) Required to consider year-by-year/month-to-month non-unit CFs to determine if non-unit reserve needed (4) Model projected non-unit CFs on reserving basis (may need per policy) (5) Start with last projection period in which net cashflow becomes negative (allowing for discounting and survival) (6) Set up amount at start of that period which is sufficient, allowing for earned investment return over the period, to ‘zeroise’ the negative cashflow (7) Deduct the amount from the net cashflow at the end of the previous time period (8) Continue process backwards towards valuation date, with each negative being ‘zeroised’ in this way (9) If the adjusted cashflow at the valuation date is negative then a positive non-unit reserve is set up equal to the absolute value of that negative amount --"
+    },
+    {
+        "question": "Gross premium valuation method: non-unit reserve calculation Describe how to calculate a non-unit reserve for a best estimate valuation (3)",
+        "answer": "Value all future non-unit CFs, including CFs after last proj period with negative net outflow There would be no other restrictions Negative non unit reserves can be held (occuring if future non unit charges expected to exceed future non unit outgo. Essentially we have an asset, used to loan finances to other contracts with positive non unit reserves --"
+    },
+    {
+        "question": "Gross premium valuation method: negative non-unit reserves Explain when a negative non-unit reserve may arise (1) Describe some other features related to negative non-unit reserves (4)",
+        "answer": "Negative non-unit reserves may arise when the life insurance company anticipates that future charges will be more than sufficient to meet future non-unit liabilities A few other general points about negative non unit reserves (1) represent a loan from other contracts which have positive reserves, which will be repaid by emerging future profits from policy for which negative non unit reserve is held (simply taking credit for future profits from a policy) (2) improves capital effeciency, since it reduces total reserve under policy (3) used, in theory, whenever there are future positive CFs the company would like to take advance credit for (be careful not to take too much credit) (4) needs adequate surrender penalty, to ensure value of future CFs not lost if PH withdraws --"
+    },
+    {
+        "question": "ross premium valuation method: negative non-unit reserves Outline the conditions that the regulator may require to hold before a negative non-unit reserve can be held under a prudential valuation (5)",
+        "answer": "total reserves (unit + non unit) > guaranteed surrender value ensures company holding enough money if policy surrenders future profits arising on policy with negative non-unit reserve need to emerge in time to repay ‘loan’ effectively made from other contracts with positive non-unit reserves no future valuation strain, after taking account of future non unit reserves in aggregate, sum of all non unit reserves should not be negative (including reserves even from non unit contracts) note even if negative non unit reserves allowed, for prudential valuation, safer to assume +future CFs are lower than best estimates +interest rate used is higher than best estimate +survival rates are lower than best estimates --"
+    },
+    {
+        "question": "Gross premium valuation method: negative non unit reserves How do we go about calculating negative non-unit reserves? (6)",
+        "answer": "(1) Model projected non-unit CFs on reserving basis (may need per policy) (2) Identify last net cashflow whether positive or negative (allowing for discounting and survival) (3) Reserve = amount at start of that period which is sufficient, allowing for earned investment return over the period, to ‘zeroise’ that cashflow (4) Check that total reserve (unit + non-unit) > guaranteed surrender value i.e unit reserves less surrender penalty (4) Move back to next previous CF, discount the reserve and then subtract from the reserve the new cashflow at the earlier time period. Repeat step above. (5) Carry on repeating process working backwards over time to valuation date. --"
+    },
+    {
+        "question": "Gross premium valuation method: key features List key features of the gross premium valuation method (6)",
+        "answer": "Explicit allowance made for expenses Explicit allowance can be made for vested/expected future bonuses (where appropriate…if done, also referred to as bonus reserve valuation) Future premiums valued are actual (‘office’) premiums expected Any differences between pricing and valuation bases immediately taken as profit or loss Reserves can initially be negative for non-linked business: +partly due to initial expenses and +partly due to capitalising expected future profit Reserves tend to be quite sensitive to changes in basis --"
+    },
+    {
+        "question": "Net prem vln meth: definition How would we define the Net Premium Valuation method? (4)",
+        "answer": "PV of expected future benefit outgo, less PV expected future net premiums calcultd on interest & mortality basis only ie no explicit expense allowance benefit ougto includes bonuses declared to date, no explicit allowance for future bonuses net premium is premium insurer would charge from pol inception to cover initial guaranteed benefits only (so again, expenses are ignored), assuming the same basis as used for PVs (so this may not be same as original pricing basis --"
+    },
+    {
+        "question": "Net premium valuation method: key features List key features of the net premium valuation method ( 4)",
+        "answer": "(1) Simple: formula used and data required is simple (2) Makes no explicit allowance for future expenses Could make implicit allowance. Common approach for future expenses: assume future annual policy expense is less than difference between net premium company is valuing with this method, and office premium will actually receive, but will only work for regular premium business. (3) Makes no explicit allowance for future bonuses (4) Reserves relatively insensitive to changes in valuation basis For regular premium business. When the reserving basis changes for gross premium valuation, the gross premium used in the calculation doesn’t change, but for the net premium valuation, the net premiums used in the calculation changes. (5) Used for conventional with profits Since it does not capitalise the profit margins in the future gross premiums. Study Deck Preview (16) Browse (16)"
+    },
+    {
+        "question": "Discuss the relationship between pricing and reserving assumptions",
+        "answer": "Premiums could be calculated using prudent assumptions, with same assumptions used for supervisory reserves +suitable for with-profits, as surplus will emerge relative to the prudent assumption +less justifiable for without-profits Premiums could be calculated using broadly realistic assumptions, with risks to company being allowed for mainly through risk discount rate +supervisory regime may require prudent reserving assumptions, in which case the premium and reserving bases will be different +supervisory regime may use best estimate or market-consistent reserving assumptions, in which case the premium and reserving bases could be the same. However, additional allowances for risk would be needed for each. --"
+    },
+    {
+        "question": "State how, in theory, the assets and liabilities should be ideally value when using a market-consistent approach (3)",
+        "answer": "Often referred to as a fair valuation which can be used to set reserves with assets being valued at market value In theory, liabilities would be valued as price that someone would charge for taking responsibility for them, in a market in which such liabilities are freely traded. In the usual absence of such a market, an approximate approach has to be taken. The value of the liabilities should be equivalent to the current market value of a notional portfolio of risk-free assets that match the liability cash flows exactly --"
+    },
+    {
+        "question": "Describe how the investment return assumption would be determined for a market-consistent valuation of the liabilities (4)",
+        "answer": "Would be based on the risk-free rate, irrespective of the type of asset actually held. This risk-free rate may be based on government bond yields, or on swap rates (if there’s a sufficiently deep and liquid market for these). A deduction may be made for credit risk, as appropriate. Credit might be taken for the liquidity premium in corporate bond yields, provided the liabilities for which the rates are to be used +are long term, +and have reasonably predictable duration, +and for which matching assets can be held to maturity (eg immediate annuities) --"
+    },
+    {
+        "question": "Explain what’s meant by ‘illiquidity premium’ in context of corporate bond yields (5)",
+        "answer": "May be possible to derive market consistent disc rate from corporate bonds Compared to government bonds, corporate bonds +higher default probability +less marketable (hence, less liquid), => prices more volatile => problem if bonds need to be sold before redemption +usually have higher bond yields due to higher default risk and lower liquidity +illiquidity premium is portion of higher return due to illiquidity --"
+    },
+    {
+        "question": "Why might it be possible to take credit for the illiquidity premium when determining the risk-free rate of return from these yields?",
+        "answer": "Lack of liquidity is not a risk if the assets are held to maturity. So, provided the liability cashflows have relatively fixed and predictable duration illiquidity premium can be allowed for in the ‘risk-free’ rate Where this practice is permitted by regulation, there would normally be strict rules about how and when it can be applied, eg there may be a requirement that matching bonds are held to maturity. --"
+    },
+    {
+        "question": "Describe the risk margin based approach to market consistent valuations: Explain the approach that normally has to be used to obtain market-consistent assumptions for mortality, persistency, and expenses.",
+        "answer": "(1) Usually impossible to obtain market values of assumptions directly, because markets are insufficiently (a) deep or (b) liquid. (2) In some cases, may be possible to use some market-consistent estimates: mortality: may derive from reinsurance risk premium rates expenses: may derive from expense agreements available in market eg 3rd party administrators (3) Instead, the approach is normally to take a best estimate of the future experience, plus a ‘risk margin’. (4) The risk margin would reflect the extra price that the market would require, in order to compensate for the uncertainties inherent in the liability cashflows due to the assumption. (5) Overall risk margin could be determined by +adding a margin to each assumption +alternatively, an overall reserving margin in respect of these risks could be determined using the ‘cost of capital’ approach. --"
+    },
+    {
+        "question": "Describe the risk margin based approach to market consistent valuations: Outline the ‘cost of capital’ approach to calculating an overall risk margin for the mortality, persistency, and expense assumptions, for the purpose of a market-consistent valuation of the liabilities.",
+        "answer": "(1) Project required capital project forward the future capital required to hold in excess of market-consistent estimate of the liabilities determined at the end of each future year, for current in force book projection guided by relevant regulatory solvency basis (2) Multiply projected capital amounts by “Cost of Capital Rate” +for each future year this rate can be considered to represent cost of raising incremental capital, in excess of risk free rate; representing the frictional cost/loss in return cause by locking in this capital rather than being able to invest it freely for higher reward +cost of capital rate, may, for example, be dertemined as excess of the weighted average cost of capital over the risk-free rate, in some cases it may be a fixed rate there may also be other frictional costs eg tax which affect CoC (3) Discount at the appropriate risk-free rate of return for each term, and sum to obtain the risk margin. (4) Projection of future capital may be +simple eg fixed percent of reserves, or +complex, leading to: stochastic modelling and correlation matrices +approximations eg expressing capital required as simple formula based on drivers such as the size of the reserves and the sum at risk --"
+    },
+    {
+        "question": "olvency capital requirements: What do we mean by solvency capital requirements? (2) Give 2 broad areas of risk where solvency capital can protect policyholders (2) How might the level of solvency capital required by regulation be specified? (2)",
+        "answer": "(1) Solvency capital requirements refers to: the usual that insurer supervisory bodies impose which requires insurers to maintain at least a specified level of solvency capital (i.e. capital to display solvency can be viewed as an additional level of protection (2) Solvency capital requirements can protect polichyholders against: reserve being underestimated, ie adverse future experience relative to reserving assumptions. a drop in asset values (including individual asset defaults). (3) Level of solvency capital may be specified as formula eg 3% of reserves to cover fall in asset value, and 0.3% of sum at risk to cover adverse mortality based on a risk based measure, such as VaR (Value at Risk) --"
+    },
+    {
+        "question": "Solvency capital requirements: relationship between reserves & solvency capital requirements Discuss the relationship between the reserves and the solvency cpaital requirements",
+        "answer": "Adequacy or reserves must be considered in relation to solvency capital requirements and not in isolation, and vice versa. Relative balance between two varies between countries: in some countries, reserves are set up on a relatively realistic basis (relatively small margins from expected values), but with requirement for substantial level of solvency capital determined using risk-based capital techniques. in other countries, reserves are set up on a relatively prudent basis (relatively large margins), but with relatively small solvency capital requirement, which isn’t specifically related to the risks borne by the company. --"
+    },
+    {
+        "question": "Solvency capital requirements: Value at Risk approach What is the VaR approach to deriving solvency capital required by an insurer? (2)",
+        "answer": "VaR approach is risk-based solvency capital requirement approach, normally expressed as a min required confidence level over a defined period (eg 99.5% over 1 year) Under VaR approach, amount of capital needed: set min required confidence level, eg 99.5%, over a given defined period, eg 1 year => assets won’t exceed liabilities over 1 year, with 99.5% confidence --"
+    },
+    {
+        "question": "Solvency capital requirements: Value at Risk approach Outline the Value at Risk (VaR) approach to deriving the risk-based solvency capital required by an insurance company.",
+        "answer": "supervisory balance sheet=>often market consistent for this approach type conduct stress tests/shocks on supervisory balance sheet for each risk factor separately, at defined confidence level, over the defined period. each stress test involves projecting the company’s future assets and liabilities, based on the actual liabiltiies and assets currently held. for each risk factor, amount of capital needed at the present time, in excess of its liabilities due to stress test, is calculated to ensure that assets exceed liabilities at the end of the defined period with the required probability. alternatively, determine single shock scenario with 99.5% confidence which involved simultaneously shocking mortality, expenses, investment return, withdrawals, etc => currently too computationally difficult, so separate stress test used instead for individual stress tests done, combine capital required over all risk factors, allowing appropriately for interactions, eg via correlation matrix Additional capital may be needed across individual risks to cover any +non-linearity (1% increase in shock <> 1% change in cap required) +non-separability (events happen together > if happen separately) --"
+    },
+    {
+        "question": "Solvency capital requirements: use of stochastic modelling In what way may stochastic models be used for supervisory solvency capital requirements? (2) Comment on the calibration of such stochastic models used for solvency capital requirements (3)",
+        "answer": "a real-world asset model would be used, which should be arbitrage free in particular, the model must not understate the frequency of the more extreme outcomes occurring. Calibration of stochastic models used for solvency capital assessment calibration can be made by reference to historical experience it’s important to reproduce the more extreme ‘tail’ behaviours accurately, both in terms of size of the tail of the distribution and (where appropriate) the path taken --"
+    },
+    {
+        "question": "Define what is meant by a passive valuation approach (2) Features of passive valuation approach (4)",
+        "answer": "valuation method that’s relatively insensitive to market condition changes valuation basis which is updated relatively infrequently assumptions may be locked in mortality/expense inflation assumptions rarely change non-economic assumption change when experience worsens in order to recognise related loss and need for higher reserves assets at book price possibly with amortisation/write down over time. simplified approach for solvency capital requirement eg holding prescribed % of base liabilities --"
+    },
+    {
+        "question": "State 3 advantages of passive valuations (3) Disadvantages of passive valuation approach (4)",
+        "answer": "Advantages of passive valuation approaches are that they: +Tend to be more straightforward to implement +Involve less subjectivity +Results in relatively stable profit emergence, to extent that it’s used for accounting purposes Disadvantages of passive valuation approaches are that they: +can become outdated +relatively insensitive to changes in market conditions +valuation basis updated infrequently (may not take account of important trends eg rising expense inflation, worsening claims experience) +false sense of security eg management failing to take appropriate actions in response to emerging problems until too late, because solvency position hasn’t appeared to change --"
+    },
+    {
+        "question": "Define what is meant by an active valuation approach ( 3 )",
+        "answer": "Active valuation approach would be +based more closely on market conditions (than a passive valuation) +with the assumptions being updated on a frequent basis +market consistent valuation for both assets/liabilities, and risk based capital approach to solvency capital requirements more informative in terms of understanding impact of market conditions on company’s ability to meet obligations, particularly in relation to financial guarantees and options. --"
+    },
+    {
+        "question": "What are the disadvantages of using an active valuation approach? ( 5 )",
+        "answer": "Disadvantages of active valuation approach More volatile results implications due to procyclicality adverse equity market conditions => active approach using risk based capital would indicate higher capital requirements needed. To reduce this requirement, companies would have to sell equities, which itself could exacerbate the market conditions. Systematic risk since this would be case for all insurers regulators may amend valuation approach under certain conditions to avoid systematic risk More complex More time consuming More costly"
+    }
+]

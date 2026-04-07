@@ -1,1 +1,126 @@
-[]
+[
+    {
+        "question": "Define reinsurance (6)",
+        "answer": "Reinsurance is an agreement whereby on party (the reinsurer)… …in return for a premium… …agrees to indemnify another party (the cedant) …against part or all of the liability assumed by the cedant under one or more insurance policies, or under one or more reinsurance contracts. Direct writer cedes to reinsurer (through a cession), who in turn may cede its liability to a second reinsurer (through a retro cession). --"
+    },
+    {
+        "question": "What are the main “types” of reinsurance? (7 points)",
+        "answer": "Facultative and obligatory reinsurance Original terms reinsurance (coinsurance) Risk premium reinsurance Excess of loss reinsurance +Catastrophe +Stop loss Financial reinsurance +risk premium financial reinsurance +contingent loan financial reinsurance --"
+    },
+    {
+        "question": "Describe factultative vs obligatory reinsurance (4) What kind of facultative/obligatory agreements might we find between insurer and reinsurer? (3) What is a treaty and what type of agreements are typically formalised via a treaty? (2) What benefits does a treaty have? (2)",
+        "answer": "The use of facultative vs obligatory essentially refers to ‘having choice’ vs being ‘obliged/obligated’ within an insurance treaty +The term ‘facultative’ applied to cedant’s part of reinsurance means it’s free to place reinsurance with any reinsurer +so far as reinsurer is concerned means it may accept/reject the reinsurance offered The use of ‘obligatory’ removes this freedom of action Agreements between ceding company vs reinsurer may be (cedant’s view first) (a) facultative/facultative (b) facultative/obligatory (c) obligatory/obligatory A treaty is +a legal contract which formalises the terms of reinsurance and is usually set up when either party has obligation ie type (b) and type (c) conctracts above +where both are factultative, usually no treaty, though to avoid having to make up treaty documents at times these are prepared in advance Treaties are advantageous in that +allows insurer to write large cases without having to refer to reinsurer to ‘ask permission’ which may stall sales process +they apply to specified products reinsurer is happy with, so even though reinsurer might be obligated to accept, as long as it knows the business insurer is writing, it can then charge appropriate reinsurance premium --"
+    },
+    {
+        "question": "Define original terms reinsurance (4)",
+        "answer": "Original terms insurance involves sharing of all aspects of original contract hence, premium split between insurer and reinsurer in fixed proportion and any claim is split in same proportion reinsurer shares in full risk of policy including investment/early lapse risks --"
+    },
+    {
+        "question": "Describe the 3 steps involved in determining the reinsurance premium rates to charge for original terms reinsurance (coinsurance)",
+        "answer": "Cedant provides premium rates (aka retail rates) to reinsurer for business class to be insured, for reinsurer to check adequacy. Reinsurer determines reinsurance commission rates prepared to pay cedant for business +reinsurance commission thus determines overall net cost of reinsurance for cedant +higher commission, lower reinsurance cost; insurer then decides to accept/not Alternatively, reinsurer provides level premium rates to insurer upon which they load costs/profit test against intended retail rates +ie reinsurer decides level premium rate for risk, to charge cedant for reinssurance +also called ‘level risk premium reinsurance’, +common for risk business prems/claims not strictly shared in fixed %, so more risk premium reins +reins comm likely much less significant with this variation, as reins prem probably has lower margins than retail rates +more common approach, given recent competition level in retail markets requires frequent prem rates changes --"
+    },
+    {
+        "question": "Under original terms reinsurance (coinsurance), when considering which reinsurer, in addition to considering reinsurance commission being offered by a reinsurer, in what other ways may a reinsurer appear more attractive over another? (3)",
+        "answer": "financial strength: reinsurer with greater strength will be less likely to default coverage offered: reinsurer offering broader coverage will be more attractive eg accept higher sums assured or accepting older-age applicants profit-sharing arrangements: reinsurers offering a profit sharing arrangement, or more generous arrangement will appear more attractive --"
+    },
+    {
+        "question": "Under original terms reinsurance (coinsurance), what factors may influence the level of reinsurance commission the reinsurer is willing to pay to the cedant? Overview of main considerations (3)",
+        "answer": "profits it expects to make from the cedant’s business risks it takes on (eg likely uncertainty in cedant’s future claim experience) how much it wants to obtain the business, accounting for competition from other reinsurers. --"
+    },
+    {
+        "question": "Under original terms reinsurance (coinsurance) what 2 methods may be used to determine the amount of risk to be reinsured?",
+        "answer": ""
+    },
+    {
+        "question": "Define risk premium reinsurance",
+        "answer": "Under a risk premium reinsurance arrangement +cedant reinsurers part of sum assured, or sum at risk ie excess of benefit over reserve +on the reinsurer’s risk premium basis +which can be either annually renewable or guaranteed --"
+    },
+    {
+        "question": "Describe the steps involved in determining the reinsurance premium rates to charge for risk premium reinsurance",
+        "answer": "Reinsurer determines risk premium rates by +assessing likely experience of the business it is to reinsure +and then adding expense and profit margins +reinsurer may or may not guarantee these rates for the term of the policy +Risk premium may be level of the term of the policy or may vary annually with the probability of the claim +Amount reinsured may be based on individual surplus or quota share --"
+    },
+    {
+        "question": "Define two bases on which excess of loss reinsurance can be entranced (3)",
+        "answer": "This is a form of reinsurance that cane be enacted on a risk basis, where the reinsurer pays any loss on an individual risk in excess of a predetermined retention. an occurrence basis where the aggregate loss from any one occurrence of an event exceeds the predetermined retention. in practice, the ‘occurrence basis’ is more commonly enacted form of reinsurance --"
+    },
+    {
+        "question": "What are the general features of excess of loss reinsurance? (4)",
+        "answer": "This reinsurance useful where loss unknown until it occurs Renegotiated annually Non-proportional form of reinsurance May be organised in levels/lines Different reinsurers may then take different proportions of each line --"
+    },
+    {
+        "question": "The main types of excess of loss reinsurance used in life assurance are catastrophe reinsurance and stop loss reinsurance. Explain how catastrophe reinsurance works?",
+        "answer": "The main aim of catastrophe reinsurance is to: reduce the potential loss to the cedant due to any non independence of risks insured (where non-independence usually leads to catastrophes) Particularly important for group business, where group contract is for many Usually available on a yearly basis and must be renegotiated each year Reinsurer agrees to pay out if ‘catastrophe’ as defined in the contract occurs Typically to qualify there needs to be minimum deaths from single incidence with deaths occurring within a specified time. --"
+    },
+    {
+        "question": "Describe the cover typically provided by a catastrophe excess of loss reinsurance contract (7)",
+        "answer": "Cover provided is usually as follows: contract specifies how much reinsurer will pay if catastrophe happens typically, this might be excess of total claim amount, net of any amounts already reinsured, over cedant’s retention limit reinsurer’s liability in respect of single catastrophe claim subject to maximum amount, and any amount above this would revert to cedant there is also usually a maximum amount of cover per life reasons for maximums could be +so that reinsurer doesn’t face unlimited liability +to help reduce cost of reinsurance for cedant +regulation/legislation may require this Catrastrophe excess of loss reinsurance cover usually excludes war risks epidemics nuclear risks however, seperate catrasrophe covers may be available for excluded risks --"
+    },
+    {
+        "question": "How does stop loss excess of loss reinsurance operate? (2)",
+        "answer": "Stop loss excess of loss reinsurance operates as follows Reinsurer pays the aggregate net loss over the predetermined retention for a portfolio over a given time period, usually a year. So cedant’s loss on a portfolio in any such period is capped As with catrasrophe excess of loss reinsurance, reinsurer’s liability is limited to specified maximum amount, and reinsurance needs to be renegotiated --"
+    },
+    {
+        "question": "What are the key features of financial reinsurance? (3) Under which situations would financial reinsurance not be effective? (3)",
+        "answer": "Key features of financial reinsurance Devised to improve apparent cedant’s accounting/supervisory solvency position help insurer manage its capital position normally only involves a small element, if any, if transfer of insurance risk from cedant to reinsurer Financial reinsurance not effective under accounting/supervisory reserving regimes where credit can already be taken for future profits a realistic liability has to be held for the loan repayments under fin re in addition, given global movement towards realistic reporting bases, there’s likely to be reduced adoption of such arrangements --"
+    },
+    {
+        "question": "Describe how risk premium financial reinsurance can be used to facilitate a financing agreement between insurer and reinsurer",
+        "answer": "reinsurer relieves cedant of part of its new business financing requirement a loan is presented to insurer in the form of initial reinsurance comm, as part of the risk premium reinsurance agreement the repayments for the ‘loan’ are spread over several years and are added to the reinsurance premiums reinsurer takes into account the expected future lapse experience of insurer when determining repayments loan is effectively repaid by insurer from its future premium receipts - it doesn’t have to set up any additional liability for the repayments, as they are only payable for as long as policy remains in force so assets increase by amount of reinsurance commission, the liabilities are unaffected, and therefore net assets of insurer will increase a straighforward loan from reinsurer would not achive this as cedant would have to add amount of loan to its liabilities --"
+    },
+    {
+        "question": "What sort of traditional (i.e non-financial reinsurance) contract would achieve the same result as a risk premium financial reinsurance financing arrangement? (3)",
+        "answer": "Same result can be achieved by original terms reinsurance in return for large loadings that reinsurer received, a substantial reinsurance comm would be paid to insurer, producing similar effect original terms actually more natural method, as premiums don’t need to be artificially increased to cover reinsurance comm payments --"
+    },
+    {
+        "question": "Describe how contingent loan financial reinsurance works (5)",
+        "answer": "Contingent loan financial reinsurance works as follows makes use of future profits contained in a block of new or existing business reinsurer, again, provides loan to cedant, but repayment of loan is contingent upon stream of future profits being generated by business hence, cedant may not need to reserve for the repayment within its supervisory returns (depending on regulatory regime) Study Deck Preview (12) Browse (12)"
+    },
+    {
+        "question": "List various reasons why insurer’s may use reinsurance (12)",
+        "answer": "Reinsurance mainly allows cedant to transfer risks from its balance sheet to reinsuerer’s balance sheet and achieve the following goals increase (raise) +capital (where permitted) +profits or risk adjusted return on capital reduce +insurance parameter risk that claims might differ to expected +claim payout fluctuation by reducing cedant’s claim cost variance +costs (cost reduction) +new business strain +overall capital requirements limit +amount paid on any particular claim +total claims payout receive technical assistance separate out different risks from a product manage aggregation of risks --"
+    },
+    {
+        "question": "What is insurance parameter risk, and what form of reinsurance best transfers this this type of risk? (2)",
+        "answer": "the risk that level of claims differ compared to what is expected may be caused by incorrect pricing, underwriting failures, fraudulent activities, etc best reinsurance for transfer this risk is through quota share reinsurance --"
+    },
+    {
+        "question": "Describe 2 factors which lead to variance of claim amounts being high relative to the mean, and what forms of reinsurance can be used for each factor?",
+        "answer": "Small number of contracts, with very high levels of cover ie concentration of risk Forms of reinsurance that help with this: either original terms reinsurance (coinsurance), or risk premium reinsurance, usually on an individual surplus basis Lives insured not independent risks ​Forms of reinsurance that could help are excess of loss reinsurance +catastrophe reinsurance +stop loss reinsurance --"
+    },
+    {
+        "question": "Why would fluctuations in claim costs be undesirable for an insurer?",
+        "answer": "may make life company insolvent may reduce excess of value of company’s assets over its liabilities below the level desired by the company may reduce rate of return on free assets below level desired by company in some years may cause fluctuations in shareholder dividends --"
+    },
+    {
+        "question": "Explain how reinsurance might be used to reduce new business strain? (2) What is the benefits or reducing new business strain? (1)",
+        "answer": "Provided it’s permitted under relevant supervisory regime, the cedant could use reinsurance to reduce financial risk associated with new business, either by: increasing its available capital, or reducing its financing requirement Reducing new business strain has the benefit that more new business can be written for the same amount of capital --"
+    },
+    {
+        "question": "Which types of reinsurance would be used for the purpose of reducing new business strain?",
+        "answer": "original terms coinsurance usually on quota share basis risk premium reinsurance usually on quota basis (not true)? financial reinsurance (if effective under regulatory regime) --"
+    },
+    {
+        "question": "Explain the circumstances in which an insurer may benefit from the technical assistance a reinsurer can provide (4) What form of reinsurance best allows insurer to benefit from technical assistance from the reinsurer? (1)",
+        "answer": "Reinsurer may have considerable degree of expertise on underwriting, product design, pricing and systems design This is particularly important when cedant starts a new line of business, as it can receive tehcnical assistance from reinsurer until it has built up its own expertise Likewise for recently established insurance company. Reinsurer can give support for existing lines in areas such as underwriting, eg treatment of unusual cases. Best form of reinsurance to benefit insurer regarding technical assistance is original terms reinsurance (with high quota share reinsured) --"
+    },
+    {
+        "question": "Discuss how reinsurance may help insurer’s in terms of cost reduction",
+        "answer": "different capital requirements it faces diversification benefits of due to reinsurer having greater spread of risks than any individual cedant tax differences across regions/regimes, across certain types of business different assessments of risks --"
+    },
+    {
+        "question": "List considerations that an insurer will take into account in deciding on Whether to use reinsurance Types of reinsurance to use Amount of reinsurance to use",
+        "answer": "Reasons for acquiring reinsurance Type of business being reinsurance Cost of reinsurance Retention limits - ie maximum amount of risk retained by cedant on any individual risk Legal conditions applying Types of reinsurance available and way in which amount reinsured is specified Legal risk: if reinsurance treaty incomplete Counterparty risk: risk that reinsurer defaults in event of claim --"
+    },
+    {
+        "question": "Once a suitable form of reinsurance has been chosen, the cedant needs to decide on how much risk it will retain (ie retention limit) What factors should the insurer/cedant consider when determining its retention limit?",
+        "answer": "the average benefit level and the expected distribution of the benefit insurer’s/cedant’s insurance risk appetite level of company’s free assets and the importance attached to stability of its free asset ratio terms on which reinsurance can be obtained and dependence of such terms on retention limit company’s familiarity with underwriting the type of business involved effect on company’s regulatory capital requirements of increasing or reducing retention limit existence of profit-sharing arrangement in the reinsurance treaty the company’s retention on its other products the nature of any future increases in sums assured --"
+    },
+    {
+        "question": "State 3 ways in which a cedant can use stochastic simulation to determine its retention limit",
+        "answer": "Stochastic simulation - reinsurance only Determine retention limit such that probability of loss/insolvency (ruin probability) kept below certain level Stochastic simulation - reinsurance and fluctuation reserve Use stochastic simulation to determine minimum total of cost of financing an appropriate mortality fluctuation reserve, and cost of obtaining reinsurance as retention limit increases, (1) will increase and (2) will decrease choose retention limit that minimises total of (1) and (2) Financial economics approach ​Based on the theory of efficient investment frontiers, and looks at reinsurance as an asset class that allows the company to optimise its risk and reward trade off. Allows identification of asset portfolios including reinsurance, which cannot be bettered in terms of either reducing risk for no reduction in return, or increasing return for no increase in risk. --"
+    },
+    {
+        "question": "When an insurer is deciding on reinsurance, describe how factors relating to counterparty risk may arise (2) How might an insurer reduce its counterparty risk? (1)",
+        "answer": "Counterparty risk arises as follows Cedant retains liability to the policyholder for the benefits even if the reinsurer becomes insolvent and can not meet claim payments as they become due. Amount of exposure known as credit risk. The greater the counterpaty risk, the less valuable the value of reinsurance An insurer may reduce its counterparty risk by: re-insuring with multiple reinsurers, thereby diversifying its risk"
+    }
+]

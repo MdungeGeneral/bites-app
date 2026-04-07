@@ -1,1 +1,82 @@
-[]
+[
+    {
+        "question": "List principles that should be considered when calculating surrender values (11)",
+        "answer": "(1) PRE (2) Treat both surrendering and continuing policyholders equitably (3) At early duration, not appear too low compared with premiums paid, accounting for any projected maturity values (4) At later duration, be consistent with projected maturity values (5) Not exceed asset shares, in aggregate, over reasonable time period (6) Competitors’ surrender values (and possibly also auction values, where applicable) (7) Not be subject to frequent change, unless dictated by financial conditions (8) Not be subject to significant discontinuities by duration (9) Not excessively complicated to calculate, accounting for computing power available (10) Be capable of being documented clearly (11) Avoid selection against insurer --"
+    },
+    {
+        "question": "Discuss the influence of PRE when setting SVs in terms of Discontinuance at short durations (4)",
+        "answer": "SVs likely compared to premiums paid (sometimes with interest), but usually asset share less than this prospective policy value based on best estimates of future experience likely to be even smaller insurers may feel obliged to accept losses/reduced profit on SVs several years into contract --"
+    },
+    {
+        "question": "Discuss the influence of PRE when setting SVs in terms of Discontinuance close to maturity (3)",
+        "answer": "where maturity benefit payable, PHs will expect SV prior to maturity to be consistent with this SVs should progress smoothly at each year end into maturity value achievable for without profits contracts: base SV on prospective policy values --"
+    },
+    {
+        "question": "Discuss the influence of PRE when setting SVs in terms of How they compare to auction values (4)",
+        "answer": "auction value is what policy obtained if PH transferred ongoing policy to someone else auction values assessed independently hence PHs may accept as fair often unsuitable, though +difference in assumptions used +values fluctuate unpredictably --"
+    },
+    {
+        "question": "Discuss the influence of PRE when setting SVs in terms of What was disclosed at new business (2)",
+        "answer": "new business sales sometimes accompanied by prospective SV illustrative values by duration (may be regulatory requirement) potentially embarrassing if SVs given/quoted in financial press surveys differ significantly from new business literature --"
+    },
+    {
+        "question": "Discuss the influence of Earned Asset Share when setting SVs according to following: What does the asset share represent in general? (1) What does using asset share for SV calcs mean in terms of profit/loss distributions (1) How might we achieve averaging over time when using asset share for SVs? (3)",
+        "answer": "Asset represents money insurer has really accumulated in respect of policy, unlike supervisory reserve (represents how much money company must hold) SVs must not exceed earned asset share in aggregate over a reasonable time period The implication is Basing SVs closely on asset shares implies distributing accrued profits/losses to PHs Averaging over time for SVs can be achieved in 2 ways: +Calculated once per year (implicit average) +smoothed over a period which has to be decided --"
+    },
+    {
+        "question": "State the main advantages and disadvantages of using the retrospective method for calculating surrender values Advantages (4) Disadvantages (3) Other points to consider (1)",
+        "answer": "Advantages Advantages: +Represents maximum company could pay without making a loss +At early durations, may be reasonable compared with the premiums paid +It may be consistent with values quoted in product disclosure literature +Not overly complicated, provided necessary information available to build up earned asset share/determine suitable parameters if formula is used Disadvantages +For without-profit contracts gives no indication of profit which would’ve been earned without surrender, hence, not easy to ensure equity either with continuing policyholders or with any shareholders +will not necessarily run into the maturity value, except by chance +future benefits/expected experience ignored. So values may be significantly different from a realistic prospective value, which is likely to be the approach used to calculate auction value. +The most complex component of the method is obtaining the necessary historic information and computing resources availability Other points Consistency with competitors depends on the method and basis used --"
+    },
+    {
+        "question": "State the main advantages and disadvantages of using the prospective method for calculating surrender values (7) Advantages (4) Disadvantages (3)",
+        "answer": "Advantages +If realistic basis used with the method it will produce a surrender value that represents what the contract is worth to the company +Therefore, it enables the company to quantify how much profit to retain and hence maintain equity with continuing policyholders and any shareholders +The surrender values will run into the maturity value, for without-profits It’s relatively easy to operate Disadvantages +There is no guarantee that the surrender values produced will not consistently exceed the asset share +It could produce unreasonably low surrender values at early durations, from the policyholder’s point of view +Likely to produce comparable surrender values to those available at auction and for comparable competitors’ contracts - although the basis used will be more influential in the comparison than the method. --"
+    },
+    {
+        "question": "Calculate SV: Choice of method How might we use retrospective and prospective methods for the eventual SV calculations? (1) In early years/policy durations what do we have to pay particular attention to when calc’ing SVs? (3) Discuss the use of retrospective method throughout policy duration for SVs (1) In later years/policy durations what might we do for SV calcs? (4)",
+        "answer": "For eventual SVs produce a table of SVs by policy duration which is a blend of retrospective and prospective values, subject to min value of zero In early years, pay close attention to actual expenses incurred (particularly initial expnses) other factors are of lesser importance in short term retrospective values are likely to be more natural approach Theoretically, could just use retrospective throughout policy duration for SVs but can become increasingly difficult to find right combo of factors to produce values which run into maturity if calc had to be done by devising some independent formula and setting parameter values for it After earlier years prospective methods more convenient, since only necessary to value future benefits, premiums and expenses main difficulty is deciding appropriate interest rate thus difficult to apply at short durations and, hence, long outstanding …because small changes in interest rate => big effect on SV --"
+    },
+    {
+        "question": "What do we mean by ‘profit retention’ in context of SVs? (2) What other important feature must be checked when deciding on method for SV calcs? (2)",
+        "answer": "Profit retention relates to excess of earned asset share over SV paid, the higher SV paid compared to asset share, the less profit we retain Also important to check for lapse and re-entry risk due to chosen basis --"
+    },
+    {
+        "question": "Comment on use of retrospective method for SVs in relation to retained profit (1)",
+        "answer": "Retrospective method profit retention => no profit wouldn’t want to use retrospective method for too long, since SV is equal as asset share --"
+    },
+    {
+        "question": "For prospective method SV calc, show how insurer profit retained on surrender can be split into (a) past profit and (b) capitalised value of future profit by considering SV calculated on the premium basis (5)",
+        "answer": "Prospective method profit retention depends on relationship between SV assumptions vs office prem assumptions if profit allowance contained solely in assumption margins used to calc office premium then profit retained can be specified as (EAS - SV’) + (SV’ - SV”), where EAS = earned asset share SV’ = prospective SV using office premium assumptions SV’’ = prospective SV using surrender value basis assumptions. 1st part, (EAS - SV’), represents the profit that’s been made to date 2nd part, (SV’ - SV’’), represents capitalised value of profit that will arise in future. --"
+    },
+    {
+        "question": "How can the SV assumptions used impact insurer’s retained profit? ( 6 )",
+        "answer": "Prospective method SV assumptions used can impact insurer’s retained profit if SV assumptions represent exactly future experience (best estimate), then total profit retained will be same as if contract had not surrendered if SV assumptions same as premium basis assumptions, then profit retained will equal profit made to date suitable choice - btwn best estimate & premium basis can adjust profit retained in line with desired aim of insurer possible approach uses blended basis start with premium basis near entry (retaining profit earned to date) ….and running into best estimate basis closer to maturity how quickly it runs into best estimate basis depends on how quickly it can start retaining same profit as form non-surrendered contract --"
+    },
+    {
+        "question": "How might we determine the assumption basis for SV calcs using retrospective methods? (2)",
+        "answer": "If retrospective method is used in earlier years company will need to examine its actual experience for all relevant factors (including investment earnings, expenses, mortality and tax). may not follow past experience exactly for regular premium contracts (where policyholders are more likely to exercise financial selection against company) particularly regarding investment earnings, to smooth the value. --"
+    },
+    {
+        "question": "List the assumptions that will usually be needed when determining a prospective surrender value basis (4)",
+        "answer": "Interest Renewal expenses Inflation Mortality (including the effect of selection) Tax (maybe) --"
+    },
+    {
+        "question": "How might we determine the assumption basis for SV calcs using prospective methods? Interest (3)",
+        "answer": "Interest (most important) insurer will likely cover without profit liabilities with fixed interest investments, chosen to give reasonable matching term assuming suitable securities exist hence insurer might consider current weighted average redemption yield of suitable securities to be best estimate --"
+    },
+    {
+        "question": "How might we determine the assumption basis for SV calcs using prospective methods? Renewal expenses (3)",
+        "answer": "Renewal expenses most recent expense investigation will indicate level of renewal expenses, could be same as used to set current prem rates --"
+    },
+    {
+        "question": "How might we determine the assumption basis for SV calcs using prospective methods? Inflation (2)",
+        "answer": "Inflation probably chosen to be consistent with investment return assumption real return anticipated on index linked government stock will given indication of suitable margin below the full interest rate assumption --"
+    },
+    {
+        "question": "How might we determine the assumption basis for SV calcs using prospective methods? Mortality (including the effect of selection) (6)",
+        "answer": "Mortality (including the effect of selection) most contracts with surrender values, mortality not have big impact on SVs…in fact, usually, contracts like term assurances, where mortality is important, often don’t even have SVs should reflect future expected mortality of those policyholders who are surrendering reasonable to assume such people have lighter mortality, since unhealthy people would likely keep policies, not surrender them --"
+    },
+    {
+        "question": "Describe the typical terms for surrender of unit-linked contracts. (5)",
+        "answer": "Normally specified at outset Surrender value normally equals unit-fund bid value, sometimes less surrender penalty Penalty could be expressed as proportion of unit-fund value, or as monetary deduction Any penalty tends to be relatively large at early policy duration, decreasing over time Aims to recover any shortfall at time of surrender, where charges to date have been insufficient to recoup all initial expenses under policy"
+    }
+]

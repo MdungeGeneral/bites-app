@@ -1,6 +1,118 @@
 [
     {
-        "question": "\\+distribution of surplus",
-        "answer": "AWP: bid price of allocated units plus terminal bonus (if appropriate) less any surrender penalty specified in contract less any MVR that company may have right to apply"
+        "question": "Define asset share",
+        "answer": "+Asset share is accumulation of premiums… +…less deductions associated with the contract… +…(plus, for with-profits policies, allocation of profits on without-profits business and surrender profits on with-profits business if applicable & appropriate)… +…all accumulated at the actual rate of return earned on investments --"
+    },
+    {
+        "question": "List 6 deductions that may be made in determining the individual asset share of a contract",
+        "answer": "Expenses, including any commission Cost of benefits (in excess of asset share) i.e. both life cover and any guarantees or options granted Tax (if appropriate), including any reserves made for future tax liabilities Transfers of profit to shareholders, in case of proprietary company Cost of any capital necessary to support contracts in early years Contribution to free assets, eg to support smoothing and greater investment flexibility --"
+    },
+    {
+        "question": "Explain in words how an asset share may be calculated using a recursive formula",
+        "answer": "+Initially, earned asset share is zero +Each year cash flows, including premiums received and deductions made, e.g. to cover cost of benefits, are recorded +Suitable rate of return on investments is used to accumulate asset share plus premiums less deductions (plus, for with-profits policies, allocation of any miscellaneous profits) to the year end to determine asset share +Process is repeated for subsequent years List 3 forms in which profits can be distributed to with-profits policyholders a Cash bonus Addition to benefits Reduction of premiums --"
+    },
+    {
+        "question": "Explain why the insurer and the with-profits policyholders may have differing views on deferral of distribution of profits to policyholders",
+        "answer": "From insurer’s point of view, deferral of distribution may be attractive because: increased probability of remaining solvent greater investment freedom ( future bonuses higher if earn higher returns) With-profits policyholders may welcome second of these (higher future bonuses), but possible disadvantage of deferral may be: uncertainty of not knowing how much deferred (terminal) distribution is going to be --"
+    },
+    {
+        "question": "What is it that forms part of the profits distributed? What split/factor is it important for us to consider when deciding on profits to distribute?",
+        "answer": "Profits usually constitute +Excess investment return on premiums paid over the guaranteed return +Mortality/expense profit Usually less significant than investment profit, because +long term mortality/expense experience can be more accurately predicted and +premium basis can be based on more realistic forecast of future Important to consider split between +profits distributed to shareholders vs profits distributed to policyholders +may be regulation restricted/governed --"
+    },
+    {
+        "question": "Name 3 surplus distribution systems",
+        "answer": "Additions to benefits +conventional with profits +accumulating with profits Revalorisation Contribution --"
+    },
+    {
+        "question": "Define reversionary bonus",
+        "answer": "+Declared during contract lifetime, payable at the same time as basic benefits +Once declared, is attached to basic benefits and cannot be taken away +Can be regular (usually added annually), or special (added as ‘once off’ from time to time) --"
+    },
+    {
+        "question": "Describe the 3 types of regular reversionary bonus for conventional with-profits policies",
+        "answer": "Simple: bonus expressed as % of basic benefit Compound: bonus expressed as a % of basic benefit plus any already attaching bonuses Super compound: bonus expressed in terms of two %s one applied to basic benefit second applied to any already attaching bonuses For given total amount of reversionary bonus at maturity date of an endowment, deferral of distribution is greatest with super compound, and least with simple bonus --"
+    },
+    {
+        "question": "Define terminal bonus State 2 ways in which it can be speficied for conventional with-profits policies",
+        "answer": "Terminal bonus +Additional amount payable when insured event occurs. +Determined when insured event occurs. +Generally more volatile as company has greater scope to increase if needed. TB may be specified as: % of total attaching reversionary bonuses possibly varying with duration in force % of total claim amount (basic benefits plus attaching reversionary bonuses) before addition of terminal bonus --"
+    },
+    {
+        "question": "What kind of profit sources are terminal bonuses usually used to distribute? What is the general/guiding principle used to determine the level of terminal bonus to distribute?",
+        "answer": "Profit source distributed by terminal bonus Usually used to distribute profits from more volatile sources rces e.g. capital gains on equity Usually set as difference between asset share and guaranteed benefits because aim is to distribute profits to policyholders, allowing for shareholder’s interest and other aspects such as cost of capital. insurer tracks asset shares of sample policies to determine if affordable terminal bonus. --"
+    },
+    {
+        "question": "Explain what is meant by accumulating with-profits (AWP) contract",
+        "answer": "Definition Bonuses are added in relation to premiums paid to date plus previously declared bonuses Premiums regular or single Terminal bonus may be added when policy becomes claim May be unitised or non-unitised --"
+    },
+    {
+        "question": "What is the key difference between conventional with-profits and non-unitised accumulating with-profits contracts?",
+        "answer": "Relationship between each premium paid and addition to benefit to which it gives rise is: +Explicit for AWP contracts +Implicit (the sum assured) for CWP contracts Level of guarantees also tends to be greater for CWP contract. --"
+    },
+    {
+        "question": "What are the key differences between unit-linked contracts and unitised accumulating with-profits contracts",
+        "answer": "Unit price UL: set objectively by direct reference to value of underlying WP: set at discretion of company, so only indirect link with value of underlying assets Surrender values equal UL: bid price of allocated units less any surrender penalty specified in contract. Company has no discretion. AWP: bid price of allocated units plus terminal bonus (if appropriate) less any surrender penalty specified in contract less any MVR that company may have right to apply --"
+    },
+    {
+        "question": "Describe 2 basic ways in which the unit part of a unitised accumulating with-profits contract could operate",
+        "answer": "(1) Unit price remains constant e.g. R1.00 and bonuses are granted by allocating additional units company allocates additional units to each contract, usually annually at bonus declaration. these are made up of (possibly zero) guaranteed addition, and bonus addition, which could also be zero especially if there are guaranteed additions number of units is determined at discretion of company (2) Bonuses are granted by increasing unit price, usually on a daily basis. increase is made up of (possibly zero) guaranteed part and bonus part. increase in UP is at discretion of company Under both methods, terminal bonus could be added when claim event happens --"
+    },
+    {
+        "question": "State 2 possible charging structures for unitised accumulating with-profits business and give 5 examples of possible charges",
+        "answer": "Explicit charging e.g \\+policy administration charges \\+percentage allocation during an initial period \\+bid/offer spread \\+charge for risk benefits \\+annual management charge Implicit charging e.g. through choice of bonus rate --"
+    },
+    {
+        "question": "Define equity in the context of treatment of policyholders Under what circumstances/examples may questions of equity arise?",
+        "answer": "Equity means that all policyholders are treated fairly… …i.e. no groups of policyholders benefit at the expense of other groups. For proprietary company, equity also considered between policyholders and shareholders."
+    },
+    {
+        "question": "Five Considerations in Bonus Making Decisions",
+        "answer": "Policyholder Reasonable Expectations Equity between different generations of policyholders as well as between shareholders and policyholders Avoiding threating future business plan, investment strategy and current solvency position Asset Shares Competitive Position and Industry Practice Describe the revalorisation system of surplus distribution a Bonuses are granted by increasing reserves, benefits and premiums of with-profits contracts by a percentage, r% say Most countries operating this bonus system also offer option of constant premium policies, ie reserves increase by r%, benefits increase by s% (s <=r) and premiums don’t change ​ In determining r%, it's common to divide surplus into savings profits (ie investment surplus) and insurance profit (ie surplus from other sources) A high proportion of savings profit is usually given to policyholders, with rest retained for shareholders All insurance profit may go to shareholders or, depending on market, it may be divided between shareholders and policyholders --"
+    },
+    {
+        "question": "State 4 advantages of revalorisation system of surplus distribution",
+        "answer": "Simple to apply Codifies exactly how company should declare part of its profits as bonus, so objective and relatively cheaper to administer Objectivity generally protects policyholders from ungenerous life insurers Takes assets at book value thus includes appropriately smoothed writing-up adjustments/smooth emergence of investment profit is usually achieved --"
+    },
+    {
+        "question": "State 4 disadvantages of the revalorisation method of surplus distribution",
+        "answer": "Company has no discretion (except to extent of spreading of one-off costs, if insurance profits is distributed to policyholders) Tends to discourage equity investment, as there is no deferral of profit distribution. meaning all investment losses would be borne by company and would constitute unacceptable insolvency risk also problem regarding treatment of unrealised gains, which are not easy to distribute directly under current revalorisation systems Versions that do not share insurance profit with policyholders go against principle of mutuality Difficult to explain to policyholders with constant premiums policies who see very small additions to their guaranteed benefits early in policy term --"
+    },
+    {
+        "question": "Describe the contribution system of surplus distribution",
+        "answer": "Distributable surplus should be distributed among policies in same proportion as those policies are judged to have contributed to surplus --"
+    },
+    {
+        "question": "State 2 common variations of the contribution method of surplus distribution",
+        "answer": "Dividend may be converted into paid-up addition to benefits, rather than paid out in cash Terminal dividend may be given --"
+    },
+    {
+        "question": "State 3 advantages of the contribution method of surplus distribution",
+        "answer": "Policyholders receive benefits earlier than under additions to benefits or revalorisation methods Objective, so more transparent and may appear fairer Equitable (dividends based on policy’s contribution to surplus) --"
+    },
+    {
+        "question": "State 3 disadvantages of the contribution method of surplus distribution",
+        "answer": "Payment of cash dividend reduces final benefit. May not be popular if policyholder wishes to pay set premium or is targeting a set benefit for specific purposes Overall return may be lower, as no deferral of surplus (unless there’s a terminal dividend) Increased admin of making dividend payments….need to ensure system is set up for the change --"
+    },
+    {
+        "question": "List 3 reasons why it may be difficult for an insurer to reduce with-profits bonuses to reflect poor experience",
+        "answer": "Policyholder Reasonable Expectations Bonus method e.g revalorisation method usually only distributes investment profits, so any other expense or mortality losses must be born by company Guarantees mean that there is some level of adverse experience beyond which any further losses cannot be recouped (as cannot declare negative bonuses) --"
+    },
+    {
+        "question": "Define PRE (policyholder’s reasonable expectations)",
+        "answer": "Relates to PRE with regard to level of benefits, or charges, under contracts where these are at discretion of insurer There is no generally accepted definition of PRE, but they will be influenced, for example, by the past practice of a company and any literature issued by it. --"
+    },
+    {
+        "question": "List 3 influences on policyholder’s expectations as regards the form of the profit distribution and level of bonuses or dividends given 3 potential consequences of a failure to meet those expectations",
+        "answer": "Influences on policyholder’s expectations +documentation issued by insurer +company’s past practice +general practice in life insurance market Possible consequences of failure to meet those expectations +policyholder dissatisfaction +risk of losing existing and/or new business +intervention by insurance supervisory authority in affairs of company --"
+    },
+    {
+        "question": "State 2 possible benefits of deferring distribution of profits to policyholders. Give 3 features of an additions to benefits surplus distribution system that could be used to help defer distribution of profits to policyholders",
+        "answer": "Deferring profit may be +used to augment company’s free assets and it ability to take on risk +available to support new business (depending on the regulatory regime) Using additions benefits system to defer profits distribution +high proportion of terminal bonus (and lower reversionary) +conventional with-profits (rather than accumulating with-profits) +super-compound bonuses (rather than compound or simple) --"
+    },
+    {
+        "question": "List 8 possible components of a profit distribution strategy",
+        "answer": "Amount of each year’s profit distributed (regular bonus) and deferred (terminal bonus) Split of profit distributed between policyholders and shareholders Bonus method used Level of initial guarantees provided Extent of smoothing of payouts over time Extent to which profit distributions to individual policyholders reflect actual profit earned by those policyholders Extent to which policyholders share in profits from other business Contribution of with-profits business to company’s estate, or vice versa --"
+    },
+    {
+        "question": "List 4 aims of profit distribution strategy",
+        "answer": "To meet PRE regarding payouts and to treat customers fairly To meet shareholders’ requirements for profit from company’s with-profits business (where appropriate ) To manage capital efficiently/control solvency risk To control marketing risk"
     }
 ]

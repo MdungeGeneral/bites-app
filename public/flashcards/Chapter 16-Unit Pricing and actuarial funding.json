@@ -1,1 +1,150 @@
-[]
+[
+    {
+        "question": "Define an internal unit-linked fund (3)",
+        "answer": "Consists of a clearly identifiable set of assets, for example equities, property, fixed-interest securities and deposits. Fund is divided into equal units consisting of identical sub-sets of fund’s assets and liabilities. Responsibility for unit pricing rests with company, subject to any relevant policy conditions. --"
+    },
+    {
+        "question": "What are the principle risks associated with unit pricing?",
+        "answer": "Underlying assets Volatile +Large movement in market values (company liabilities depend on unit price, thus not exactly matched to underlying assets) +Timing delays (introduces price risk needing to be managed) Approximations included in price +Tax on unrealised capital gains +Accrued assets/liabilities (e.g. accrued interest not year received) +Estimates of asset market values (e.g property prices not immediately observable; risk of estimates being wrong compared to correct price) Errors in actual calculations +Appropriation/expropriation basis (risk of wrong basis used to calc UP) +Prices based on incorrect data (e.g. ass manager gives wrong asset MV) +Error in calculation routine Regulations restricting policy charges (which may be included in price, changes in this pose a risk) Negative impact on company profits/income +because charges are based on value of units +company expected to make up shortfall in policyholder benefits resulting from pricing error Negative impact on reputation (in turn affect new business/increased withdrawals) Anti-selection (policyholders selectively dis-investing if aware that UP overstates NAV) --"
+    },
+    {
+        "question": "State the basic equity principle of unit pricing for an internal unit-linked fund (5)",
+        "answer": "The interests of unit-holders not involved in a unit transaction should be unaffected by that transaction. Creation/cancellation of units should not given rise to change in NAV per unit --"
+    },
+    {
+        "question": "Define: (1) Appropriation price (2) Expropriation price",
+        "answer": "Appropriation price NAV of fund on an offer basis amount of money per unit put into a unit-linked fund for each new unit appropriated i.e. created, such that the net asset value per unit is the same after as before the appropriation. therefore, it is the price at which the company will create a unit Expropriation price NAV of fund on a bid basis amount of money taken out of a unit-linked fund for each unit expropriated cancelled, such that the net asset value per unit is the same after as before the expropriation. therefore, it is the price at which a company will cancel units --"
+    },
+    {
+        "question": "Outline how the appropriation price is calculated (4)",
+        "answer": "The market ‘offer price’ value of assets held by fund plus the expenses and any duty that would be incurred in the purchase Plus the value of any current assets, such as cash on deposit or investments sold but not yet settled less the value of any liabilities, such as investments purchased but not yet settled or loans to the fund less any allowance/accrual for tax, if applicable This gives a net asset value of the fund on an ‘offer basis’. Dividing the number of units existing at the valuation date i.e. before any new units are created, gives the appropriate price. --"
+    },
+    {
+        "question": "Explain how the calculation of the expropriation price differs from that of the appropriating price (2)",
+        "answer": "Main difference is that starting point is the proceeds that would be received from selling the assets in the fund This requires that the investments of the fund are valued on a market ‘bid basis’, and that the expenses that would be incurred in the sale are deducted. --"
+    },
+    {
+        "question": "Outline the difference between an offer basis and a bid basis, and which basis is used in practice? (7)",
+        "answer": "Offer basis used for fund expansion marginal transaction involving creation of units money put into fund = net number units being created * appropriation price Bid basis used for fund contraction marginal transaction involving cancellation of units money taken out of fund = net number units cancelled * expropriation price Companies more likely practice broad equity approach under which basis is only changed if there is a significant movement against existing basis e.g. significant inflow for fund currently priced on bid (expropriation) basis --"
+    },
+    {
+        "question": "Describe the 2 main adjustments that are likely to be made to either the appropriation price or the expropriation price in order to determine the offer price and bid price used when dealing with policyholders (2)",
+        "answer": "Initial charges companies may want to make a charge to contribute towards initial expenses, including any commission and possibly profit offer price is then taken as appropriation/expropriation price plus the initial charge and the bid price as the appropriation/expropriation price initial charge may also be referred to as bid/offer spread Rounding it is normal to quote prices rounded to a certain number of decimal places --"
+    },
+    {
+        "question": "What considerations should be given to charges levied on the unit-linked fund, hence unit price?",
+        "answer": "What the charges are used to fund \\+expenses (initial, renewal, termination) \\+cost of capital \\+profit \\+death/maturity guarantees Charges start low level (then grow as fund increase) Matching cashflows +difficult to match initial expenses, since charges start low +likely to be greater than ongoing costs later Charges calculation +fixed amount or related to fund value? +related to FV exposes company to market risk, particularly when majority of charges will be of this form Study Deck Preview (8) Browse (8)"
+    },
+    {
+        "question": "What is actuarial funding? (4)",
+        "answer": "In the context of unit linked contracts, actuarial funding is when the insurer takes credit for some of the extra future annual management charges in present day’s terms. Life insurers can hold lower reserves for unit-linked contracts (i.e. less units) to which it can be applied, and this reduce new business strain Money saved can be used to cover initial expenses. Missing unit funds then bought later on from future management charges and management charge should thus be greater than the actual fund management expenses. --"
+    },
+    {
+        "question": "What are the requirements necessary for actuarial funding to work? (5)",
+        "answer": "Permitted by regulation Benefit contingent on death/survival +​for minimum period of years, thus still some risk on death Unit related charge +company hold less than full funded value +additional units purchased over lifetime (using unit related charges) +unit charge exactly sufficient (because charge is unit related, irrespective of any price movement) Sufficient regular fund management charges Specifically higher than management expenses. Unit-linked related surrender penalty ​+imposed such that unit reserve not lower than surrender value payable --"
+    },
+    {
+        "question": "What common mechanisms can be used to implement actuarial funding? (2)",
+        "answer": "Higher fund management charges on all units Capital/accumulation units (with different management charges) Capital units: attracts higher management charge, typically allocated premiums used to buy during first few years Accumulation units: lower management charge, allocated premiums used to buy later on However, has issues with transparency: thus no longer really used in contract design But because of long term nature, still many policies in force --"
+    },
+    {
+        "question": "Actuarial funding factors",
+        "answer": "For endowment assurance at policy duration t allowing for contingency of death would be (using a suitably chosen basis): UFt * A(x+t:n-t), where UFt is the fully funded value of the unit fund at policy duration t x is the entry age n is the policy term Discount rate used should be proportion of fund management charge we wish to take advance credit for considering the ability to cover renewal expenses --"
+    },
+    {
+        "question": "What is the effect of actuarial funding on net cashflows from the unit fund? (5)",
+        "answer": "Creates extra cashflows to non-unit fund (funding factor) +to help reduce new business strains +net cashflow reduces since assurance factor increases with time Reduces future management charges +transferred from unit fund to non-unit fund, coz charge is only levied on actual number of units purchase (which will now be less) Additional charges/reduced credits to non-unit fund will be much smaller than the additional credit as result of actuarial funding, providing AMC on units in unit fund is substantial Creates additional liability on death +on non-unit fund, due to death of policyholder because higher amount required to make up bid value of unit fund to guaranteed minimum sum assured +this expected additional death cost is a charge on non-unit fund at each year end Swap high future management charges for capitalised sum early +thus matched cash flows from policy with incidence of expenses --"
+    },
+    {
+        "question": "Considerations to consider when applying actuarial funding? (2)",
+        "answer": "Only allow for excess management charges In the calculation of non-unit reserves +Only residual cash flows from the unit fund can be counted towards future cashflow projections +Full fund management charge is no longer available for this purpose The unit fund should not be less than the surrender value +thus, the extent to which actuarial funding may be employed is restricted by the amount of any surrender penalty (reduction in benefit from bid value of units) that company may impose. +too risky to deduct the cost of additional benefit on surrender, coz surrender is policy option, it is quite feasible for all policies to surrender over a very short period of time. +would then have to find value of units almost immediately, and there’d be inadequate reserves --"
+    },
+    {
+        "question": "Advantages of actuarial funding? (7)",
+        "answer": "Lower reserves Reduce new business strain Write more new business More capital efficient Charges/expenses well-matched, while also… …allowing higher initial allocation making product more marketable t Reduced investment/persistence risk because charges/expenses more closely matched --"
+    },
+    {
+        "question": "Disadvantages of actuarial funding? (5)",
+        "answer": "Regulatory restrictions Can be complicated particularly when used together with capital units Issues because of complexity +reduced transparency +poor persistency because of selling to clients who don’t understand +restricts distribution channels +more effort required to sell may restrict level of sales, +depending on remuneration Requires surrender penalty which may be unattractive Increase mortality risk As sum at risk will be higher due to greater discrepancy between reserves held and face value of units Study Deck Preview (20) Browse (20)"
+    },
+    {
+        "question": "What is product pricing? (2) Outline how models are used for product pricing (4)",
+        "answer": "Pricing is the process of setting the premium/charging structure, for: new business or existing business +continually monitoring validity of premium rates on existing business +re-examine if expected future experience changed from that used in initial pricing Choose model points, considering existing business: profile of similar business, with advice from marketing dependent new bus: profile of existing bus, adj for exp future changes ​For each model point, project cashflows, allowing for reserving + solvency capital requirements, on basis of set of assumptions Discount cashflows at risk discount rate RDR that allows for: +return required by company +level of statistical risk attaching to cashflows (so in theory, separate RDR for each component of cashflows) Premium/charges for model point set to produce profit required by company --"
+    },
+    {
+        "question": "Model points What is a model point (MP)? (3) How do model points help in the modelling exercise? (3)",
+        "answer": "A model point is a data record fed as input into a model/modelling programme… …will represent either a policy or group of homogeneous policies …will contain most important characteristics of the policy How model points help? Underlying business comprises wide range of policies Model points group policies expected to produce similar results, which can then be scaled up, saving time, requiring less power Number of model points represent whole business --"
+    },
+    {
+        "question": "Define the term ‘profit criterion’ and name 3 profit criteria (3)",
+        "answer": "Single figure that tries to summarise relative efficiency of contracts with different profit signatures NPV (net present value) IRR (internal rate of return) DPP (discounted payback period) --"
+    },
+    {
+        "question": "Describe the net present value criterion (2) List 4 issues regarding the NPV criterion (4)",
+        "answer": "NVP of profit signature is calculated by discounting at risk discount rate Economic theory implies NPV is best profit criterion to use List 4 issues with NPV criterion However, it’s dependent on assumptions of +RDR being appropriate for inherent risk +operating in free and efficient capital market Means little by itself (e.g. can double NPV by doubling MPs’ premiums), so NPV normally expressed in relative terms such as +in proportion to initial sales costs (initial commission) +in proportion to total discounted premium incomes (market share) Subject to law of diminishing returns, else company could sell unlimited same policy with positive NPVs to increase profits Says nothing about competitiveness: high NPV bad if can’t sell --"
+    },
+    {
+        "question": "Define the internal rate of return profit criterion (2) State 3 reasons why the NPV may be more reliable than the IRR (3)",
+        "answer": "Defined as rate of return at which discounted value of cashflows (NVP) is zero Company will usually prefer contracts with higher IRR Potentially NPV may be better than IRR: If more than one change of sign in stream of cashflows, IRR wil not usually be unique NPV can be related to useful indicators of policy’s worth to company, IRR can’t NPV always exists. IRR may not exist (e.. if policy makes profits from outset) --"
+    },
+    {
+        "question": "Define the discounted payback (DPP) profit criterion and state why it will not usually agree with the NPV (2) When is the DPP an important criteria? (4)",
+        "answer": "Policy duration at which the profits that have emerged so far have zero present value i.e. time it takes for company to recover initial investment with interest at risk discount rate DPP will not usually agree with NPV as it ignores cashflows after the DPP When is the DPP criteria important: +Limited capital available=> sell policies with short DPP +Long term policies +Large initial capital strain +Greater variation in DPP --"
+    },
+    {
+        "question": "List 5 possible responses to premiums/charges being unmarketable. (After premiums/charges that meet profit criterion have been determined, and marketability needs to be considered.)",
+        "answer": "Reconsider product design e.g. +remove risky features add product differentiating features Consider distribution channel change if would cause/permit +assumption change in model +higher premium/charges without loss of marketability Reduce company’s profit requirement’ Decide not to market the product Re-examine assumed expenses --"
+    },
+    {
+        "question": "Define Embedded Value",
+        "answer": "The present value of the future profits of existing business together with the value of the net assets attributable to the shareholders --"
+    },
+    {
+        "question": "List the components that make up the present value of future shareholder profits from existing contracts for the following types of business: Conventional without profit Unit-linked With-profits",
+        "answer": "Conventional without profits: the future premiums plus investment income less claims and expenses plus the release of reserves and required solvency capital Unit-linked business: the present value of future charges less expenses and guaranteed benefits in excess of the unit fund plus release of supervisory non-unit reserves and required solvency capital With-profit business the present value of shareholder transfers --"
+    },
+    {
+        "question": "Define Appraisal Value",
+        "answer": "The combination of present value of future profits from new business and embedded value --"
+    },
+    {
+        "question": "How do we go about assessing ROC (return on capital) during a pricing exercise? (6)",
+        "answer": "Group up net cashflows for existing/new business, and use to assess amount of capital required to write product +regulatory basis +economic basis Add one off development costs: to the extent that they have not already been amortised/included in expense CFs used Total capital requirement: given by above can be compared with profits expected to emerge from product so as to determine expected return on capital --"
+    },
+    {
+        "question": "What is ‘solvency’? (3)",
+        "answer": "Solvency relates to insurer’s ability to meet future outgo, both from existing bus and from future new bus may sell Enough reserves for future liabilities on existing bus + extra for anything else (cost of smoothing bonuses, new bus strain) Regular solvency projections required, as part of regular supervisory submission --"
+    },
+    {
+        "question": "Outline how an insurer should assess its capital requirements (4)",
+        "answer": "Insurer should assess amounts and types of capital needed given +amount of liabilities +types of risks inherent in those liabilities Given liabilities span long period of years, necessary to project assets & liabilities into future years, allowing for: +new business plans +management actions e.g. changes in bonus and investment policy --"
+    },
+    {
+        "question": "Give 2 main bases on which the values of assets and liabilities can be determined, for the purposes of assessing solvency",
+        "answer": "Company needs to compare assets and liabilities at point in time to assess solvency, can use following bases Supervisory values as determined for supervisory reporting Economic values based on expected future experience or using a market-consistent basis --"
+    },
+    {
+        "question": "What is static solvency testing? (2) List 3 disadvantages of static solvency testing (3)",
+        "answer": "Static solvency testing Testing solvency at specific point in time Won’t enable assessment of comp’s ability to withstand future changes in external economic environment and particular comp’s experience 3 disadvantages of static solvency testing +considers only existing portfolio, no new business +assumes experience for remaining duration +guarantees are hard to cost --"
+    },
+    {
+        "question": "Describe the process of dynamic solvency testing (4, 10)",
+        "answer": "Dynamic solvency testing Involves testing solvency over future time periods Project revenue account/balance sheet far enough ahead to identify full effect of any potential risks e.g. current solvency assess shows A>L, but projecting surplus might show it runs out in few years Requires full model office, with realistic representation of liability portfolio by model points Projections bases either: +deterministic, using expected assumptions, combined with assumptions with margins to test effect of adverse future experience +stochastic (simulations), to assess probability of adverse circumstances concurring +take into account existing business only, or also include expected future new business --"
+    },
+    {
+        "question": "List 5 key uses of dynamic solvency testing (5)",
+        "answer": "5 key uses of dynamic solvency testing Managing solvency (on both supervisory and realistic bases), by assessing ability of company to withstand changes in environment Setting new business plans Setting investment strategy Setting bonus strategy Setting reinsurance strategy --"
+    },
+    {
+        "question": "Define the financial strength of a company (3, 1)",
+        "answer": "Usually refers to ability of a life company to: +withstand adverse changes in experience, including those arising from investment in higher-yielding but more volatile assets +fulfil its new business plans +meet reasonable expectations of its policyholders Is often measured by level of its free assets or estate --"
+    },
+    {
+        "question": "Define free assets (2) and the estate (1) of a life company",
+        "answer": "Free assets part of life company’s assets that are not needed to cover its liabilities opinion differs as to what should be included in liabilities, and they may or may not include any solvency capital requirements Estate Excess of realistic value of assets over realistic value of liabilities --"
+    },
+    {
+        "question": "List external sources of capital (4) and internal sources of capital (1) for a life company List 7 uses of capital for life company (7)",
+        "answer": "Sources of capital External: shareholders, financial markets, reinsurance, derivatives Internal: free assets (retained profit) Uses of capital Enables withstanding of adverse, often unexpected conditions Enables writing of new business (covers product development costs + new business strain) Enables adoption of less restrictive investment policy Smoothing surplus distributions to policyholders Smoothing dividend payments to shareholders Reducing need for reinsurance Allows seizing of profitable business opportunities (e.g. merger, takeover)"
+    }
+]

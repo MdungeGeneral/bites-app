@@ -1,30 +1,34 @@
 [
     {
+        "question": "Describe a whole life assurance contract",
+        "answer": "Pays benefit on death of life insured whenever it occurs Long-term protection +cover funeral expenses +wealth transfer between generations +protection for dependants meeting any liability to taxes arising on death can be tax efficient, depending on legislation Typically surrender value payable +Usually increases with increasing duration in force +Less common in RSA Product design decision Can have paid-up benefit too +Administration costs > premiums +Premiums paid > Sum assured No group version employer wouldn’t want to give cover after employment"
+    },
+    {
         "question": "Discuss the risks to an insurance company that arise from whole life assurances",
-        "answer": "A Pays benefit on death of life insured whenever it occurs"
+        "answer": "Investment risk depending on contract design also duration in force Mortality risk depends on age at entry into product and duration in force from selective withdrawals (policyholders in good health most likely to withdraw, leaving substandard lives) Withdrawal/persistency risk depending on withdrawal value compared to asset share Expense risk inflation long term duration=> administering contract for longer and thus cost of administering > premium collected"
     },
     {
         "question": "Describe a term assurance contract",
-        "answer": "A Investment risk depending on contract design also duration in force"
+        "answer": "Pays benefit on death of life insured within term of contract chosen at outset Protection contract +At low cost compared to endowment/whole life for same level of benefit +For dependants to protect against financial loss from death of life assured Typically, no surrender value, or value at end of term +losses on early withdrawals/negative asset share +would encourage selective withdrawals +relatively small asset shares asset share likely to be volatile, due to impact of mortality Usually no paid up value (similar reasons as no surrender val) Group version +death benefit to employees +protection for credit card company (pay outstanding balances)"
     },
     {
         "question": "List 4 types of individual term assurance contract",
-        "answer": "A Pays benefit on death of life insured within term of contract chosen at outset"
+        "answer": "+Level +Decreasing +Convertible +Renewable"
     },
     {
         "question": "State 2 consumer needs that can be met by a decreasing term assurance",
-        "answer": "A +Level +Decreasing +Convertible +Renewable"
+        "answer": "Decreasing term assurance also gives protection +Repay loan balance +Income for children until older to look after themselves"
     },
     {
         "question": "State key risks to an insurance company that arise from term assurances",
-        "answer": "A Decreasing term assurance also gives protection"
+        "answer": "Mortality risk Anti-selection risk is significantly more for individual than for group Withdrawal/persistency risk when asset share is negative especially as policyholders have a sense of their health as the policy terms evolves Expense risk"
     },
     {
         "question": "Describe a convertible/renewable term assurance",
-        "answer": "Anti-selection risk is significantly more for individual than for group"
+        "answer": "Operates as a term assurance, with the option to +renew at the end of the original contract, +convert to some form of LT insurance e.g. whole life usually without requiring further medical underwriting, except AIDS test Needs met +convert from term assurance to whole-of-life +low cost death cover +conversion certainty to permanent form when it can be afforded +renewing without evidence (unless benefit is increased) Other features +premium guarantee on renewal - same as new business premium rates as at time of conversion different conversion dates (specific date, on several dates, or at any date during term) Usually no surrender value before conversion (same reasons as term assurance) Group version exists +continuation option on employment cessation +e.g. leave employer (hence group contract), purchase individual policy without medical underwriting"
     },
     {
         "question": "Describe the risks that exist for renewable/convertible term assurances",
-        "answer": "A Operates as a term assurance, with the option to +renew at the end of the original contract, +convert to some form of LT insurance e.g. whole life usually without requiring further medical underwriting, except AIDS test"
+        "answer": "Same as for term assurance. But, in addition, there’s significant anti-selection risk because of option to renew/convert"
     }
 ]

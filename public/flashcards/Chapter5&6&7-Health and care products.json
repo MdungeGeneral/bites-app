@@ -1,58 +1,206 @@
 [
     {
+        "question": "Discuss the customer needs met by income protection products",
+        "answer": "Main needs Income replacement +peace of mind (income stream while unable to earn) +if state sickness/disability income insufficient +employment benefits short term (employer continues to pay employee’s income) Match loan servicing costs +protection against inability to +meet major financial loans +required by lender may cover unemployment Other needs +​fund other insurance premiums +Employers keen to pass on financial responsibility +IP on professionals in practice (locum cover)"
+    },
+    {
         "question": "List the key features of an IP contract",
-        "answer": "A Main needs"
+        "answer": "Replaces income +would’ve earned if becomes unable to work due to accident/illness +temporary annuity continuing until insured recovers/dies/annuity term ends, whichever comes first May be commutable (to provide lump sum/ not generally the case) Circumstances clearly defined for benefits to become payable/cease +Not covered unemployment, redundancy, early retirement, reluctance to return to work, some illnesses/physical injury e.g. HIV, attempted suicide Benefits do not cease on claim ​cover still provided if recover and return to work Level/increasing premiums/benefits may be ​at fixed rate relative to sum assured ​No surrender/maturity value +​sum at risk is very large compared to regular premium. once expenses/expected claims taken into account, little surplus left to build asset share Own/similar occupations ​ With profits/unit linked ​+mostly without profits basis, no benefit paid if claim is not made +bonus builds up death/expiry benefit, so bonus doesn’t affect IP claims +unit-linked policies may have a morbidity charge deducted from fund, with remaining unit fund at end of policy term paid as maturity benefit"
     },
     {
         "question": "What kind of product variations are possible on IP contracts in terms of guarantees/reviewability of premiums?",
-        "answer": "A Replaces income +would\u2019ve earned if becomes unable to work due to accident/illness +temporary annuity continuing until insured recovers/dies/annuity term ends, whichever comes first"
+        "answer": "Guaranteed/renewable premium rates +full guarantee for full term of policy, expressed as level increasing/increasing according to specific index +requires substantial loading (very long contracts, maybe high standard error for claims experience) +higher reserves No guarantee +annual review +comfort knowing premiums can be adjusted due to bad experience +risks change sickness that would’ve caused death, can now impair lives, leading to claims terminal illnesses no longer terminal +market pressures may limit premium increases +selective lapsing, leading to portfolio with only poor lives left +PRE: careful not to create expectations of no increases +maximum increases +uncertain future premium amounts some guarantee e.g guaranteed for first five years, with complete freedom review after +Guaranteed insurability +No Claims Discount"
     },
     {
         "question": "What options may we find with respect to benefits/premiums on IP contracts in terms of escalation?",
-        "answer": "A Guaranteed/renewable premium rates"
+        "answer": "+May be subject to a cap +Ideally escalation rate < earnings inflation +difficult to match too high escalation rate +Escalation rates might be different in and out of claim (can lead to complex product design) Benefit increase usually accompanied by premiums increase +based on the current premium rate (rather than premium assumptions prevailing when original contract effected) required for additional cover at a given age (protects against adverse experience)"
     },
     {
         "question": "What are some important points to bear in mind when setting claims definitions for IP contracts?",
-        "answer": "A +May be subject to a cap"
+        "answer": "Claim definitions + Need to strike a balance between meeting needs/controlling insurance risk +can be difficult to assess incapacity, ADLs are objective +should be allowance for interpretation +price charged for contract may differ for different risks represented by the claim definition"
     },
     {
         "question": "What kind of claims definitions do we have for IP contracts?",
-        "answer": "A Claim definitions"
+        "answer": "Occupational based +inability to perform own occupation (very expensive/greatest level of cover) +inability to perform own/reasonable occupation by education, status, training +own occupation initially thereafter +inability to perform any occupation offered where occupations carry above average accident/health risk Alternative incapacity criteria +assessing impact of illness on insured’es ability to perform tasks required by an occupation or day-to-day life +activities of daily living physical activity (feeding, dressing, washing, toileting, mobility, transfer) +mental capacity (overrides tests of physical incapacity +functional assessment tests +activities of daily working +personal capability assessment"
     },
     {
         "question": "What kind of benefit definitions might exist for IP contracts?",
-        "answer": "Alternative incapacity criteria"
+        "answer": "Replacement ratio (level of post-claim income to pre-claim income, net of taxes in both cases) +easy to calculate +tax impacts ratio (some regions do/don’t tax benefits) +level indicates claim experience as it influences incentive to return to work +Require limits to ensure individuals have incentive to return to work Maximum benefit specified +in terms of salary at claim time +in terms of state benefits Benefits expressed as cash amount (requires annual review to check needs met) Benefits in form of premium waivers +waived when benefits are payable +charged for by a small percentage addition to premium rate Proportionate/rehabilitation benefits +for those returning to work on part time basis/less strenuous/lower paid role +benefits both insured/insurer +recuperation needs (attractive to policyholders, doesn’t add sign cost) +benefit relates to ratio (that gross earnings from new role bear to those from occupation against which disability was being claimed +Benefit definitions mustn’t disinstinctive insured returning to work"
     },
     {
         "question": "What is over-insurance in the context of IP contracts , and how might it arise?",
-        "answer": "A Replacement ratio (level of post-claim income to pre-claim income, net of taxes in both cases)"
+        "answer": "When benefit is more than is needed e.g. a higher than appropriate replacement ratio Over-insurance arises \\+from outset \\+subsequent to sale (salary not keeping up if benefits increase automatically on policy anniversary) \\+reduction in tax on IP claims \\+multiple policies \\+non-disclosed income"
     },
     {
         "question": "How do we address over insurance in the context of IP contracts?",
-        "answer": "A When benefit is more than is needed e.g. a higher than appropriate replacement ratio"
+        "answer": "Appropriate maximum benefit +max replacement ratio +overall max benefit level +deductions for other benefits example state benefits +review benefit level appropriateness +clear policy conditions highlighting what would occur at the claim stage +financial underwriting"
     },
     {
-        "question": "Other policy definitions on IP contracts:",
-        "answer": "Appropriate maximum benefit"
+        "question": "Other policy definitions on IP contracts: Waiting period",
+        "answer": "+specified period after policy start during which benefits won’t be paid +reduce potential for anti-selection +Uncommon now as anti-selection can be reduced through underwriting"
     },
     {
-        "question": "Deferred period definition and characteristics",
-        "answer": "A +specified period after policy start during which benefits won\u2019t be paid +reduce potential for anti-selection +Uncommon now as anti-selection can be reduced through underwriting"
+        "question": "Deferred period definition and characteristics Deferred period benefits",
+        "answer": "Deferred period +Period of incapacity/sickness during which insured won’t pay benefits +Split deferred period: eg pay half over for certain amount of weeks, full amount after +Early notification (even before deferred period end so insurer can help with rehabilitation) Deferred period benefits +Integrate with employer-supplied benefits +Reduce claim cost and therefore product price +Reduce administration cost +Reduce number of trivial claims +meet customer needs: eg won’t want to claim for few days off for flue!"
     },
     {
         "question": "Linked claims period",
-        "answer": "A Deferred period"
+        "answer": "Waive deferred period if same sickness recurs within certain amount of time e.g. 26, or 52 weeks since last claim to encourage return to work"
     },
     {
         "question": "Expiry age/term",
-        "answer": "A Waive deferred period if same sickness recurs within certain amount of time e.g. 26, or 52 weeks since last claim to encourage return to work"
+        "answer": "+age at which benefits cease; often same as normal retirement age +The term could also be fixed duration +shorter premium paying period than policy term"
     },
     {
         "question": "Briefly discuss group IP contracts (General)",
-        "answer": "A +age at which benefits cease; often same as normal retirement age +The term could also be fixed duration +shorter premium paying period than policy term"
+        "answer": "+legal obligation eg some countries sick pay during first 2 weeks if sick +The use of gross salary to provide benefits improves administration resulting cheaper (economies of scale) contracts +smooth early retirement (when employee continuing in poor health) +promote health (and ensure speedy return to work following operation)"
     },
     {
         "question": "Briefly discuss group IP contracts (Benefits)",
-        "answer": "A +legal obligation eg some countries sick pay during first 2 weeks if sick"
+        "answer": "Benefits +level (based on salary gross of tax, usually max 2/3 - 75% +additional (pension contributions, state welfare contributions) +in claim escalation Continuation option +allows employee of company to effect individual policy without providing evidence of health when he leaves service of employer +possibly increase anti-selection Study Deck Preview (16) Browse (16)"
+    },
+    {
+        "question": "Describe a critical illness insurance contract",
+        "answer": "Product which provides a non-indemnifying lump sum on the occurrence of events specified in contract terms, typically related to: +critical illness event +reaching defined level of impairment +undergoing surgical procedure Customer needs met \\+mainly protection \\+fund medical costs \\+fund lifestyle change (e.g. medical equipment installed at home) \\+recuperate after CI event provide income from lump sum via annuity if can't work after CI event \\+loan repayment \\+taxation planning \\+buyout partner (key person cover) Rather simple idea: pay lump sum, not meant to indemnify Usually no surrender benefit or maturity benefit Group version may exist +employer offers as part of attractive remuneration package +valuable to blue collar employees, if IP unavailable +requires clear definition of eligibility and benefits +likely standalone +usually short term, annually reveiwable, premiums may be shared +may include multiple dependants +free cover limits may apply (above which, underwriting needed) --"
+    },
+    {
+        "question": "In addition to the core description of CI contracts, what other key features exist? Specifically forms of the contract, Idea of cover given and complications that apply.",
+        "answer": "Form of the contract may be: Standalone: benefit paid on CI event defined, no death benefit Rider: CI benefit payable both for CI event, and death benefit payable on death Accelerator: benefit payable on either CI event or death, whichever occurs first. Benefit may be paid in part for CI, and remainder on death. Rather simple idea… Pay lump sum which can’t be ‘taken back’ by insurer, unlike IP, where recovery leads to end of benefit payment not meant to indemnify- lump sum specified not related to claim event …complications arise different definitions for conditions between insurers in same market severe/strict requirements for conditions compared to layman’s understanding --"
+    },
+    {
+        "question": "What characteristics are required for a condition to be deemed as ‘critical’, and hence seen as worthwhile being provided for via a CI contract?",
+        "answer": "Perceived as serious threat by public (lifestyle threatening) Perceived to occur frequently by public (or not too rate that no public isn’t threatened) Clearly definable avoid ambiguity at claim, prevent windfalls claims Sufficient data to price population-wide data Difficult to predict future medical trends Anti-selection can be avoided by the insurer e.g with moratorium period (period during which claims aren’t allowed if underwriting suspected insufficient) --"
+    },
+    {
+        "question": "What broad “categories” of conditions might be covered by a CI contract?",
+        "answer": "Core conditions (covering majority of all CI claims) Additional conditions Terminal illness conditions Conditions influencing children Total permanent disability --"
+    },
+    {
+        "question": "Briefly list core conditions typically covered by CI contracts",
+        "answer": "These conditions make up majority of all CI claims Cancer Heart-attack Stroke Coronary artery bypass graft Also included the following of late kidney failure major organ transplant multiple sclerosis These core conditions may be agreed industry wide --"
+    },
+    {
+        "question": "What are the benefits of having core conditions for CI policies agreed industry wide?",
+        "answer": "uses experience of many insurers can be used to estimate transition probabilities resulting in more credible estimates Sharing of expertise, in interpreting current medical conditions and future advances Shared costs of developing/maintaining policy conditions Easier to collect comparable industry wide data Better information to assess risks which results in lower risk loading => lower premiums Easier for prospective policyholder to understand to understand claims definition Reduces ambiguity hence, easier for sales staff to explain hence, more sales in general Claims settled more quickly fewer disputes, reduced expenses, reduced reputation threat --"
+    },
+    {
+        "question": "Briefly list additional conditions which may be covered by CI contracts (i.e. in addition to core conditions)",
+        "answer": "These additional conditions are usually included on the basis of competition/product differentiation in a competitive market. Alzheimer's disease AIDS/HIV (contracted by blood transfusion/occupation) aorta graft surgery benign brain tumour blindness coma deafness heart valve replacement/repair loss of limbs loss of speech motor neuron disease paralysis/paraplegia Parkinson's disease third degree burns chronic emphysema diabetes pre-senile dementia rheumatoid arthritis --"
+    },
+    {
+        "question": "Discuss the conditions and benefits covered by CI contracts in relation to terminal illnesses",
+        "answer": "These conditions don’t relate to a specific CI disease.. …but rather the severity of a condition and its effect on life expectancy Essentially accelerate the death benefit, thus additional cost is minimal Can cease prior to end of term, e.g may not be paid 12 months prior to policy end… …because terminal illness is seen as health state from which death would occur within 12 months, and death would thus fall outside the term of the policy. Usually present where death benefit already part of policy… …where there are no death benefits, terminal illness benefit could add significant cost, and various causes would need to be investigated --"
+    },
+    {
+        "question": "Discuss the conditions and benefits covered by CI contracts in relation to children’s benefits",
+        "answer": "Usually a rider benefit …providing similar cover to insured’s children, usually until age 18 (when can cater for selves) Claim from children doesn’t terminate policy… ..only claim from insured policyholder terminates policy (different for tiered benefit, covered later) Exclusions may be used, related to disabilities that could be caused intentionally (some parents would go to far means to extract benefit :( ) pre-existing congenital effects Cover may be limited to a certain % of insured’s cover Cost is actually very low, compared to perceived benefit (because of low incidence rates in healthy kids!) --"
+    },
+    {
+        "question": "Discuss the conditions and benefits covered by CI contracts in relation to total permanent disability (TPD)",
+        "answer": "Such benefits often included as TPD complements CI cover… …despite different nature of criteria for valid claim (can be significant overlap between TPD and CI Definitions for permanent disability may be based on Occupation Related ADL; advantages over occupation based definition +less subjective than ability to perform occupation +simplicity of using one definition throughout policy +applied beyond retirement applied to wider range of lives, +Working activities/functional abilities Can be added for little cost because of overlap between CI, depends on definitions used conditions covered by CI Different to IP which pays on temporary or permanent disability --"
+    },
+    {
+        "question": "What additional variations to the product design may exist for CI contracts?",
+        "answer": "Tired benefits Guarantees/review-ability of premiums/benefits New diseases/guaranteed inseparability options --"
+    },
+    {
+        "question": "Discuss tiered-benefits in the context of CI contracts",
+        "answer": "For one or more of conditions covered, payment of benefit linked to severity/extent of illness/disease Features policy conditions need change, such that policy only terminates once 100% of benefit is paid further payments made from balance of benefit/sum assured levels/severity need to be clearly defined Reasons offered CI more comprehensive, benefit received at disease levels which would otherwise not receive under standard CI contract Payments more closely match customer need, Multiple claims possible, better policyholder satisfaction/retention Differentiate competitors --"
+    },
+    {
+        "question": "Discuss guarantees/review-ability of premiums/benefits new diseases/guaranteed insurability options in the context of CI contracts",
+        "answer": "Guarantees/review-ability of premiums/benefits Uncertainty of various CI rates results significant enhancements to reserves Guarantees=> cover based on contract, as opposed to changing circumstances (1) may end up covering illnesses no longer critical over time (2) may end up covering less server incidences of illnesses than assumed in pricing Windfall claims may be incentive anti-selection conflict with matching loss to benefit New diseases/guaranteed insurability options Needs to be properly costed May need advice from re-insurers/other parties --"
+    },
+    {
+        "question": "Discuss the risks to an insurance company that arise from standard non-tiered critical illness contracts",
+        "answer": "Prediction of critical illness diagnosis/incident rates due to limited data Anti-selection, which can be reduced by waiting period/moratorium period or medical underwriting Medical technology enhancements may result in selective withdrawals (even when offered as rider benefit) Expense risk (mostly for standalone contracts) Investment risk (usually small due to small reserves since it’s a term contract) --"
+    },
+    {
+        "question": "Discuss the additional risks to an insurance company that arise from tiered critical illness contracts",
+        "answer": "Contract design difficult designing benefit levels/claim trigger levels ..legally and objectively …to prevent weak definitions which could actually lead to more claims than anticipated Underwriting risk Need stringent initial underwriting, cost time/money because bringing forward claims increases importance of pre-existing conditions More claim forms/definitions Claim assessment judgement, since less likely to have market consistent definitions Pricing risk limited data, exacerbated by us splitting data into smaller groups changing critical illness diagnosis rates in future ...leading to greater uncertainty => margins => more expensive overlapping between illnesses cross correlation (greater potential for disallowed claims and customer dissatisfaction) --"
+    },
+    {
+        "question": "Comment on the capital requirements typically associated with CI insurance contracts",
+        "answer": "Similar reserves to income protection needs to be held Adequate financial reserves to cover late notification claims can impose some sort of notification period e.g. only claims submitted within 2 years of qualifying event will be considered Describe a long term care insurance contract a A long term care insurance contract may provide a cash benefit or indemnify the insured for the cost of long term care Customer needs met: +Finance provision of care/assistance (in old age) +Financial protection (when a person becomes unable to look after self) +Protect from insufficient funds/inadequate state care +Avoid dependence +Provide comfort (for insured, for insured’s relatives/family) +Generally doesn’t indemnify Uncertainty associated with state provided cover +Inflation protection of care costs (if indemnity) +Advice on care Group versions don’t typically exist --"
+    },
+    {
+        "question": "What is long term care?",
+        "answer": "All forms of continuing +personal care or +nursing care and associated domestic services… …for people who are unable to look after themselves without some degree of support, whether provided in +their own homes, +at a day centre, +or in a state sponsored or care home setting. --"
+    },
+    {
+        "question": "Describe the optimal outcomes of long term care",
+        "answer": "Long term care aims to treat the result of the condition, not the condition itself. Ideally we want +help individual regain independence +slow down deterioration +provide necessary care support and environment Medical care also important aspect of long term care, where physical/mental breakdown requires doctors/nursing staff. Usually expensive! --"
+    },
+    {
+        "question": "Describe the 3 types of costs associated with long term care",
+        "answer": "living: +food, clothing, hearing, amenities +may require special arrangements, and increased cost impact housing: rent, mortgage payments, council tax) personal care: +added costs of being looked after/having body touched (intimacy/personal dignity/confidentiality issues) +nursing care: needs knowledge/skills of qualified nurse +intermediary care: focusing on recuperative services acute event (e.g. heart-attack) to reduce hospital admission/minimise dependence on ongoing care --"
+    },
+    {
+        "question": "Briefly describe the 2 main ways in which long term care may be provided, in terms of who the providers of care services are, and the qualification of providers",
+        "answer": "Formal care Care which is provided via a professional services either in +Own home +Homes near relatives +Managed residential homes Informal care Care typically provided by spouses/family/relatives, not provided via professional services, usually limited to not more than 4 hours per week. Often carries indirect cost (lost economic activity) Influenced by +Cultural/religious practices +Attitude towards caring for older generation +Geographic family dispersion +Family structure changes (divorces, re-marriage, lower birth rates) +Proportion of working women --"
+    },
+    {
+        "question": "What are the 2 main types of long term care contracts?",
+        "answer": "Pre-funded long term care contracts +purchased by relatively healthy people to protect them against risk of future disability/morbidity +something else worth noting: because these contracts provide for future disability, a claims trigger will need to be met to pay benefit. This is not the case for immediate needs long term care contracts Immediate needs long term care contracts Purchased by people already in a state of needing long term care, needing to protect against uncertain survival duration --"
+    },
+    {
+        "question": "Pre-funded long term care contracts: discuss the following: Structure, in terms of the ‘policy being sold by itself’ vs ‘the policy in addition to other policies’ (5) Funding/financing for the care required by the policyholder…ie premiums payable (4)",
+        "answer": "Structure may either be: +Standalone: this is the case most of the time Rider: added to +CI: TPD definition changes at age 60 to ‘loss of independent existence’’ +Whole of life: fixed % of benefit accelerated when LTC claim def satisfied +IP: cover annuities beyond NRA, defs changes from occupation based to activity based Funding: +Single premium +Regular premiums: usually increase with chosen benefit increase rate Restricted regular premiums: +up to certain age (NRA?) +non during specified level of disability e.g. waiver of premium +Retrospective payment: equity release after sale of home --"
+    },
+    {
+        "question": "Pre-funded long term care contracts: Discuss claims definitions Claims trigger requirements (3)",
+        "answer": "Claims trigger requires +insured incapable perform certain number of activities +without endangering health/well-being of themselves or others +usually failure of insured to undertake certain # of ADLs unaided Examples of ADLs (activities of daily living) Physical incapacity +feeding, washing, dressing, toileting +mobility: able to move indoors, room to room, level surface at normal residence +transfer: able to move from lying position to sitting position in upright chair/wheel chair Mental incapacity: \\+deterioration/loss of mental capacity from organic cause=> need for care/supervision organic cause (Alzheimer's, irreversible dementia) +NOT depression/side effects from other medication Covers \\+memory \\+knowing who/where they are \\+awareness of time \\+ability to solve simple problems \\+make rational decisions --"
+    },
+    {
+        "question": "Pre-funded long term care contracts: Discuss the benefits provided in terms of 2 key factors for claim definitions (3)",
+        "answer": "Two key factors Payment depends on claim definition +single event (depend on level of disability, continuation for a specified period), or multiple set of events +complex triggers also possible (e.g. need to be disabled and require care during night) more stringent definition results in cheaper premiums --"
+    },
+    {
+        "question": "Pre-funded long term care contracts: Discuss the benefits provided in terms of What benefit depends on (2), and the advantages (4) and disadvantages (3)",
+        "answer": "Benefit depends on +Level of disability e.g. 50% fail on 2 ADLs and 100% fail on 3+ ADLs +May depend on residence: own vs nursing; not important if indemnify Advantages +Care provided at early age if there’s modest impairment +Better match customer needs +Perceived better value +Novel feature may attract intermediaries Disadvantages +Increased admin costs +Pricing more difficult +Design more complex=> detailed literature, more effort to sell --"
+    },
+    {
+        "question": "Pre funded long term care contracts: Discuss the benefits provided in terms of Form of benefits (4) Other benefit forms (2) What happens on early death (1) Surrender value and paid up value (2)",
+        "answer": "Benefit forms +Lump sum +Annuity certain +Lifetime benefit (subject to ongoing disability) +Restricted benefit (maximum period, or maximum total) Other benefit forms/topics +Assertive devices: norm limited to 3 or 6x main monthly benefit +Independent care advice: at claim, help insured understand choices available and right to state suppose Return premiums on early death (single premium unlikely for reg premium) No surrender benefit Paid up benefit --"
+    },
+    {
+        "question": "Immediate needs long term care contracts: discuss the following Form (2) Premium and how it’s determined (2) Benefit level (2) Death benefit payable (4) Structure (6)",
+        "answer": "Usually some form of impaired life annuity +Secured by single premium at start of contract… +…when insured needs care as result of failing ill health Premium +Calculated individually, based on health status at purchase +Premium guarantees not relevant (for single premium policies) Benefit level +May increase with pre agree benefit increase rates, with specified nursing home list +May increase with worsening incapacity Death benefit may be payable +gives capital protection of part of single premium +higher death benefit => less impact of health status on premium +may be subject to minimum payment period +usually just amortise single premium Structure: +could be: pure endowment, purchased life annuities, disability covers structure should consider +tax position ( of policyholder and life office) +regulatory capital required +benefit flexibility --"
+    },
+    {
+        "question": "Variations for long term care insurance contracts: What kind of variations may be found in terms of the level of benefits paid (4) What are the advantages of having these variations (1) What are the disadvantages of having these variations(2)",
+        "answer": "Types of variations +Guaranteed terms +Indemnity benefits +Cash benefits +Unit-linked Advantages increase level of customer demand (extended range of benefits/enhanced quality) Disadvantages +May lead to confusion about product suitability +May be costly for insurers/re-insurers --"
+    },
+    {
+        "question": "Variations for long term care insurance contracts: guaranteed terms What important need does the provision of guaranteed terms meet/recognise? (2) What impact does provision of guarantees have on pricing of LTC contracts? (2) What issues arise through the provision of guaranteed terms: for insurer (1) and for policyholder (1) What ‘tweaks’ may the insurer make to the guaranteed terms offered to help manage the risk? (2)",
+        "answer": "Recognises: +policyholders’ intended need for indemnity against all future costs +can’t take additional risks associated with additional premium/reduced benefit +May include substantial contingency loading +leading to far lower reviewed premiums than guaranteed premiums.. +…may be attractive to policyholders Issues of offering guaranteed terms +True costs could be extensive +Uncertainty in pricing basis + additional regulatory capital needed due to guarantee +Favourable experience may not be passed to customer To help manage the risks introduced, guaranteed terms may be +age dependent: insurer not seeking further premiums/benefit reductions past given age +limited: protection for 5 or 10 years --"
+    },
+    {
+        "question": "Variations for long term care insurance contracts: Indemnity benefits (1) What are the characteristics of the benefit paid when indemnity cover is given(4) What important implication does provision of indemnity benefits have on cost? (1) What is the common industry practice in terms of provision of indemnity benefits? (1)",
+        "answer": "Indemnify insured=> pay for full cost of treatment/care received by policyholder Benefit +may be unknown +may be paid directly to provider=> extract better provider terms with bargaining power +subject to policy conditions e..g deferred period, restriction on provider +may be subject to overriding maximums, so not full indemnity Uncertainty of future costs=> high margins => prohibitively expensive Few insurers give true indemnity; simply too much uncertainty --"
+    },
+    {
+        "question": "Variations for long term care insurance contracts: Define what we mean by cash benefits, and how they’re determined (4) What is the key policyholder advantage of giving cash benefits? (1) What main issue arises for insurer if cash benefits are provided, and how might this be mitigated? (1) What policyholder issues may arise with the provision of cash benefits? (3 main points, 3 subpoints)",
+        "answer": "Cash benefits Cash benefits given either in form of lump sum, or, more usually, an income the level of which is specified in contract Benefit level chosen +to meet expected cost/assistance level needed at time of need +in accordance with policyholder’s meant to pay Key policyholder advantage of cash benefits? gives choice: not necessarily earmarked for particular reasons Issues for insured risk of windfall payments => need more stringent claims assess Issues for the policyholder +family exploitation => could leave elderly with inadequate care +adequacy to meet needs not guaranteed +policyholders have little experience of buying care services +judging price and quality +knowing how state-provided care impacts choices +insurers may offer management service --"
+    },
+    {
+        "question": "Variations for long term care insurance contracts: unit linked (2) aims (4) risk charges (2)",
+        "answer": "LTC benefits usually paid out of non-unit fund (represents protection element of fund). Benefits in unit fund at claim time may also be used to pay LTC,or some, or all may be returned to policyholders when fund is protected (representing savings aspect) Aims +People rather purchase savings plan +Surrender/death benefit on unit-linked is very attractive +LTC insurance vehicle: lack of death/surrender benefit unattractive +Flexible investment contract Risk charges \\+Monthly risk premium deductions \\+Cover risk exposure for period, which depends on deferred period level of protection current age benefit amount --"
+    },
+    {
+        "question": "Variations for long term care insurance contracts: unit linked guarantees (2, 3)",
+        "answer": "Guarantees As policyholder ages & risk charges increase (accentuated where benefits also escalate), may be concern that without steady investment growth, unit fund depletes. If fund is less than risk charge and no guarantees were offered, cover lapses unless more money put into unit fund. Different guarantees available: No guarantee single premium sufficient: single premium enough to provide lifetime LTC protection Protection from fixed age: if fund positive at fixed age, no further risk premiums drawn to cover LTC benefits Full guaranteed: insurer accepts all risk of fund exhaustion. Investment choice restricted to managed/with-profits fund --"
+    },
+    {
+        "question": "Variations for long term care insurance contracts: unit linked claim triggers (6)",
+        "answer": "Claim triggers Often choice’ Protect fund (all benefits paid from non unit fund, and unit fund returned to policyholder as lump sum). Risk charges higher to pay benefits Protect initial investment (deferred period depends on difference between FV at claim point and fund protection benefit selected (plus minimum deferred period), calculated according to benefit amount selected Allowing fund exhaustion (use unit fund to initially pay benefits, then move onto non-unit fund) Different periods (protection choice=> varying deferred period) Differed period (chosen at outset by policyholder) Benefit paid from unit fund protection Benefits paid from non-unit fund What kind of risks are faced by insurers who --"
+    },
+    {
+        "question": "What kind of risks are faced by insurers who sell long term care insurance contracts",
+        "answer": "Transfer probabilities Claim inception probabilities Transfers between states if multiple states exist under contract The need to use a typical multiple state model Healthy; needing own home care; needing residential care; needing nursing home care; withdrawn; dead Data shortages Difficult to price, underwrite, etc Need to adjust date for different/differences in populations; behaviour; environment; policy wordings; social attitudes Exploitative claims ADLs don’t always offer enough protection Difficulty to assess impact of disability Depends on contract design, underwriting, claims procedures Anti-selection Selective withdrawals Investment risk (significant reserves built up before claim inception) Expense risk Financial risk (negative asset share; withdrawal benefit > asset share) Marketing risk policyholder expect benefits sufficient to cover eventual cost care) bad for public image, and future business --"
+    },
+    {
+        "question": "Comment on the capital requirements associated with long term care insurance contracts ( 4 )",
+        "answer": "Comparable to investment contracts e.g. endowment: premiums paid and benefit paid when premiums stop whole life: no fixed latest time at which claim has to be paid Depends primarily on Nature of contract: unit linked, indemnity, cash benefits, etc Guarantees: requires increased prudence, hence, larger reserves"
     }
 ]

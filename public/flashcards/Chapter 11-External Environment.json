@@ -1,1 +1,86 @@
-[]
+[
+    {
+        "question": "List the factors in the general business environment which affect a life insurer’s business",
+        "answer": "DERLF PEP Distribution channels used and their impact Economic environment Regulatory constraints/opportunities Legal environment Fiscal regime Propensity of consumers to purchase products Expenses and commission Professional guidance --"
+    },
+    {
+        "question": "Another useful acronym from CA1/ARM CREATE GREAT LISTS",
+        "answer": "Useful CA1/ARM list for the external environment within which insurer’s operate Competition & the underwriting Cycle Regulation Environmental & Ethical considerations Accounting standards Tax Economics (interest rates, inflation, economic growth, exchange rates) Governance (corporate) Risk management (operational, credit, market) Experience from overseas Adequacy of capital and solvency requirements Trends (demographics Lifestyle International practice Social trends Technological changes State benefits --"
+    },
+    {
+        "question": "List 4 distribution channels used by life insurance companies",
+        "answer": "Insurance intermediaries/independent financial advisers Tied agents Own sales force Direct marketing --"
+    },
+    {
+        "question": "State 2 main risks to a life insurer if a policy is sold which does not meet agreed policyholder needs",
+        "answer": "Reputation risk which may affect new business volumes Persistence risk consequently financial loss due to withdrawals --"
+    },
+    {
+        "question": "Describe insurance intermediaries (5) How they work (3) How they are remunerated (2) Who initiates the sale (1)",
+        "answer": "Salespeople act interdependently of any insurer Searches for contract that best meets clients’ situation/needs (premium and benefits) AKA: independent financial advisers and insurance brokers Remunerated via +commission payments from companies whose products they sell +fee from clients Sales often client-initiated, however, can also promote themselves e.g. initiating periodic reviews --"
+    },
+    {
+        "question": "Describe tied agents How they work (3) How they are remunerated (1) Who initiates the sale (1)",
+        "answer": "Work solely on behalf of one or several insurers i.e. offer clients only products of those companies Where tie is to multiple companies, sometimes product ranges are mutual exclusive, but often overlap Typically employees of bank or other similar financial institution Remunerated via commission payments or salary plus bonuses by companies to which they’re tied Sales often client-initiated, but tied agents may actively engage in selling. --"
+    },
+    {
+        "question": "Describe an insurer’s own sales force How they work (1) How they are remunerated (1) Who initiates the sale (1)",
+        "answer": "Usually employees of insurer and only sell products of that company Remunerated by commission and salary or mixture of both Usually the salesperson initiates the sale, making use of client lists or purchased leads (however, client my initiate any further sales) --"
+    },
+    {
+        "question": "List 4 forms of direct marketing",
+        "answer": "Internet selling +useful for without profits contract (simple) +quote online +apply online Press advertising +short application form +give telephone number or address Telephone selling Mailshots (promotional/advertising letters sent in batches) --"
+    },
+    {
+        "question": "State 3 features of life insurance contracts that will be affected by the distribution channel used",
+        "answer": "Contract design Contract pricing Demographic profile --"
+    },
+    {
+        "question": "List four Items of insurance customer profile that likely to vary by distribution channel",
+        "answer": "Financial Sophistication Income Mortality Experience Persist ency Experience --"
+    },
+    {
+        "question": "State how the choice of distribution channel can affect contract design",
+        "answer": "Higher clients’ financial sophistication, greater possible complexity Products sold via direct marketing may be less complicated than products sold face to face Insurer using multiple distribution channels may sell different versions of same product, varying by channel --"
+    },
+    {
+        "question": "State how choice of distribution channel can affect contract pricing Underwriting level (4) Need for competitive pricing of contracts (5) Other aspects impacting competitive terms (4) Assumptions (3)",
+        "answer": "Underwriting performed will be linked to the channel… This will be reflected in the demographic assumptions used in pricing Strict underwriting for intermediaries intermediaries represent client’s best interests, may thus encourage anti-selection Customers likely high net worth => higher insurance cover low underwriting: low sum assured; overly complicated underwriting = barrier to entry Prices need to be competitive but some distribution channels are more competitive than others Beyond competitiveness via price of contract +innovative features/attractive options +complex prods difficult to compare +savings products compete on investment performance +competition on customer service/admin support scribe how an insurer may be affected by the economic environment in which it operates. a Consumers may see insurance products as more/less attractive compared to other investments Available asset types/expected returns influences insurer’s investment choice and prob of securing pricing return assumed Volatile investment markets usually => more expensive insurance prods and possibly less take up of them. Insurers will tend to have relatively higher capital requirements as result of increased uncertainty of investment return Insurer investing in more risky/speculative markets is likely to seek greater expected return on capital and there’s greater risk of required return not being achieved. --"
+    },
+    {
+        "question": "Outline main types of expenses an insurer may incur in running business",
+        "answer": "Commission +initial, payable on acquisition of new policy +renewal, payable on premium renewal Management expenses Incurred directly for new business written/maintain existing business Overheads incurred irrespective of new/in-force business e.g. costs of general management, property --"
+    },
+    {
+        "question": "State 2 main risks with regard to expenses",
+        "answer": "Profitability risk +loading insufficient to meet actual expenses incurred Risk that company cannot control costs +poor management +inflation --"
+    },
+    {
+        "question": "Explain how legal risks may arise for an insurer",
+        "answer": "In areas where the insurer has discretion +Principle of PRE may act unfavourably against the insurer e.g flexibility in bonus method being constrained legally required to distribute profits in way that is kept consistent with PRE +Unfair terms voiding clauses contract Misrepresentation inconsistency in policy documents and other relevant representations made by company or its agents Insurance contracts spanning several years hence open to developing legal cultures, interpretations, court judgements --"
+    },
+    {
+        "question": "State main advantages and main disadvantages of life insurance company regulation",
+        "answer": "Main advantages: +protection of policyholder interests +public need confidence Main disadvantages: +Cost to policyholder either directly and/or indirectly e.g. through reduced innovation Impacts contract design --"
+    },
+    {
+        "question": "List 8 regulatory restrictions commonly imposed on life insurance companies",
+        "answer": "Types of contract that can be offered Contract terms and conditions e.g. how surrender values are calculated Ability to underwrite e.g. prohibition on use of generic testing/past claims history Rating factors that can be used to calculate premiums Premium rates/charges Sales channels/sales procedures or info given during sale Amount of business that maybe written (indirectly) e.g. due to minimum reserving/solvency capital requirements Investments e.g. types of assets allowed whether mismatching allowed --"
+    },
+    {
+        "question": "List direct and indirect ways in which regulatory framework might affect insurer’s choice of investments",
+        "answer": "Direct, restrictions on +types of assets company can invest in +amount of any particular asset admissible for solvency +extent to which mismatching is allowed at all Indirect +Certain assets may allow use of higher discount rate in statutory valuation of liabilities and so reduce value of liabilities +May be regulatory requirement to allow for mismatching reserve --"
+    },
+    {
+        "question": "Briefly describe 2 common ways of taxing life insurance business",
+        "answer": "Profits basis +Tax on annual profits of business, where profits means excess of change in value of assets over change in value of liabilities +Reserves used will generally be supervisory basis, because limit’s company’s ability to manipulate reserve amt, hence taxable profit +Focuses on shareholder profit profit distributed to WP policyholders automatically excluded from profit calc, since they would increase reserves and reduce assets I - E basis Tax payable on investment income/gains less some or all of operating expenses of company In addition, may be tax on premium income --"
+    },
+    {
+        "question": "Describe how taxation system can influence product design and sales for life insurance company",
+        "answer": "For policyholder +Tax treatment in policyholder’s hands can influence buying habits, and attractiveness of life insurance +tax treatment of premiums paid particularly when premiums are deductible from individual’s taxable income in part/full/not at all. tax treatment of eventual policy benefits For insurer: current tax implications Product design make use of opportunities offered Tax concessions helps ease sales of certain contract types easier Tax treatment impacts life insurance attractiveness relative to other savings mediums Taxation risk from changes over time, important to bear in mind when benefits guaranteed over long term --"
+    },
+    {
+        "question": "Briefly discuss the impact of professional guidance on products which life insurers choose to sell",
+        "answer": "Actuarial associations often issue professional guidance for actuaries advising life insurers Provides framework to consider when carrying out responsibilities to maintain professional standards Not intended to restrict actions of actuary Guides interpretation of government regulation Adds safeguards Ensures consistency Generate consumer confidence"
+    }
+]
