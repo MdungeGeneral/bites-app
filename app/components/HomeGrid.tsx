@@ -54,9 +54,11 @@ function VideoThumbnail({ src }: { src: string }) {
 }
 
 /** Single notebook card */
-function NotebookCard({ notebook }: { notebook: Notebook }) {
+function NotebookCard({ notebook, cardCount }: { notebook: Notebook, cardCount?: number }) {
   const router = useRouter();
   const slug = encodeURIComponent(notebook.slug);
+
+  const displayCount = typeof cardCount === 'number' ? cardCount : notebook.cardCount;
 
   return (
     <div
@@ -109,10 +111,10 @@ function NotebookCard({ notebook }: { notebook: Notebook }) {
           </p>
           <p className="text-white/50 text-xs mt-0.5">
             {notebook.videoCount} {notebook.videoCount === 1 ? "bite" : "bites"}
-            {typeof notebook.cardCount === 'number' && notebook.cardCount > 0 && (
+            {typeof displayCount === 'number' && displayCount > 0 && (
               <>
                 {" \u00B7 "}
-                {notebook.cardCount} {notebook.cardCount === 1 ? 'card' : 'cards'}
+                {displayCount} {displayCount === 1 ? 'card' : 'cards'}
               </>
             )}
           </p>
@@ -129,10 +131,33 @@ export default function HomeGrid({ notebooks }: { notebooks: Notebook[] }) {
     let mounted = true;
     async function loadIndex() {
       try {
-        const res = await fetch('/api/flashcards/index');
-        if (!res.ok) return;
-        const data = await res.json();
-        const items: { name: string; url: string; count: number }[] = data.items || [];
+        let items: { name: string; url: string; count: number }[] = [];
+
+        // Try server-side index first
+        try {
+          const res = await fetch('/api/flashcards/index');
+          if (res.ok) {
+            const data = await res.json();
+            items = data.items || [];
+          }
+        } catch (e) {
+          // ignore and fallback
+        }
+
+        // Fallback to public index.json
+        if (!items.length) {
+          try {
+            const res2 = await fetch('/flashcards/index.json');
+            if (res2.ok) {
+              const data2 = await res2.json();
+              items = data2.items || [];
+            }
+          } catch (e) {
+            // ignore
+          }
+        }
+
+        if (!items.length) return; // nothing to do
 
         // normalize helper
         const normalize = (s: string) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
@@ -207,7 +232,7 @@ export default function HomeGrid({ notebooks }: { notebooks: Notebook[] }) {
             {/* Responsive 2-column grid on mobile, 3 on wider screens */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {notebooks.map((nb) => (
-                <NotebookCard key={nb.slug} notebook={nb} />
+                <NotebookCard key={nb.slug} notebook={nb} cardCount={cardCounts[nb.slug]} />
               ))}
             </div>
           </>
