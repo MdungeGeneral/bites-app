@@ -1,3 +1,10 @@
+---
+name: bites-app
+description: TikTok-style educational video platform with flashcards and reactions
+deployment: Vercel
+repository: https://github.com/MdungeGeneral/bites-app
+---
+
 # AGENTS.md - Developer Guide for AI Agents
 
 Welcome! This file is your map to the bites-app codebase. Read this before working on any issue.
