@@ -182,7 +182,7 @@ export default function ShortsPlayer({
   playlist,
   notebookLabel,
 }: {
-  videos: Video[];
+  videos?: Video[];
   playlist?: any[];
   notebookLabel?: string;
 }) {
@@ -295,7 +295,7 @@ export default function ShortsPlayer({
     }
   }, [blockedByBrowser]);
 
-  if (videos.length === 0) {
+  if (items.length === 0) {
     return (
       <div className="h-screen w-full bg-black flex flex-col items-center justify-center text-white gap-5 px-8 text-center">
         <span className="text-7xl">🎓</span>
@@ -313,7 +313,7 @@ export default function ShortsPlayer({
     );
   }
 
-  const canLoop = videos.length > 1;
+  const canLoop = items.length > 1;
 
   return (
     // Outer div: tap to pause/resume or unlock sound
@@ -346,7 +346,7 @@ export default function ShortsPlayer({
                 onBlock={() => { setMuted(true); setBlockedByBrowser(true); }}
                 counts={reactionCounts[item.video.id] ?? { likes: 0, dislikes: 0 }}
                 userReaction={userReactions[item.video.id] ?? null}
-                onReact={(action: string) => handleReact(item.video.id, action)}
+                onReact={(action: "like" | "dislike") => handleReact(item.video.id, action)}
               />
             ) : (
               <div onClick={(e) => e.stopPropagation()} className="h-full w-full flex items-center justify-center">
